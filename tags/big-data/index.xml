@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Big Data on Opoa</title>
+        <link>http://localhost:1313/tags/big-data/</link>
+        <description>Recent content in Big Data on Opoa</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>蜀ICP备20005474号-1</copyright>
+        <lastBuildDate>Thu, 10 Dec 2020 14:05:51 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/big-data/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>初识数仓分层</title>
+        <link>http://localhost:1313/p/%E5%88%9D%E8%AF%86%E6%95%B0%E4%BB%93%E5%88%86%E5%B1%82/</link>
+        <pubDate>Thu, 10 Dec 2020 14:05:51 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/%E5%88%9D%E8%AF%86%E6%95%B0%E4%BB%93%E5%88%86%E5%B1%82/</guid>
+        <description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@master/cover/yellow-leaves-orange-hair.webp" alt="Featured image of post 初识数仓分层" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;最近在给公司的大数据项目写操作手册，又不得不涉及到数仓分层的一些专有名词和概念。这次专门整理学习一下，加深理解记忆。&lt;/p&gt;
+&lt;h2 id=&#34;为什么要分层&#34;&gt;为什么要分层
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;清晰数据结构&lt;/strong&gt;：
+每一个数据分层都有它的作用域，这样我们在使用表的时候能更方便地定位和理解。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据血缘追踪&lt;/strong&gt;：
+我们最终给业务呈现的是一张能直接使用的业务表，但它的来源有很多，如果一张来源表出了问题，能够快速准确地定位到问题，并清楚它的危害范围。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;复杂问题简单化&lt;/strong&gt;：
+将一个复杂的任务分解成多个步骤来完成，每一层只处理单一的步骤，比较简单和容易理解。而且便于维护数据的准确性，当数据出现问题后，可以不用修复所有数据，可以从有问题的步骤开始修复。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;提高数据的复用性&lt;/strong&gt;：
+规范数据分层，通过的中间层数据，能够极大减少重复计算，增加一次计算结果的复用性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隔离原始数据&lt;/strong&gt;：
+不论是数据的异常还是数据的敏感性，使真实数据和统计数据解耦开。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数仓分层结构&#34;&gt;数仓分层结构
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;ODS 层&lt;/strong&gt; （Operational Data Store） 原始数据层 &lt;br&gt;
+ODS 层存放业务系统获取的最原始的数据，是其他上层数据的源数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DWD 层&lt;/strong&gt; （Data Warehouse Detail） 明细数据层 &lt;br&gt;
+对 ODS 层的数据进行清洗转换（去除空值，脏数据和异常数据），数据脱敏（对一些个人信息进行处理，比如电话号码和账户密码）等操作。该层的数据易用性较高，是可以直接给上层使用的。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DWS 层&lt;/strong&gt; (Data Warehouse Service) 服务数据层 &lt;br&gt;
+把 DWD 层的数据进行轻度汇总，一般聚集到以用户当日，商品当日的粒度。比如一个商品当日的浏览量，收藏数，评论数等等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DWT 层&lt;/strong&gt; (Data Warehouse Topic) 主题数据层 &lt;br&gt;
+把 DWS 层的数据按主题进行汇总，比如用户一个月的活跃天数，某个商品一个月的成交金额等等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ADS 层&lt;/strong&gt; (Application Data Store) 应用数据层 &lt;br&gt;
+面向实际的数据需求，以 DWD 层、DWS 层或 DWT 层的数据为基础，组成的各种统计报表。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;愚见&#34;&gt;愚见
+&lt;/h2&gt;&lt;p&gt;由于是第一次接触大数据方面的知识，脑补了一个例子来帮助理解记忆，如果存在不准确的地方，还请见谅，欢迎指正。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;graph LR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    A(业务端) --&amp;gt;B(ODS层)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    B --&amp;gt; C(DWD层)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    C --&amp;gt; D(DWS层)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    D --&amp;gt; E(DWT层)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    E --&amp;gt; F(ADS层)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;以网易云音乐举例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们每日在使用网易云的时候，都会产生很多数据。比如说你今天听了哪些歌，你喜欢的歌，你创建的歌单，你收藏了哪些歌单等等。这时，数据还保存在网易云的数据库里，也就是业务端。&lt;/li&gt;
+&lt;li&gt;晚上 12 点，网抑云时间到了。生而为人……噢不是，新的一天了。意味着昨天的数据记录不会再更改了，你今天听的歌不会算到昨日听歌总时长里。在凌晨这种服务器压力比较小的时间段里，他们会把这一天的数据从业务端采集到 ODS 层。&lt;/li&gt;
+&lt;li&gt;这里的数据还不具备可用性，在经过清洗转换等等操作之后，数据来到了 DWD 层。&lt;/li&gt;
+&lt;li&gt;DWD 层的数据经过轻度汇总，以日为粒度来到 DWS 层，可以通过一张表就查询出某个用户当天听歌的总时长，最晚听歌时间等等，而不用去庞大的数据库中费力地搜索。&lt;/li&gt;
+&lt;li&gt;DWT 层在 DWS 层的基础上，汇总出一个月的数据。当然也可以根据业务需求，创建其他的主题。&lt;/li&gt;
+&lt;li&gt;最后，由 ADS 层进行报表统计或展示。&lt;/li&gt;
+&lt;li&gt;到了年末，你的网易云就会推送一份年度使用报告，告诉你今年听了 4213 首歌，听歌的总时长达到 269 小时，以及最常听的 top10，在 9 月 31 日这天，你把《好心分手》循环了 12 遍。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_43674082/article/details/88028266&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;数仓分层&lt;/a&gt; &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/BeiisBei/article/details/105723188#_19&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;数据仓库系列（三）数仓分层的意义价值及如何设计数据分层&lt;/a&gt; &lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_46548855/article/details/107596208&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;电商数仓-(数仓分层概念+数仓理论)&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

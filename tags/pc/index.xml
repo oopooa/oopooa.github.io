@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PC on Opoa</title>
+        <link>http://localhost:1313/tags/pc/</link>
+        <description>Recent content in PC on Opoa</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>蜀ICP备20005474号-1</copyright>
+        <lastBuildDate>Sun, 05 Jul 2020 22:40:16 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/pc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>新电脑如何验机</title>
+        <link>http://localhost:1313/p/%E6%96%B0%E7%94%B5%E8%84%91%E5%A6%82%E4%BD%95%E9%AA%8C%E6%9C%BA/</link>
+        <pubDate>Sun, 05 Jul 2020 22:40:16 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/%E6%96%B0%E7%94%B5%E8%84%91%E5%A6%82%E4%BD%95%E9%AA%8C%E6%9C%BA/</guid>
+        <description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@latest/cover/wink-cherry-blossom-cute-smiling.webp" alt="Featured image of post 新电脑如何验机" /&gt;&lt;font style=&#34;color:red&#34;&gt;
+&lt;strong&gt;注意：初始化设置的时候先不要联网，否则系统会自动激活，就不能七天无理由退换货了&lt;/strong&gt;
+&lt;/font&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作
+&lt;/h2&gt;&lt;p&gt;这里需要先准备一个 U盘，因为需要在断网的环境下完成对电脑的检测，推荐一个软件：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.图吧工具箱&lt;/strong&gt;		 	&lt;a class=&#34;link&#34; href=&#34;http://www.tbtool.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;集成了很多 DIY 爱好者常用的硬件检测软件，这些软件功能强大，但使用起来需要一定的学习成本，不过对我们来说，其中几款常用的工具就能满足大部分的测试需求了。图吧工具箱本身只是一个启动器，完全免费。&lt;/p&gt;
+&lt;h2 id=&#34;验机流程&#34;&gt;验机流程
+&lt;/h2&gt;&lt;h3 id=&#34;1检查外包装&#34;&gt;1.检查外包装
+&lt;/h3&gt;&lt;p&gt;快递到手之后，先仔细检查一下外包装，如果包装上有破损，凹陷，那么就要小心了。很可能是运输过程中造成的，如果还在取件点，可以当着快递员的面开箱，确认里面的机器没有损坏。如果回到了家才发现，那么开箱的过程一定要用录像的方式记录下来。（我以前就吃过这个亏）&lt;/p&gt;
+&lt;h3 id=&#34;2开箱过程&#34;&gt;2.开箱过程
+&lt;/h3&gt;&lt;p&gt;开箱的过程，条件允许的话，最好能用手机录下来，自己不方便可以找别人帮你录。录的时候先清晰地对着包装上的寄件信息，确认无误之后，再记录开箱的过程。&lt;/p&gt;
+&lt;h3 id=&#34;3外观&#34;&gt;3.外观
+&lt;/h3&gt;&lt;p&gt;接下来就是对外观的检查，看 USB 接口是否有使用过的痕迹，闭合的情况下四边是否对齐，外观有无划痕，键盘和触控板是否正常，有没有缝隙比较大的情况等等，总之就是好好地检查一下。毕竟，有一个好看的外观用着也舒心些。&lt;/p&gt;
+&lt;h3 id=&#34;4开机&#34;&gt;4.开机
+&lt;/h3&gt;&lt;p&gt;在接通电源的情况下试着按一下开机键，这时可能会没有反应，因为有些品牌的新电脑，第一次开机需要接通电源来激活电池，如果你正好也是这样，那么恭喜，你大概率是这台机器的第一个主人。&lt;/p&gt;
+&lt;h3 id=&#34;5初始化设置&#34;&gt;5.初始化设置
+&lt;/h3&gt;&lt;p&gt;这里根据自己的喜好设置即可，需要特别注意的是先 &lt;font style=&#34;color:red&#34;&gt; &lt;strong&gt;不要联网&lt;/strong&gt;&lt;/font&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;6软件检测&#34;&gt;6.软件检测
+&lt;/h3&gt;&lt;p&gt;开机之后就需要用到之前准备好的U盘了。&lt;/p&gt;
+&lt;p&gt;（1）屏幕：可以使用图吧工具箱下的坏点与漏光测试，把屏幕切换成纯色背景，看看有没有坏点，一般来说，坏点在 3 个以内都是正常的。&lt;/p&gt;
+&lt;p&gt;（2）硬盘：推荐图吧工具箱下的 DiskInfo(64位)，很容易就能看到硬盘的通电次数，通电时间。通电次数新机都在个位数，通电时间少于 12 小时。&lt;/p&gt;
+&lt;p&gt;（3）其他硬件：CPU，显卡等的测试可以根据自己的喜好来，比如单烤，双烤之类的。&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语
+&lt;/h2&gt;&lt;p&gt;以上的检测都没什么问题了的话，那么恭喜，你的新电脑很健康，可以开始装软件啦。&lt;/p&gt;
+&lt;p&gt;Enjoy yourself!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
