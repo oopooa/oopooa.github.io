@@ -1,702 +1,83 @@
-<!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SweetAlert 替换浏览器默认弹窗">
-<title>Hexo 使用 SweetAlert 美化弹窗</title>
-
-<link rel='canonical' href='http://localhost:1313/p/hexo-%E4%BD%BF%E7%94%A8-sweetalert-%E7%BE%8E%E5%8C%96%E5%BC%B9%E7%AA%97/'>
-
-<link rel="stylesheet" href="/scss/style.min.f9ad708e15e672b601c6bac58605dd9291b2bbb7f3b55a9fd92b298f2ddc87ce.css"><meta property='og:title' content="Hexo 使用 SweetAlert 美化弹窗">
-<meta property='og:description' content="SweetAlert 替换浏览器默认弹窗">
-<meta property='og:url' content='http://localhost:1313/p/hexo-%E4%BD%BF%E7%94%A8-sweetalert-%E7%BE%8E%E5%8C%96%E5%BC%B9%E7%AA%97/'>
-<meta property='og:site_name' content='Opoa'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hexo' /><meta property='article:published_time' content='2020-04-27T12:55:04&#43;08:00'/><meta property='article:modified_time' content='2020-04-27T12:55:04&#43;08:00'/><meta property='og:image' content='https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp' />
-<meta name="twitter:title" content="Hexo 使用 SweetAlert 美化弹窗">
-<meta name="twitter:description" content="SweetAlert 替换浏览器默认弹窗"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp' />
-    <link rel="shortcut icon" href="/favicon.ico" />
-
-  
-
-
-    </head>
-    <body class="
-    article-page
-    ">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header>
-        
-            
-            <figure class="site-avatar">
-                <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_huc9522c74db490d479204dfcc8d873015_49072_300x0_resize_q75_h2_box_2.webp" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-                </a>
-                
-            </figure>
-            
-        
-        
-        <div class="site-meta">
-            <h1 class="site-name"><a href="/">Opoa</a></h1>
-            <h2 class="site-description">💻 The best thing you can do at work hard.</h2>
-        </div>
-    </header><ol class="menu-social">
-            
-                <li>
-                    <a 
-                        href='https://github.com/oopooa'
-                        target="_blank"
-                        title="GitHub"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-        </ol><ol class="menu" id="main-menu">
-        
-        
-        <li class="menu-bottom-section">
-            <ol class="menu">
-
-                
-                    <li id="dark-mode-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                        <span>暗色模式</span>
-                    </li>
-                
-            </ol>
-        </li>
-    </ol>
-</aside>
-
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目录</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#安装">安装</a></li>
-    <li><a href="#参考文章">参考文章</a></li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
-
-            <main class="main full-width">
-    <article class="has-image main-article">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/p/hexo-%E4%BD%BF%E7%94%A8-sweetalert-%E7%BE%8E%E5%8C%96%E5%BC%B9%E7%AA%97/">
-                
-                    <img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp" loading="lazy" alt="Featured image of post Hexo 使用 SweetAlert 美化弹窗" />
-                
-            </a>
-        </div>
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E6%8A%80%E6%9C%AF/" >
-                技术
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/hexo-%E4%BD%BF%E7%94%A8-sweetalert-%E7%BE%8E%E5%8C%96%E5%BC%B9%E7%AA%97/">Hexo 使用 SweetAlert 美化弹窗</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            SweetAlert 替换浏览器默认弹窗
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Apr 27, 2020</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    阅读时长: 1 分钟
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-
-    <section class="article-content">
-    
-    
-    <h2 id="前言">前言
-</h2><blockquote>
-<p>私密文章参考: <a class="link" href="https://blog.csdn.net/cungudafa/article/details/104346521"  target="_blank" rel="noopener"
-    >Hexo（sakura）设置文章置顶+私密文章</a></p>
-</blockquote>
-<p>为 Hexo 加入了私密文章功能后，密码输入错误之后弹出的浏览器自带提示框，在整个博客中显得很不协调。
-<img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert.webp"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p>而接下来要添加的 <a class="link" href="https://sweetalert.js.org/"  target="_blank" rel="noopener"
-    >SweetAlert</a>，感官上就舒服得多，能给人更好的交互体验。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert1.webp"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="安装">安装
-</h2><p>在 <font color=orange>themes/Sakura/layout/_partial/footer.ejs</font> 文件中加入以下代码</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;!-- sweetalert --&gt;
-</span></span><span class="line"><span class="cl">&lt;script src=&#34;https://unpkg.com/sweetalert/dist/sweetalert.min.js&#34;&gt;&lt;/script&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>修改 <font color=orange>node_modules/hexo-blog-encrypt/lib/blog-encrypt.js</font> 文件</p>
-<p>搜索 <code>alert(WrongPassMessage)</code>，找到弹出错误密码信息的js代码段</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">return</span> <span class="kr">await</span> <span class="nx">verifyContent</span><span class="p">(</span><span class="nx">hmacKey</span><span class="p">,</span> <span class="nx">decoded</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">alert</span><span class="p">(</span><span class="nx">wrongPassMessage</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>把弹框替换为 <code>SweetAlert</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">return</span> <span class="kr">await</span> <span class="nx">verifyContent</span><span class="p">(</span><span class="nx">hmacKey</span><span class="p">,</span> <span class="nx">decoded</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// alert(wrongPassMessage);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">swal</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">text</span><span class="o">:</span> <span class="s2">&#34;密码错误！&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">icon</span><span class="o">:</span> <span class="s2">&#34;error&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">className</span><span class="o">:</span> <span class="s2">&#34;password-error&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">button</span><span class="o">:</span> <span class="s1">&#39;OK&#39;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">});</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">});</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在 <font color=orange>themes/Sakura/source/css/style.css</font> 文件中调整弹窗的样式</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 密码错误sweetalert弹框样式修改 */</span>
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">swal-overlay</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">swal-footer</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">password-error</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">12</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><font style="color:red"><b>注意：由于修改了依赖库中的代码，一旦修改或更新依赖都会覆盖掉我们的修改，需要重新修改。</b></font></p>
-<h2 id="参考文章">参考文章
-</h2><p><a class="link" href="http://yearito.cn/posts/hexo-advanced-settings.html"  target="_blank" rel="noopener"
-    >Hexo 搭建个人博客系列：进阶设置篇</a></p>
-
-</section>
-
-
-    <footer class="article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/tags/hexo/">Hexo</a>
-        
-    </section>
-
-
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>Licensed under CC BY-NC-SA 4.0</span>
-    </section>
-    </footer>
-
-
-    
-</article>
-
-    
-
-    
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/hexosakura-%E6%B7%BB%E5%8A%A0%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9-tidio/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp" loading="lazy" data-key="" data-hash="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Hexo(Sakura) 添加在线聊天 Tidio</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/hexosakura-%E9%9F%B3%E4%B9%90%E6%8F%92%E4%BB%B6%E6%92%AD%E6%94%BE%E5%BC%82%E5%B8%B8/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" loading="lazy" data-key="" data-hash="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Hexo(Sakura) 音乐插件播放异常</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/hexo-%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp" loading="lazy" data-key="" data-hash="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Hexo 博客迁移</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/hexosakura-%E7%BC%A9%E7%95%A5%E5%9B%BE%E6%98%BE%E7%A4%BA%E5%BC%82%E5%B8%B8/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp" loading="lazy" data-key="" data-hash="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Hexo(Sakura) 缩略图显示异常</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/hexosakura-%E9%9F%B3%E4%B9%90%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp" loading="lazy" data-key="" data-hash="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Hexo(Sakura) 音乐插件问题</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
-
-     
-    
-        
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
-
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy;
-        
-            2020 -
-        
-        2024 蜀ICP备20005474号-1
-    </section>
-
-    <section class="powerby">
-        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
-    </section>
-
-    <section class="running-time">
-      本博客已稳定运行 🧡
-      <span id="runningdays" class="running-days"></span>
-    </section>
-</footer>
-
-
-<script>
-  runningTime();
-
-  setInterval(() => {
-    runningTime();
-  }, 1000)
-
-  function runningTime() {
-    let startDate = '2020-02-02 22:22:22';
-    startDate = new Date(startDate.replace(/-/g, "/"));
-    let current = new Date();
-    let timeDifference = current.getTime() - startDate.getTime();
-
-    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.round(timeDifference % (1000 * 60 * 60 * 24) % (1000 * 60 * 60) % (1000 * 60) / 1000);
-
-    let result = `${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒`;
-    document.querySelector('#runningdays').innerHTML = result;
-  }
-</script>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
-            >
-
-            </main>
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
-                
-                >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-    </body>
-</html>
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="SweetAlert 替换浏览器默认弹窗"><title>Hexo 使用 SweetAlert 美化弹窗</title>
+<link rel=canonical href=https://example.com/p/hexo-%E4%BD%BF%E7%94%A8-sweetalert-%E7%BE%8E%E5%8C%96%E5%BC%B9%E7%AA%97/><link rel=stylesheet href=/scss/style.min.6d0a77ed00a06d642571a6a469b836f2b3b51ea7d600eb63316382887218c0de.css><meta property='og:title' content="Hexo 使用 SweetAlert 美化弹窗"><meta property='og:description' content="SweetAlert 替换浏览器默认弹窗"><meta property='og:url' content='https://example.com/p/hexo-%E4%BD%BF%E7%94%A8-sweetalert-%E7%BE%8E%E5%8C%96%E5%BC%B9%E7%AA%97/'><meta property='og:site_name' content='Opoa'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Hexo'><meta property='article:published_time' content='2020-04-27T12:55:04+08:00'><meta property='article:modified_time' content='2020-04-27T12:55:04+08:00'><meta property='og:image' content='https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp'><meta name=twitter:title content="Hexo 使用 SweetAlert 美化弹窗"><meta name=twitter:description content="SweetAlert 替换浏览器默认弹窗"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp'><link rel="shortcut icon" href=/favicon.ico></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_huc9522c74db490d479204dfcc8d873015_49072_300x0_resize_q75_h2_box_2.webp width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>Opoa</a></h1><h2 class=site-description>💻 The best thing you can do at work hard.</h2></div></header><ol class=menu-social><li><a href=https://github.com/oopooa target=_blank title=GitHub rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li></ol><ol class=menu id=main-menu><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#前言>前言</a></li><li><a href=#安装>安装</a></li><li><a href=#参考文章>参考文章</a></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/hexo-%E4%BD%BF%E7%94%A8-sweetalert-%E7%BE%8E%E5%8C%96%E5%BC%B9%E7%AA%97/><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp loading=lazy alt="Featured image of post Hexo 使用 SweetAlert 美化弹窗"></a></div><div class=article-details><header class=article-category><a href=/categories/%E6%8A%80%E6%9C%AF/>技术</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/hexo-%E4%BD%BF%E7%94%A8-sweetalert-%E7%BE%8E%E5%8C%96%E5%BC%B9%E7%AA%97/>Hexo 使用 SweetAlert 美化弹窗</a></h2><h3 class=article-subtitle>SweetAlert 替换浏览器默认弹窗</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Apr 27, 2020</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 1 分钟</time></div></footer></div></header><section class=article-content><h2 id=前言>前言</h2><blockquote><p>私密文章参考: <a class=link href=https://blog.csdn.net/cungudafa/article/details/104346521 target=_blank rel=noopener>Hexo（sakura）设置文章置顶+私密文章</a></p></blockquote><p>为 Hexo 加入了私密文章功能后，密码输入错误之后弹出的浏览器自带提示框，在整个博客中显得很不协调。
+<img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert.webp loading=lazy></p><p>而接下来要添加的 <a class=link href=https://sweetalert.js.org/ target=_blank rel=noopener>SweetAlert</a>，感官上就舒服得多，能给人更好的交互体验。</p><p><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert1.webp loading=lazy></p><h2 id=安装>安装</h2><p>在 <font color=orange>themes/Sakura/layout/_partial/footer.ejs</font> 文件中加入以下代码</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&lt;!-- sweetalert --&gt;
+</span></span><span class=line><span class=cl>&lt;script src=&#34;https://unpkg.com/sweetalert/dist/sweetalert.min.js&#34;&gt;&lt;/script&gt;
+</span></span></code></pre></td></tr></table></div></div><p>修改 <font color=orange>node_modules/hexo-blog-encrypt/lib/blog-encrypt.js</font> 文件</p><p>搜索 <code>alert(WrongPassMessage)</code>，找到弹出错误密码信息的js代码段</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=k>return</span> <span class=kr>await</span> <span class=nx>verifyContent</span><span class=p>(</span><span class=nx>hmacKey</span><span class=p>,</span> <span class=nx>decoded</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}).</span><span class=k>catch</span><span class=p>((</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>alert</span><span class=p>(</span><span class=nx>wrongPassMessage</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>e</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span></code></pre></td></tr></table></div></div><p>把弹框替换为 <code>SweetAlert</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=k>return</span> <span class=kr>await</span> <span class=nx>verifyContent</span><span class=p>(</span><span class=nx>hmacKey</span><span class=p>,</span> <span class=nx>decoded</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}).</span><span class=k>catch</span><span class=p>((</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// alert(wrongPassMessage);
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>swal</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>        <span class=nx>text</span><span class=o>:</span> <span class=s2>&#34;密码错误！&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=nx>icon</span><span class=o>:</span> <span class=s2>&#34;error&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=nx>className</span><span class=o>:</span> <span class=s2>&#34;password-error&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=nx>button</span><span class=o>:</span> <span class=s1>&#39;OK&#39;</span>
+</span></span><span class=line><span class=cl>      <span class=p>});</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>e</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span></code></pre></td></tr></table></div></div><p>在 <font color=orange>themes/Sakura/source/css/style.css</font> 文件中调整弹窗的样式</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=line><span class=cl><span class=c>/* 密码错误sweetalert弹框样式修改 */</span>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nc>swal-overlay</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>background-color</span><span class=p>:</span> <span class=kc>transparent</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nc>swal-footer</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>text-align</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nc>password-error</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>box-shadow</span><span class=p>:</span> <span class=mi>0</span><span class=kt>px</span> <span class=mi>4</span><span class=kt>px</span> <span class=mi>12</span><span class=kt>px</span> <span class=nb>rgba</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mf>0.15</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>border-radius</span><span class=p>:</span> <span class=mi>4</span><span class=kt>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p><font style=color:red><b>注意：由于修改了依赖库中的代码，一旦修改或更新依赖都会覆盖掉我们的修改，需要重新修改。</b></font></p><h2 id=参考文章>参考文章</h2><p><a class=link href=http://yearito.cn/posts/hexo-advanced-settings.html target=_blank rel=noopener>Hexo 搭建个人博客系列：进阶设置篇</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/hexo/>Hexo</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/p/hexosakura-%E6%B7%BB%E5%8A%A0%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9-tidio/><div class=article-image><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp loading=lazy data-key data-hash=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp></div><div class=article-details><h2 class=article-title>Hexo(Sakura) 添加在线聊天 Tidio</h2></div></a></article><article class=has-image><a href=/p/hexosakura-%E9%9F%B3%E4%B9%90%E6%8F%92%E4%BB%B6%E6%92%AD%E6%94%BE%E5%BC%82%E5%B8%B8/><div class=article-image><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp loading=lazy data-key data-hash=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp></div><div class=article-details><h2 class=article-title>Hexo(Sakura) 音乐插件播放异常</h2></div></a></article><article class=has-image><a href=/p/hexo-%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/><div class=article-image><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp loading=lazy data-key data-hash=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp></div><div class=article-details><h2 class=article-title>Hexo 博客迁移</h2></div></a></article><article class=has-image><a href=/p/hexosakura-%E7%BC%A9%E7%95%A5%E5%9B%BE%E6%98%BE%E7%A4%BA%E5%BC%82%E5%B8%B8/><div class=article-image><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp loading=lazy data-key data-hash=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp></div><div class=article-details><h2 class=article-title>Hexo(Sakura) 缩略图显示异常</h2></div></a></article><article class=has-image><a href=/p/hexosakura-%E9%9F%B3%E4%B9%90%E6%8F%92%E4%BB%B6%E9%97%AE%E9%A2%98/><div class=article-image><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp loading=lazy data-key data-hash=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp></div><div class=article-details><h2 class=article-title>Hexo(Sakura) 音乐插件问题</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//hugo-theme-stack.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2020 -
+2024 蜀ICP备20005474号-1</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.26.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section><section class=running-time>本博客已稳定运行 🧡
+<span id=runningdays class=running-days></span></section></footer><script>runningTime(),setInterval(()=>{runningTime()},1e3);function runningTime(){let t="2020-02-02 22:22:22";t=new Date(t.replace(/-/g,"/"));let n=new Date,e=n.getTime()-t.getTime(),s=Math.floor(e/(1e3*60*60*24)),o=Math.floor(e%(1e3*60*60*24)/(1e3*60*60)),i=Math.floor(e%(1e3*60*60)/(1e3*60)),a=Math.round(e%(1e3*60*60*24)%(1e3*60*60)%(1e3*60)/1e3),r=`${s} 天 ${o} 小时 ${i} 分钟 ${a} 秒`;document.querySelector("#runningdays").innerHTML=r}</script><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

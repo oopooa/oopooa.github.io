@@ -1,33 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>随笔 on Opoa</title>
-        <link>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/</link>
-        <description>Recent content in 随笔 on Opoa</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>蜀ICP备20005474号-1</copyright>
-        <lastBuildDate>Fri, 22 Jan 2021 21:20:10 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>献给墨茶</title>
-        <link>http://localhost:1313/p/%E7%8C%AE%E7%BB%99%E5%A2%A8%E8%8C%B6/</link>
-        <pubDate>Fri, 22 Jan 2021 21:20:10 +0800</pubDate>
-        
-        <guid>http://localhost:1313/p/%E7%8C%AE%E7%BB%99%E5%A2%A8%E8%8C%B6/</guid>
-        <description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha9.webp" alt="Featured image of post 献给墨茶" /&gt;&lt;p&gt;&lt;font color=red size=4&gt;&lt;strong&gt;有些人仅仅是活着，就已经拼尽了全力。&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;p&gt;直到今天，我才真真切切理解了这句话。&lt;/p&gt;
-&lt;p&gt;命运，数次无情地摧残着这个热爱生活又努力的普通人，乃至最后埋葬。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha1.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;他的奶奶生病，因病致贫，父母躲债跑路，留下他一人高中辍学自生自灭，出来打工遭遇黑心公司，一个月薪资八百元，除去房租每月仅剩三百元，就这样公司还欠薪不发，前去讨薪被踩断身份证。无奈只能回家，后来听说家里房子要拆迁，家人们也回来了，生活好像就要迎来曙光。然而，他那群有血缘关系的家伙回来只是为了把他赶出去……&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;墨茶生平(转自B站)&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;黑茶他家住大凉山，原来家庭也算可以，不是很富裕也不是很贫困，他说他高中学习成绩很好。直到他奶奶生病，家里借了很多钱，最后人没救回来，钱欠了一屁股。于是他父母就跑走躲债去了，只留下黑茶一个人面对生活。为了生存，他去成都打工，装卸工，一个月八百，房租就要五百，三百元的生活费，吃了上顿没有下顿，长期的饥饿与劳作的摧残下，他得了胃部疾病，胃痛到彻夜难眠。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>随笔 on Opoa</title><link>https://example.com/categories/%E9%9A%8F%E7%AC%94/</link><description>Recent content in 随笔 on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Fri, 22 Jan 2021 21:20:10 +0800</lastBuildDate><atom:link href="https://example.com/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml"/><item><title>献给墨茶</title><link>https://example.com/p/%E7%8C%AE%E7%BB%99%E5%A2%A8%E8%8C%B6/</link><pubDate>Fri, 22 Jan 2021 21:20:10 +0800</pubDate><guid>https://example.com/p/%E7%8C%AE%E7%BB%99%E5%A2%A8%E8%8C%B6/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha9.webp" alt="Featured image of post 献给墨茶" />&lt;p>&lt;font color=red size=4>&lt;strong>有些人仅仅是活着，就已经拼尽了全力。&lt;/strong>&lt;/font>&lt;/p>
+&lt;p>直到今天，我才真真切切理解了这句话。&lt;/p>
+&lt;p>命运，数次无情地摧残着这个热爱生活又努力的普通人，乃至最后埋葬。&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha1.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>他的奶奶生病，因病致贫，父母躲债跑路，留下他一人高中辍学自生自灭，出来打工遭遇黑心公司，一个月薪资八百元，除去房租每月仅剩三百元，就这样公司还欠薪不发，前去讨薪被踩断身份证。无奈只能回家，后来听说家里房子要拆迁，家人们也回来了，生活好像就要迎来曙光。然而，他那群有血缘关系的家伙回来只是为了把他赶出去……&lt;/p>
+&lt;p>&lt;strong>墨茶生平(转自B站)&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>黑茶他家住大凉山，原来家庭也算可以，不是很富裕也不是很贫困，他说他高中学习成绩很好。直到他奶奶生病，家里借了很多钱，最后人没救回来，钱欠了一屁股。于是他父母就跑走躲债去了，只留下黑茶一个人面对生活。为了生存，他去成都打工，装卸工，一个月八百，房租就要五百，三百元的生活费，吃了上顿没有下顿，长期的饥饿与劳作的摧残下，他得了胃部疾病，胃痛到彻夜难眠。
 2018年四五月份，因雇主欠薪不发，他前去讨薪，但是却被老板踩断了身份证，赶了出去。失去生活来源的他，又遭遇诈骗，用花呗五百元额度换了两百元现金。房租眼看就要到期，身体又不能支撑体力劳作，他决定回家。这大概是我们第一次援助他，他没有路费，无奈之下向我们求助，这才凑足了路费，最后得以回家。
 他想去医院看病，群里也有学医的人建议他去看病，但是等到了医院才发现他没有医保，具体的原因已经记不清了，好像是欠缴费用，导致不能享受。最后无奈在当地医院用他仅剩的一点存款加上一些援助，在当地医院治病，诊断为胃溃疡和胃炎，但由于不能承受长期住院治疗的费用，输了几天液之后又匆匆回家。好在村里人善良，他回家之后并没有被要求承担家中的债务。否则他可能连片刻安稳都不可得了。
 后来他又有了希望，据说他家房子要拆迁了，能拿三十多万，只要能熬到房子拆迁，人生就算破局了。于是虽然被胃病折磨的难以正常生活，他还是决定做些事，赚些钱。这时候我们也零零碎碎资助了一些钱，但是因为群友多是些学生，援助只能让黑茶勉强度日。然后有人提议，让他做vup吧，多少能赚些钱。接着群友有的把一些退下来的电脑零件给他寄过去，有的给他画了一张皮，有的给他做了模型。
@@ -36,208 +16,149 @@
 即使是如此荒诞的人生都没能击垮他的心灵。20年，他人生中最后的冬天格外寒冷。缺衣少食，疾病缠身的他看到了在寒风中瑟瑟发抖的小猫。尽管他自己买几粒1.8元的药片都心疼不已，他仍然为小猫买了舒化奶，拿着破箱子和破衣服为小猫御寒取暖。最后，与他相熟的小卖部老板抚养了这只小猫。
 但是谁来关爱他呢？贫病交加，饥寒交迫的他最后还是死在了2021年1月4日或这之后的某个冬日。
 酮症酸中毒的死因是一直跟踪他身体状况的我个人的推测，并不代表已经确认其死因为酮症酸中毒，望周知。
-作者：御坂伊里奇_Official&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mochachat.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;即使命运是这样的造化弄人，他也并没有抱怨什么，更多的只是调侃，和对生活的热爱，哪怕只是一点小小的幸福。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha3.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha5.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha6.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;为了喜爱的事情熬夜&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha8.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;默默努力地直播着，小心经营着自己的两百多位粉丝&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha4.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha7.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;这张图看着真的很揪心，可能这就是墨茶活着的时候，内心中孤独和无助的真实写照吧。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha2.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;最后的日子里，说很想很想吃草莓，却因为草莓太贵了吃不起。太贵了，太贵了&amp;hellip;一盒草莓十多二十块，可对于一年生活费只有不足 2500 的他来说，得几天的饭钱，才能够吃上一次草莓啊。&lt;/p&gt;
-&lt;p&gt;2021年1月4日或之后的某个冬日，在饥寒交迫和病痛的折磨下，墨茶离开了。&lt;/p&gt;
-&lt;p&gt;你好傻啊！明明可以活下来的，大家也都愿意帮助你，你也只是平凡地努力着，相信总有一天一切都会变好。群友援助给你的钱，说以后赚了钱一定还上。
-那现在你有了好多好多的粉丝，终于能赚好多好多的钱了，那承诺呢？可以回来兑现吗，求求你了。&lt;/p&gt;
-&lt;p&gt;唉，我今天一整天都处于破防的状态，早上红着眼睛，午休睡不着，泪一直流，下班坐地铁红着眼睛，晚上写这个好几次写不下去，被自己打断。我想也许很多人和我一样，想做点什么，但又改变不了什么，因为我们来晚了。&lt;/p&gt;
-&lt;p&gt;很抱歉以这样的方式认识你。&lt;/p&gt;
-&lt;p&gt;墨茶，你住在大凉山，我以后会来看你的，一定。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomocha.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;晚安🌙，墨茶。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>2020年终总结</title>
-        <link>http://localhost:1313/p/2020%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
-        <pubDate>Thu, 31 Dec 2020 17:59:57 +0800</pubDate>
-        
-        <guid>http://localhost:1313/p/2020%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
-        <description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/colorful-mask-girl.webp" alt="Featured image of post 2020年终总结" /&gt;&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/css/wishlist.css&#34; /&gt;
-&lt;h2 id=&#34;前言&#34;&gt;前言
-&lt;/h2&gt;&lt;p&gt;2020，转眼即将逝去。回顾这一年，我们见证了太多，经历了太多。新冠疫情、战争、巨星陨落…
-好在最黑暗的时候已然过去，一切都在慢慢变好。希望如此。&lt;/p&gt;
-&lt;h2 id=&#34;2020&#34;&gt;2020
-&lt;/h2&gt;&lt;p&gt;年初，搭建了这个小站。希望可以记录自己的生活，整理一些学习笔记之类的。毕竟，有输出才有输入嘛。
-然而中间还是有好长时间没更新，不管是因为忙还是懒🤣，明年一定要高产起来🏳‍🌈。&lt;/p&gt;
-&lt;p&gt;来看看年初立的那些 flag:
-&lt;span  style=&#34;text-align: center;display:block;&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/about/2020todo.webp&#34;  width=&#34;170&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;table id=&#34;mytable&#34;&gt;
-  &lt;tr&gt;
-    &lt;th&gt;愿望&lt;/th&gt;
-    &lt;th&gt;完成情况&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;spec&#34;&gt;
-    &lt;td&gt;完善博客&lt;/td&gt;
-    &lt;td&gt;✅&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;specalt&#34;&gt;
-    &lt;td class=&#34;alt&#34;&gt;一台新电脑 + 双屏显示器&lt;/td&gt;
-    &lt;td class=&#34;alt&#34;&gt;✅&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;spec&#34;&gt;
-    &lt;td&gt;过 CET-6&lt;/td&gt;
-    &lt;td&gt;❌&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;specalt&#34;&gt;
-    &lt;td class=&#34;alt&#34;&gt;读完两本Java相关的书籍&lt;/td&gt;
-    &lt;td class=&#34;alt&#34;&gt;❌&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;spec&#34;&gt;
-    &lt;td&gt;拥有一段&lt;font style=&#34;color:#EB7FAF&#34;&gt;甜甜的恋爱&lt;/font&gt;o(TヘTo)&lt;/td&gt;
-    &lt;td&gt;❌&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-&lt;p&gt;📃&lt;strong&gt;Detail&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;完善博客&lt;/strong&gt;
+作者：御坂伊里奇_Official&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mochachat.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>即使命运是这样的造化弄人，他也并没有抱怨什么，更多的只是调侃，和对生活的热爱，哪怕只是一点小小的幸福。&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha3.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha5.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha6.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>为了喜爱的事情熬夜&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha8.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>默默努力地直播着，小心经营着自己的两百多位粉丝&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha4.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha7.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>这张图看着真的很揪心，可能这就是墨茶活着的时候，内心中孤独和无助的真实写照吧。&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha2.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>最后的日子里，说很想很想吃草莓，却因为草莓太贵了吃不起。太贵了，太贵了&amp;hellip;一盒草莓十多二十块，可对于一年生活费只有不足 2500 的他来说，得几天的饭钱，才能够吃上一次草莓啊。&lt;/p>
+&lt;p>2021年1月4日或之后的某个冬日，在饥寒交迫和病痛的折磨下，墨茶离开了。&lt;/p>
+&lt;p>你好傻啊！明明可以活下来的，大家也都愿意帮助你，你也只是平凡地努力着，相信总有一天一切都会变好。群友援助给你的钱，说以后赚了钱一定还上。
+那现在你有了好多好多的粉丝，终于能赚好多好多的钱了，那承诺呢？可以回来兑现吗，求求你了。&lt;/p>
+&lt;p>唉，我今天一整天都处于破防的状态，早上红着眼睛，午休睡不着，泪一直流，下班坐地铁红着眼睛，晚上写这个好几次写不下去，被自己打断。我想也许很多人和我一样，想做点什么，但又改变不了什么，因为我们来晚了。&lt;/p>
+&lt;p>很抱歉以这样的方式认识你。&lt;/p>
+&lt;p>墨茶，你住在大凉山，我以后会来看你的，一定。&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomocha.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>晚安🌙，墨茶。&lt;/p></description></item><item><title>2020 年终总结</title><link>https://example.com/p/2020-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link><pubDate>Thu, 31 Dec 2020 17:59:57 +0800</pubDate><guid>https://example.com/p/2020-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/colorful-mask-girl.webp" alt="Featured image of post 2020 年终总结" />&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/css/wishlist.css" />
+&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>2020，转眼即将逝去。回顾这一年，我们见证了太多，经历了太多。新冠疫情、战争、巨星陨落…
+好在最黑暗的时候已然过去，一切都在慢慢变好。希望如此。&lt;/p>
+&lt;h2 id="2020">2020
+&lt;/h2>&lt;p>年初，搭建了这个小站。希望可以记录自己的生活，整理一些学习笔记之类的。毕竟，有输出才有输入嘛。
+然而中间还是有好长时间没更新，不管是因为忙还是懒🤣，明年一定要高产起来🏳‍🌈。&lt;/p>
+&lt;p>来看看年初立的那些 flag:
+&lt;span style="text-align: center;display:block;">&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/about/2020todo.webp" width="170">&lt;/span>&lt;/p>
+&lt;table id="mytable">
+&lt;tr>
+&lt;th>愿望&lt;/th>
+&lt;th>完成情况&lt;/th>
+&lt;/tr>
+&lt;tr class="spec">
+&lt;td>完善博客&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;/tr>
+&lt;tr class="specalt">
+&lt;td class="alt">一台新电脑 + 双屏显示器&lt;/td>
+&lt;td class="alt">✅&lt;/td>
+&lt;/tr>
+&lt;tr class="spec">
+&lt;td>过 CET-6&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr class="specalt">
+&lt;td class="alt">读完两本Java相关的书籍&lt;/td>
+&lt;td class="alt">❌&lt;/td>
+&lt;/tr>
+&lt;tr class="spec">
+&lt;td>拥有一段&lt;font style="color:#EB7FAF">甜甜的恋爱&lt;/font>o(TヘTo)&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;/table>
+&lt;p>📃&lt;strong>Detail&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;input checked="" disabled="" type="checkbox"> &lt;strong>完善博客&lt;/strong>
 外观界面：现在博客的主题是 Sakura，从 Hexo 转到 Halo 也一直在用，个人非常喜欢。衷心感谢博客系统和主题的开发者们💗
-内容：小站现在只有十来篇文章，大部分还是关于以前 Hexo 博客使用的。来年要多多输出，质量上也要加油呐💪。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;一台新电脑+双屏显示器&lt;/strong&gt;
+内容：小站现在只有十来篇文章，大部分还是关于以前 Hexo 博客使用的。来年要多多输出，质量上也要加油呐💪。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;input checked="" disabled="" type="checkbox"> &lt;strong>一台新电脑+双屏显示器&lt;/strong>
 服役了四年左右的游戏本扛不住微服务多开，我被迫换了新笔记本 Yoga 14S,头一次选择 AMD 处理器，用了快半年感觉就俩字儿： AMD，YES!
-馋了很久双屏的使用体验，于是几百从网上淘了个副屏。虽然有点小瑕疵，但不细看也还可以接受。所以现在我能同时看两集猫和老鼠，效率直接翻倍（雾。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;过CET-6&lt;/strong&gt;
+馋了很久双屏的使用体验，于是几百从网上淘了个副屏。虽然有点小瑕疵，但不细看也还可以接受。所以现在我能同时看两集猫和老鼠，效率直接翻倍（雾。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> &lt;strong>过CET-6&lt;/strong>
 今年由于疫情影响，两次考试时间比较接近，9 月和 12 月，9 月的考试准备了两个星期，本来之前有些事决定裸考的，其实后来发现，两个星期好像跟裸考区别也不大。最有把握的长篇阅读翻了车，作文和翻译都没写完。理所当然，考的很差，400 分不到。
 12 月的准备了一个月左右，这次作文和翻译都写完了，哎哟容我叉会儿腰。但到底还是得看听力和阅读，写作不拖后腿就行了😢。听力果然还是得持续练才有效果。
-希望明年 2 月出成绩的时候我能回来把这里勾上。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;读完两本Java相关的书籍&lt;/strong&gt;
+希望明年 2 月出成绩的时候我能回来把这里勾上。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> &lt;strong>读完两本Java相关的书籍&lt;/strong>
 趁着双十一促销，买了一堆书，这不，明年的 flag 又有了。
 好吧，这年底冲业绩的时候还是读完了一本《Head First Java》，Java 语言入门书籍，但不得不说，收获颇丰。（也可能是我太菜了）在 Java 中有许多东西我都是知其然不知其所以然，看完这本书让我对它们有了一些新的理解。
-现在在啃 Java核心技术卷Ⅰ，感觉里面很多东西需要过代码，不然很可能看完也就完了。所以进度会比第一本慢得多。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;strong&gt;拥有一段&lt;font style=&#34;color:#EB7FAF&#34;&gt;甜甜的恋爱&lt;/font&gt;o(TヘTo)&lt;/strong&gt;
+现在在啃 Java核心技术卷Ⅰ，感觉里面很多东西需要过代码，不然很可能看完也就完了。所以进度会比第一本慢得多。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> &lt;strong>拥有一段&lt;font style="color:#EB7FAF">甜甜的恋爱&lt;/font>o(TヘTo)&lt;/strong>
 又是一年，365 天，8760 小时，525600 分钟，31536000 秒完完整整的单身狗🐕。总是羡慕🍋别人成双成对，自己圈子小，又不愿去拓展社交圈，还幻想着能有甜甜的恋爱。俗称：又菜又爱玩!
 明年要有所改变啊🤦‍♂️。多去结交朋友，扩大圈子，说不定呢。
-所以这个 flag 继续挂，挂到哪天勾上了为止。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2021&#34;&gt;2021
-&lt;/h2&gt;&lt;p&gt;整点新的 flag:
-&lt;span  style=&#34;text-align: center;display:block;&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/about/2021todo.webp&#34;  width=&#34;170&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;table id=&#34;mytable&#34;&gt;
-  &lt;tr&gt;
-    &lt;th&gt;愿望&lt;/th&gt;
-    &lt;th&gt;完成情况&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;spec&#34;&gt;
-    &lt;td&gt;博客写 12 篇文章&lt;/td&gt;
-    &lt;td&gt;❌&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;specalt&#34;&gt;
-    &lt;td class=&#34;alt&#34;&gt;养一只小主子🐈&lt;/td&gt;
-    &lt;td class=&#34;alt&#34;&gt;❌&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;spec&#34;&gt;
-    &lt;td&gt;过 CET-6&lt;/td&gt;
-    &lt;td&gt;❌&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;specalt&#34;&gt;
-    &lt;td class=&#34;alt&#34;&gt;拿到学位证&lt;/td&gt;
-    &lt;td class=&#34;alt&#34;&gt;❌&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;spec&#34;&gt;
-    &lt;td&gt;读完 6 本书（4 本 Java 相关）&lt;/td&gt;
-    &lt;td&gt;❌&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;specalt&#34;&gt;
-    &lt;td class=&#34;alt&#34;&gt;练好英语听力，能脱离字幕看电影&lt;/td&gt;
-    &lt;td class=&#34;alt&#34;&gt;❌&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;spec&#34;&gt;
-    &lt;td&gt;拥有一段&lt;font style=&#34;color:#EB7FAF&#34;&gt;甜甜的恋爱&lt;/font&gt;o(TヘTo)&lt;/td&gt;
-    &lt;td&gt;❌&lt;/td&gt;
-&lt;/table&gt;
-&lt;br/&gt;
+所以这个 flag 继续挂，挂到哪天勾上了为止。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="2021">2021
+&lt;/h2>&lt;p>整点新的 flag:
+&lt;span style="text-align: center;display:block;">&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/about/2021todo.webp" width="170">&lt;/span>&lt;/p>
+&lt;table id="mytable">
+&lt;tr>
+&lt;th>愿望&lt;/th>
+&lt;th>完成情况&lt;/th>
+&lt;/tr>
+&lt;tr class="spec">
+&lt;td>博客写 12 篇文章&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr class="specalt">
+&lt;td class="alt">养一只小主子🐈&lt;/td>
+&lt;td class="alt">❌&lt;/td>
+&lt;/tr>
+&lt;tr class="spec">
+&lt;td>过 CET-6&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr class="specalt">
+&lt;td class="alt">拿到学位证&lt;/td>
+&lt;td class="alt">❌&lt;/td>
+&lt;/tr>
+&lt;tr class="spec">
+&lt;td>读完 6 本书（4 本 Java 相关）&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/tr>
+&lt;tr class="specalt">
+&lt;td class="alt">练好英语听力，能脱离字幕看电影&lt;/td>
+&lt;td class="alt">❌&lt;/td>
+&lt;/tr>
+&lt;tr class="spec">
+&lt;td>拥有一段&lt;font style="color:#EB7FAF">甜甜的恋爱&lt;/font>o(TヘTo)&lt;/td>
+&lt;td>❌&lt;/td>
+&lt;/table>
+&lt;br/>
 最后，祝大家在新的一年都能实现自己的愿望或目标。
-&lt;p&gt;2021，冲鸭！&lt;/p&gt;
-&lt;br/&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;p>2021，冲鸭！&lt;/p>
+&lt;br/></description></item></channel></rss>

@@ -1,52 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>DNS on Opoa</title>
-        <link>http://localhost:1313/tags/dns/</link>
-        <description>Recent content in DNS on Opoa</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>蜀ICP备20005474号-1</copyright>
-        <lastBuildDate>Thu, 09 Apr 2020 19:29:26 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/dns/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>谷歌Page Speed分析404的处理</title>
-        <link>http://localhost:1313/p/%E8%B0%B7%E6%AD%8Cpage-speed%E5%88%86%E6%9E%90404%E7%9A%84%E5%A4%84%E7%90%86/</link>
-        <pubDate>Thu, 09 Apr 2020 19:29:26 +0800</pubDate>
-        
-        <guid>http://localhost:1313/p/%E8%B0%B7%E6%AD%8Cpage-speed%E5%88%86%E6%9E%90404%E7%9A%84%E5%A4%84%E7%90%86/</guid>
-        <description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-shattered-glass-beautiful.webp" alt="Featured image of post 谷歌Page Speed分析404的处理" /&gt;&lt;p&gt;本来打算给网站做个体检的，结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/googlespeed404.min.gif&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;网站是可以访问的，却报了 404 的错误。&lt;/p&gt;
-&lt;p&gt;博客是部署在 Coding 和 Github 上的，国内走 Coding，国外走 Github，我用的是 &lt;a class=&#34;link&#34; href=&#34;https://www.googlespeed.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;谷歌测速中文版&lt;/a&gt;，可能是指向了 Github。&lt;/p&gt;
-&lt;p&gt;打开阿里云的域名解析设置，直接停掉 Github 的两条解析记录。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/cdnclose.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;等待 10 分钟左右 DNS 服务器刷新。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oopooa/cdn/post/30.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;🤔emmm&amp;hellip;&lt;/p&gt;
-&lt;p&gt;没救了，等死吧，告辞&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DNS on Opoa</title><link>https://example.com/tags/dns/</link><description>Recent content in DNS on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Thu, 09 Apr 2020 19:29:26 +0800</lastBuildDate><atom:link href="https://example.com/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>谷歌Page Speed分析404的处理</title><link>https://example.com/p/%E8%B0%B7%E6%AD%8Cpage-speed%E5%88%86%E6%9E%90404%E7%9A%84%E5%A4%84%E7%90%86/</link><pubDate>Thu, 09 Apr 2020 19:29:26 +0800</pubDate><guid>https://example.com/p/%E8%B0%B7%E6%AD%8Cpage-speed%E5%88%86%E6%9E%90404%E7%9A%84%E5%A4%84%E7%90%86/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-shattered-glass-beautiful.webp" alt="Featured image of post 谷歌Page Speed分析404的处理" />&lt;p>本来打算给网站做个体检的，结果&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/googlespeed404.min.gif"
+loading="lazy"
+>&lt;/p>
+&lt;p>网站是可以访问的，却报了 404 的错误。&lt;/p>
+&lt;p>博客是部署在 Coding 和 Github 上的，国内走 Coding，国外走 Github，我用的是 &lt;a class="link" href="https://www.googlespeed.cn/" target="_blank" rel="noopener"
+>谷歌测速中文版&lt;/a>，可能是指向了 Github。&lt;/p>
+&lt;p>打开阿里云的域名解析设置，直接停掉 Github 的两条解析记录。&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/cdnclose.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>等待 10 分钟左右 DNS 服务器刷新。&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/30.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>🤔emmm&amp;hellip;&lt;/p>
+&lt;p>没救了，等死吧，告辞&lt;/p></description></item></channel></rss>
