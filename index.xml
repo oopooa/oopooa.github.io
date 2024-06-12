@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Opoa</title><link>https://example.com/</link><description>Recent content on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Fri, 02 Jul 2021 17:03:46 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml"/><item><title>[ 设计模式 ] 模板方法</title><link>https://example.com/posts/design-pattern-template-method/</link><pubDate>Fri, 02 Jul 2021 17:03:46 +0800</pubDate><guid>https://example.com/posts/design-pattern-template-method/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/whitegirl.webp" alt="Featured image of post [ 设计模式 ] 模板方法" />&lt;h2 id="定义">定义
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Opoa</title><link>https://example.com/</link><description>Recent content on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Fri, 02 Jul 2021 17:03:46 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml"/><item><title>[ 设计模式 ] 模板方法</title><link>https://example.com/post/design-pattern-template-method/</link><pubDate>Fri, 02 Jul 2021 17:03:46 +0800</pubDate><guid>https://example.com/post/design-pattern-template-method/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/whitegirl.webp" alt="Featured image of post [ 设计模式 ] 模板方法" />&lt;h2 id="定义">定义
 &lt;/h2>&lt;p>模板方法模式在一个方法中定义一个算法骨架，并将某些步骤推迟到子类中实现。模板方法模式可以让子类在不改变算法整体结构的情况下，重新定义算法中的某些步骤。&lt;/p>
 &lt;p>简单来说模板方法定义了一套流程，流程中有哪些操作，操作的具体顺序是什么。而操作的具体实现则交给其子类去实现，模板方法不需要关心。&lt;/p>
 &lt;h2 id="示例">示例
@@ -300,7 +300,7 @@ loading="lazy"
 &lt;/h2>&lt;p>&lt;a class="link" href="https://aobing.blog.csdn.net/article/details/117935005" target="_blank" rel="noopener"
 >模板方法 （宝，我输液了，输的想你的夜）&lt;/a> &lt;br>
 &lt;a class="link" href="https://www.liaoxuefeng.com/wiki/1252599548343744/1281319636041762" target="_blank" rel="noopener"
->模板方法 - 廖雪峰的官方网站&lt;/a>&lt;/p></description></item><item><title>[ Java ] 双链表</title><link>https://example.com/posts/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://example.com/posts/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
+>模板方法 - 廖雪峰的官方网站&lt;/a>&lt;/p></description></item><item><title>[ Java ] 双链表</title><link>https://example.com/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://example.com/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
 &lt;/h2>&lt;p>双链表也叫双向链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。&lt;/p>
 &lt;h2 id="单链表与双链表的区别">单链表与双链表的区别
 &lt;/h2>&lt;h3 id="单链表">单链表
@@ -1080,7 +1080,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="参考资料">参考资料
-&lt;/h2>&lt;p>Java8 LinkedList 源码&lt;/p></description></item><item><title>[ 设计模式 ] 单例模式实现</title><link>https://example.com/posts/design-pattern-singleton-pattern/</link><pubDate>Sat, 13 Mar 2021 23:11:16 +0800</pubDate><guid>https://example.com/posts/design-pattern-singleton-pattern/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp" alt="Featured image of post [ 设计模式 ] 单例模式实现" />&lt;h2 id="什么是单例模式">什么是单例模式
+&lt;/h2>&lt;p>Java8 LinkedList 源码&lt;/p></description></item><item><title>[ 设计模式 ] 单例模式实现</title><link>https://example.com/post/design-pattern-singleton-pattern/</link><pubDate>Sat, 13 Mar 2021 23:11:16 +0800</pubDate><guid>https://example.com/post/design-pattern-singleton-pattern/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp" alt="Featured image of post [ 设计模式 ] 单例模式实现" />&lt;h2 id="什么是单例模式">什么是单例模式
 &lt;/h2>&lt;p>单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点。&lt;/p>
 &lt;h2 id="优点">优点
 &lt;/h2>&lt;ul>
@@ -1385,7 +1385,7 @@ loading="lazy"
 &lt;/h2>&lt;p>&lt;strong>枚举类 &amp;gt; 双重检查锁 &amp;gt; 饿汉式&lt;/strong>&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://yichun.blog.csdn.net/article/details/103249751" target="_blank" rel="noopener"
->【设计模式】单例模式的八种写法分析&lt;/a>&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://example.com/posts/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://example.com/posts/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
+>【设计模式】单例模式的八种写法分析&lt;/a>&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://example.com/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://example.com/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
 &lt;/h2>&lt;p>单链表是链表的其中一种基本结构。它是构成单链表的基本结点结构。在结点中数据域用来存储数据元素，指针域用于指向下一个具有相同结构的结点。
 因为只有一个指针结点，称为单链表。&lt;/p>
 &lt;h2 id="顺序表与单链表的区别">顺序表与单链表的区别
@@ -2235,7 +2235,7 @@ loading="lazy"
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=13" target="_blank" rel="noopener"
 >2020 王道考研 数据结构【单链表的查找】&lt;/a> &lt;br>
 &lt;a class="link" href="https://blog.csdn.net/weixin_36605200/article/details/88804537" target="_blank" rel="noopener"
->Java基础&amp;ndash;单链表的实现&lt;/a>&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://example.com/posts/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://example.com/posts/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
+>Java基础&amp;ndash;单链表的实现&lt;/a>&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://example.com/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://example.com/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
 &lt;/h2>&lt;h3 id="线性表">线性表
 &lt;/h3>&lt;p>线性表是具有&lt;font color=red>相同&lt;/font>数据类型的 n (n ≥ 0) 个&lt;font color=purple>数据元素&lt;/font>的有限序列&lt;/p>
 &lt;h3 id="顺序表">顺序表
@@ -2551,7 +2551,7 @@ loading="lazy"
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=9" target="_blank" rel="noopener"
 >2020 王道考研 数据结构【顺序表的插入删除】&lt;/a> &lt;br>
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=10" target="_blank" rel="noopener"
->2020 王道考研 数据结构【顺序表的查找】&lt;/a>&lt;/p></description></item><item><title>[ LeetCode题解 ] 001-两数之和</title><link>https://example.com/posts/leetcode-two-sum/</link><pubDate>Mon, 08 Feb 2021 17:04:36 +0800</pubDate><guid>https://example.com/posts/leetcode-two-sum/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/screen-code.webp" alt="Featured image of post [ LeetCode题解 ] 001-两数之和" />&lt;h2 id="题目">题目
+>2020 王道考研 数据结构【顺序表的查找】&lt;/a>&lt;/p></description></item><item><title>[ LeetCode题解 ] 001-两数之和</title><link>https://example.com/post/leetcode-two-sum/</link><pubDate>Mon, 08 Feb 2021 17:04:36 +0800</pubDate><guid>https://example.com/post/leetcode-two-sum/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/screen-code.webp" alt="Featured image of post [ LeetCode题解 ] 001-两数之和" />&lt;h2 id="题目">题目
 &lt;/h2>&lt;h3 id="描述">描述
 &lt;/h3>&lt;p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 &lt;strong>和为目标值&lt;/strong> 的那 &lt;strong>两个&lt;/strong> 整数，并返回它们的数组下标。&lt;/p>
 &lt;p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。&lt;/p>
@@ -2638,7 +2638,7 @@ loading="lazy"
 &lt;/div>
 &lt;/div>&lt;p>利用哈希表仅一层 for 循环就可得出答案。&lt;/p>
 &lt;p>先创建一个 &lt;code>Integer&lt;/code> 类型同时作为 key 和 value 的 &lt;code>HashMap&lt;/code>, key 是当前元素的值，value 是当前元素在数组中的下标。比如 target = 18, int[] nums = [1, 5, 7, 11],循环三次的 map 结果是 {1 = 0, 5 = 1, 7 = 2} ,判断当前 map 是否存在正确值之一的 key 存在，不存在则添加到 map 中，存在则找到答案数组，直接返回。&lt;/p>
-&lt;p>上面的例子答案是 [2, 3],循环遍历到 7 的时候，18 - 7 = 11,此时 map 中并没有 11 作为 key 存在，存入一个元素 key = 7, value = 2 到 map 中,遍历到 11 的时候， 18 - 11 = 7,由于此前存入过 7 为 key 的键值对，可得 11 和 7 为正确答案，在返回他们对应下标的数组即可。&lt;/p></description></item><item><title>记 Vue 接入百度地图</title><link>https://example.com/posts/how-to-integrate-baidu-maps-with-vue/</link><pubDate>Mon, 01 Feb 2021 13:56:49 +0800</pubDate><guid>https://example.com/posts/how-to-integrate-baidu-maps-with-vue/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/city-draw.webp" alt="Featured image of post 记 Vue 接入百度地图" />&lt;h2 id="搭建环境">搭建环境
+&lt;p>上面的例子答案是 [2, 3],循环遍历到 7 的时候，18 - 7 = 11,此时 map 中并没有 11 作为 key 存在，存入一个元素 key = 7, value = 2 到 map 中,遍历到 11 的时候， 18 - 11 = 7,由于此前存入过 7 为 key 的键值对，可得 11 和 7 为正确答案，在返回他们对应下标的数组即可。&lt;/p></description></item><item><title>记 Vue 接入百度地图</title><link>https://example.com/post/how-to-integrate-baidu-maps-with-vue/</link><pubDate>Mon, 01 Feb 2021 13:56:49 +0800</pubDate><guid>https://example.com/post/how-to-integrate-baidu-maps-with-vue/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/city-draw.webp" alt="Featured image of post 记 Vue 接入百度地图" />&lt;h2 id="搭建环境">搭建环境
 &lt;/h2>&lt;ul>
 &lt;li>Vue 2.9.6&lt;/li>
 &lt;li>Element-UI 2.13.2&lt;/li>
@@ -2836,7 +2836,7 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/liub37/article/details/83750164" target="_blank" rel="noopener"
->记录 Vue 异步加载百度地图&lt;/a>&lt;/p></description></item><item><title>算法的时间复杂度</title><link>https://example.com/posts/how-long-an-algorithm-takes-to-run/</link><pubDate>Sun, 31 Jan 2021 23:32:56 +0800</pubDate><guid>https://example.com/posts/how-long-an-algorithm-takes-to-run/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/cup-rem.webp" alt="Featured image of post 算法的时间复杂度" />&lt;h2 id="概念">概念
+>记录 Vue 异步加载百度地图&lt;/a>&lt;/p></description></item><item><title>算法的时间复杂度</title><link>https://example.com/post/how-long-an-algorithm-takes-to-run/</link><pubDate>Sun, 31 Jan 2021 23:32:56 +0800</pubDate><guid>https://example.com/post/how-long-an-algorithm-takes-to-run/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/cup-rem.webp" alt="Featured image of post 算法的时间复杂度" />&lt;h2 id="概念">概念
 &lt;/h2>&lt;p>通过&lt;font color=#FF0000>事前预估&lt;/font>算法&lt;font color=#FF0000>时间开销T(n)&lt;/font>与&lt;font color=#FF0000>问题规模n&lt;/font>的关系(T 表示 time)函数，来描述该算法的运行时间。&lt;/p>
 &lt;h2 id="示例1">示例1
 &lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
@@ -3059,7 +3059,7 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=5" target="_blank" rel="noopener"
->2020 王道考研 数据结构【算法的时间复杂度】&lt;/a>&lt;/p></description></item><item><title>献给墨茶</title><link>https://example.com/posts/dedicate-to-mocha-official/</link><pubDate>Fri, 22 Jan 2021 21:20:10 +0800</pubDate><guid>https://example.com/posts/dedicate-to-mocha-official/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha9.webp" alt="Featured image of post 献给墨茶" />&lt;p>&lt;font color=red size=4>&lt;strong>有些人仅仅是活着，就已经拼尽了全力。&lt;/strong>&lt;/font>&lt;/p>
+>2020 王道考研 数据结构【算法的时间复杂度】&lt;/a>&lt;/p></description></item><item><title>献给墨茶</title><link>https://example.com/post/dedicate-to-mocha-official/</link><pubDate>Fri, 22 Jan 2021 21:20:10 +0800</pubDate><guid>https://example.com/post/dedicate-to-mocha-official/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha9.webp" alt="Featured image of post 献给墨茶" />&lt;p>&lt;font color=red size=4>&lt;strong>有些人仅仅是活着，就已经拼尽了全力。&lt;/strong>&lt;/font>&lt;/p>
 &lt;p>直到今天，我才真真切切理解了这句话。&lt;/p>
 &lt;p>命运，数次无情地摧残着这个热爱生活又努力的普通人，乃至最后埋葬。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mocha1.webp"
@@ -3117,7 +3117,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomocha.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>晚安🌙，墨茶。&lt;/p></description></item><item><title>请永远不要寄希望于从大众平台上找到学习之路</title><link>https://example.com/posts/dont-count-on-mainstream-platforms-to-show-you-the-way-to-learn/</link><pubDate>Wed, 20 Jan 2021 22:37:52 +0800</pubDate><guid>https://example.com/posts/dont-count-on-mainstream-platforms-to-show-you-the-way-to-learn/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/pc-gaming-keyboard-monitor.webp" alt="Featured image of post 请永远不要寄希望于从大众平台上找到学习之路" />&lt;p>转自https://zhuanlan.zhihu.com/p/68556316&lt;/p>
+&lt;p>晚安🌙，墨茶。&lt;/p></description></item><item><title>请永远不要寄希望于从大众平台上找到学习之路</title><link>https://example.com/post/dont-count-on-mainstream-platforms-to-show-you-the-way-to-learn/</link><pubDate>Wed, 20 Jan 2021 22:37:52 +0800</pubDate><guid>https://example.com/post/dont-count-on-mainstream-platforms-to-show-you-the-way-to-learn/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/pc-gaming-keyboard-monitor.webp" alt="Featured image of post 请永远不要寄希望于从大众平台上找到学习之路" />&lt;p>转自https://zhuanlan.zhihu.com/p/68556316&lt;/p>
 &lt;h2 id="前言">前言
 &lt;/h2>&lt;p>这是我很久前写的一篇文章，当时是一时有感而发就写了出来。过去了这么多年后，我依然觉得这篇文章写的适用于现在的很多年轻人。所以我决定再把它翻出来，写在这里。下文中提到的“几天前”等时间词汇都是距今大概十来年的事情了。&lt;/p>
 &lt;p>请注意，虽然我将标题写为“不要从大众平台找到学习之路”，但是不代表我反对关注和浏览大众平台的文字。&lt;/p>
@@ -3184,7 +3184,7 @@ loading="lazy"
 &lt;h3 id="补充一">补充一
 &lt;/h3>&lt;p>我题目写的是不要试图从大众平台找到学习之路，注意是“学习之路”，也就是说我的观点是不能希望依靠大众平台学有所成，理由我上面已经说了。但是这不代表你绝对不能从大众平台去搜索“经验之谈”。&lt;/p>
 &lt;p>然而会学习的人和不会学习的人的其中一个区别就是，会学习的人有自己的判断或者说追求客观的判断，而不会盲从。不会学习的人很容易受到大众平台上各种言语的“蛊惑”，轻易的被别人带跑。会学习的人在看过一个回答或一个文章后，会想办法理解来龙去脉，至少应该可以看出里面论述的错误或片面或模糊的地方，会客观性的评估内容的可参考性，会通过更客观的资料来分析和认证自己认为“可能错误”的地方，从而将这部分只是真正化为己有，而不是单纯的被别人带着走。不会学习的人到死都只会发出两种感叹：“竟然不工作，求大神救救孩子！”或者“竟然能工作了，好神奇！”。&lt;/p>
-&lt;p>大众平台上有没有学习之路？我认为没有，因为它不符合学习所需要的各种条件因素。大众平台上有没有有参考性的文字？我认为有，只是你要有足够的知识水平和端正的学习态度才能较游刃有余的在正式学习之余穿梭于大众平台之中。否则我认为就会像我正文描述的那样，陷入泥沼，走上另一条远离大路的道路。&lt;/p></description></item><item><title>2020 年终总结</title><link>https://example.com/posts/2020-year-end-summary/</link><pubDate>Thu, 31 Dec 2020 17:59:57 +0800</pubDate><guid>https://example.com/posts/2020-year-end-summary/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/colorful-mask-girl.webp" alt="Featured image of post 2020 年终总结" />&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/css/wishlist.css" />
+&lt;p>大众平台上有没有学习之路？我认为没有，因为它不符合学习所需要的各种条件因素。大众平台上有没有有参考性的文字？我认为有，只是你要有足够的知识水平和端正的学习态度才能较游刃有余的在正式学习之余穿梭于大众平台之中。否则我认为就会像我正文描述的那样，陷入泥沼，走上另一条远离大路的道路。&lt;/p></description></item><item><title>2020 年终总结</title><link>https://example.com/post/2020-year-end-summary/</link><pubDate>Thu, 31 Dec 2020 17:59:57 +0800</pubDate><guid>https://example.com/post/2020-year-end-summary/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/colorful-mask-girl.webp" alt="Featured image of post 2020 年终总结" />&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/css/wishlist.css" />
 &lt;h2 id="前言">前言
 &lt;/h2>&lt;p>2020，转眼即将逝去。回顾这一年，我们见证了太多，经历了太多。新冠疫情、战争、巨星陨落…
 好在最黑暗的时候已然过去，一切都在慢慢变好。希望如此。&lt;/p>
@@ -3289,7 +3289,7 @@ loading="lazy"
 &lt;br/>
 最后，祝大家在新的一年都能实现自己的愿望或目标。
 &lt;p>2021，冲鸭！&lt;/p>
-&lt;br/></description></item><item><title>初识数仓分层</title><link>https://example.com/posts/getting-to-know-data-warehouse-layering/</link><pubDate>Thu, 10 Dec 2020 14:05:51 +0800</pubDate><guid>https://example.com/posts/getting-to-know-data-warehouse-layering/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@master/cover/yellow-leaves-orange-hair.webp" alt="Featured image of post 初识数仓分层" />&lt;h2 id="前言">前言
+&lt;br/></description></item><item><title>初识数仓分层</title><link>https://example.com/post/getting-to-know-data-warehouse-layering/</link><pubDate>Thu, 10 Dec 2020 14:05:51 +0800</pubDate><guid>https://example.com/post/getting-to-know-data-warehouse-layering/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@master/cover/yellow-leaves-orange-hair.webp" alt="Featured image of post 初识数仓分层" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>最近在给公司的大数据项目写操作手册，又不得不涉及到数仓分层的一些专有名词和概念。这次专门整理学习一下，加深理解记忆。&lt;/p>
 &lt;h2 id="为什么要分层">为什么要分层
 &lt;/h2>&lt;ul>
@@ -3335,7 +3335,7 @@ ODS 层存放业务系统获取的最原始的数据，是其他上层数据的�
 &lt;a class="link" href="https://blog.csdn.net/BeiisBei/article/details/105723188#_19" target="_blank" rel="noopener"
 >数据仓库系列（三）数仓分层的意义价值及如何设计数据分层&lt;/a> &lt;br>
 &lt;a class="link" href="https://blog.csdn.net/qq_46548855/article/details/107596208" target="_blank" rel="noopener"
->电商数仓-(数仓分层概念+数仓理论)&lt;/a>&lt;/p></description></item><item><title>新电脑如何验机</title><link>https://example.com/posts/how-to-inspect-a-new-computer/</link><pubDate>Sun, 05 Jul 2020 22:40:16 +0800</pubDate><guid>https://example.com/posts/how-to-inspect-a-new-computer/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@latest/cover/wink-cherry-blossom-cute-smiling.webp" alt="Featured image of post 新电脑如何验机" />&lt;font style="color:red">
+>电商数仓-(数仓分层概念+数仓理论)&lt;/a>&lt;/p></description></item><item><title>新电脑如何验机</title><link>https://example.com/post/how-to-inspect-a-new-computer/</link><pubDate>Sun, 05 Jul 2020 22:40:16 +0800</pubDate><guid>https://example.com/post/how-to-inspect-a-new-computer/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@latest/cover/wink-cherry-blossom-cute-smiling.webp" alt="Featured image of post 新电脑如何验机" />&lt;font style="color:red">
 &lt;strong>注意：初始化设置的时候先不要联网，否则系统会自动激活，就不能七天无理由退换货了&lt;/strong>
 &lt;/font>
 &lt;h2 id="准备工作">准备工作
@@ -3361,7 +3361,7 @@ ODS 层存放业务系统获取的最原始的数据，是其他上层数据的�
 &lt;p>（3）其他硬件：CPU，显卡等的测试可以根据自己的喜好来，比如单烤，双烤之类的。&lt;/p>
 &lt;h2 id="结语">结语
 &lt;/h2>&lt;p>以上的检测都没什么问题了的话，那么恭喜，你的新电脑很健康，可以开始装软件啦。&lt;/p>
-&lt;p>Enjoy yourself!&lt;/p></description></item><item><title>Hexo 使用 SweetAlert 美化弹窗</title><link>https://example.com/posts/add-sweetalert-in-hexo/</link><pubDate>Mon, 27 Apr 2020 12:55:04 +0800</pubDate><guid>https://example.com/posts/add-sweetalert-in-hexo/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp" alt="Featured image of post Hexo 使用 SweetAlert 美化弹窗" />&lt;h2 id="前言">前言
+&lt;p>Enjoy yourself!&lt;/p></description></item><item><title>Hexo 使用 SweetAlert 美化弹窗</title><link>https://example.com/post/add-sweetalert-in-hexo/</link><pubDate>Mon, 27 Apr 2020 12:55:04 +0800</pubDate><guid>https://example.com/post/add-sweetalert-in-hexo/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp" alt="Featured image of post Hexo 使用 SweetAlert 美化弹窗" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;blockquote>
 &lt;p>私密文章参考: &lt;a class="link" href="https://blog.csdn.net/cungudafa/article/details/104346521" target="_blank" rel="noopener"
 >Hexo（sakura）设置文章置顶+私密文章&lt;/a>&lt;/p>
@@ -3474,7 +3474,7 @@ loading="lazy"
 &lt;/div>&lt;p>&lt;font style="color:red">&lt;b>注意：由于修改了依赖库中的代码，一旦修改或更新依赖都会覆盖掉我们的修改，需要重新修改。&lt;/b>&lt;/font>&lt;/p>
 &lt;h2 id="参考文章">参考文章
 &lt;/h2>&lt;p>&lt;a class="link" href="http://yearito.cn/posts/hexo-advanced-settings.html" target="_blank" rel="noopener"
->Hexo 搭建个人博客系列：进阶设置篇&lt;/a>&lt;/p></description></item><item><title>Hexo(Sakura) 添加在线聊天 Tidio</title><link>https://example.com/posts/add-tidio-in-hexo-sakura-theme/</link><pubDate>Sun, 26 Apr 2020 20:30:45 +0800</pubDate><guid>https://example.com/posts/add-tidio-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp" alt="Featured image of post Hexo(Sakura) 添加在线聊天 Tidio" />&lt;h2 id="前言">前言
+>Hexo 搭建个人博客系列：进阶设置篇&lt;/a>&lt;/p></description></item><item><title>Hexo(Sakura) 添加在线聊天 Tidio</title><link>https://example.com/post/add-tidio-in-hexo-sakura-theme/</link><pubDate>Sun, 26 Apr 2020 20:30:45 +0800</pubDate><guid>https://example.com/post/add-tidio-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp" alt="Featured image of post Hexo(Sakura) 添加在线聊天 Tidio" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>一直想给博客装款在线聊天软件，综合对比下来后，选择了 &lt;a class="link" href="https://www.tidiochat.com" target="_blank" rel="noopener"
 >Tidio&lt;/a>，其界面优雅简洁，支持多渠道回复，网页、Windows、安卓、IOS，关键是免费功能对普通用户完全够用，所以理论上来说是完全免费的！(白嫖使我快乐)&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio.webp"
@@ -3536,7 +3536,7 @@ loading="lazy"
 &lt;/div>
 &lt;/div>&lt;h2 id="参考文章">参考文章
 &lt;/h2>&lt;p>&lt;a class="link" href="http://yearito.cn/posts/hexo-advanced-settings.html" target="_blank" rel="noopener"
->Hexo 搭建个人博客系列：进阶设置篇&lt;/a>&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件播放异常</title><link>https://example.com/posts/music-plugin-playback-error-in-hexo-sakura-theme/</link><pubDate>Sun, 19 Apr 2020 15:08:06 +0800</pubDate><guid>https://example.com/posts/music-plugin-playback-error-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" alt="Featured image of post Hexo(Sakura) 音乐插件播放异常" />&lt;h2 id="前言">前言
+>Hexo 搭建个人博客系列：进阶设置篇&lt;/a>&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件播放异常</title><link>https://example.com/post/music-plugin-playback-error-in-hexo-sakura-theme/</link><pubDate>Sun, 19 Apr 2020 15:08:06 +0800</pubDate><guid>https://example.com/post/music-plugin-playback-error-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" alt="Featured image of post Hexo(Sakura) 音乐插件播放异常" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>重做博客时新发现的问题，loop按钮不显示，且循环播放功能失效。回看才发现，其实一直都存在的问题，处理了站内播放bug之后就忽略音乐插件了。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.min.gif"
 loading="lazy"
@@ -3563,7 +3563,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop4.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>嗯&amp;hellip;目前双方情绪都很稳定。&lt;/p></description></item><item><title>谷歌Page Speed分析404的处理</title><link>https://example.com/posts/fix-the-404-error-in-google-page-speed-analysis/</link><pubDate>Thu, 09 Apr 2020 19:29:26 +0800</pubDate><guid>https://example.com/posts/fix-the-404-error-in-google-page-speed-analysis/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-shattered-glass-beautiful.webp" alt="Featured image of post 谷歌Page Speed分析404的处理" />&lt;p>本来打算给网站做个体检的，结果&lt;/p>
+&lt;p>嗯&amp;hellip;目前双方情绪都很稳定。&lt;/p></description></item><item><title>谷歌Page Speed分析404的处理</title><link>https://example.com/post/fix-the-404-error-in-google-page-speed-analysis/</link><pubDate>Thu, 09 Apr 2020 19:29:26 +0800</pubDate><guid>https://example.com/post/fix-the-404-error-in-google-page-speed-analysis/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-shattered-glass-beautiful.webp" alt="Featured image of post 谷歌Page Speed分析404的处理" />&lt;p>本来打算给网站做个体检的，结果&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/googlespeed404.min.gif"
 loading="lazy"
 >&lt;/p>
@@ -3579,7 +3579,7 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;p>🤔emmm&amp;hellip;&lt;/p>
-&lt;p>没救了，等死吧，告辞&lt;/p></description></item><item><title>Hexo 博客迁移</title><link>https://example.com/posts/migrate-hexo-blog/</link><pubDate>Mon, 06 Apr 2020 14:22:35 +0800</pubDate><guid>https://example.com/posts/migrate-hexo-blog/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp" alt="Featured image of post Hexo 博客迁移" />&lt;h2 id="前言">前言
+&lt;p>没救了，等死吧，告辞&lt;/p></description></item><item><title>Hexo 博客迁移</title><link>https://example.com/post/migrate-hexo-blog/</link><pubDate>Mon, 06 Apr 2020 14:22:35 +0800</pubDate><guid>https://example.com/post/migrate-hexo-blog/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp" alt="Featured image of post Hexo 博客迁移" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>折腾了两天，软件和环境装的差不多了，接下来把我的Hexo博客转移过来，也是第一次弄，记录一下。&lt;/p>
 &lt;h2 id="git">Git
 &lt;/h2>&lt;p>Git之前已经装过了，但它对Hexo来说太重要，这里还是提一下，要先安装Git。&lt;/p>
@@ -3747,7 +3747,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo2.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>到这里就迁移成功啦&lt;/p></description></item><item><title>个人开发环境安装</title><link>https://example.com/posts/personal-development-environment-installation/</link><pubDate>Sun, 05 Apr 2020 14:36:45 +0800</pubDate><guid>https://example.com/posts/personal-development-environment-installation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/close-up-heterochromia-brown-hair-scarf.webp" alt="Featured image of post 个人开发环境安装" />&lt;h2 id="前言">前言
+&lt;p>到这里就迁移成功啦&lt;/p></description></item><item><title>个人开发环境安装</title><link>https://example.com/post/personal-development-environment-installation/</link><pubDate>Sun, 05 Apr 2020 14:36:45 +0800</pubDate><guid>https://example.com/post/personal-development-environment-installation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/close-up-heterochromia-brown-hair-scarf.webp" alt="Featured image of post 个人开发环境安装" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>2月份的时候电脑出了些问题，开不了机，但因为在特殊时期，前几天才有机会修好。结果太久没开机，一直卡在修复界面，得，直接重装吧。每次重装又需要的一堆环境配置，实在繁琐，就想在这整理一下，再用的时候也好参考。&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>以下安装都是在Win10系统进行的&lt;/strong>&lt;/p>
@@ -4237,7 +4237,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/git.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>能看到这两个选项，安装成功。&lt;/p></description></item><item><title>Hexo(Sakura) 缩略图显示异常</title><link>https://example.com/posts/thumbnail-display-issue-in-hexo-sakura/</link><pubDate>Thu, 26 Mar 2020 21:36:45 +0800</pubDate><guid>https://example.com/posts/thumbnail-display-issue-in-hexo-sakura/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp" alt="Featured image of post Hexo(Sakura) 缩略图显示异常" />&lt;h2 id="前言">前言
+&lt;p>能看到这两个选项，安装成功。&lt;/p></description></item><item><title>Hexo(Sakura) 缩略图显示异常</title><link>https://example.com/post/thumbnail-display-issue-in-hexo-sakura/</link><pubDate>Thu, 26 Mar 2020 21:36:45 +0800</pubDate><guid>https://example.com/post/thumbnail-display-issue-in-hexo-sakura/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp" alt="Featured image of post Hexo(Sakura) 缩略图显示异常" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp"
 loading="lazy"
 alt="异常缩略图"
@@ -4302,7 +4302,7 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/caidingnu/article/details/92232872" target="_blank" rel="noopener"
->用CSS解决前端图片变形问题&lt;/a>&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件问题</title><link>https://example.com/posts/music-plugin-issue-of-hexo-sakura-theme/</link><pubDate>Mon, 23 Mar 2020 21:22:35 +0800</pubDate><guid>https://example.com/posts/music-plugin-issue-of-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp" alt="Featured image of post Hexo(Sakura) 音乐插件问题" />&lt;h2 id="前言">前言
+>用CSS解决前端图片变形问题&lt;/a>&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件问题</title><link>https://example.com/post/music-plugin-issue-of-hexo-sakura-theme/</link><pubDate>Mon, 23 Mar 2020 21:22:35 +0800</pubDate><guid>https://example.com/post/music-plugin-issue-of-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp" alt="Featured image of post Hexo(Sakura) 音乐插件问题" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>偶然发现的一个问题，全局的aplayer插件在站内跳转的时候会重新加载，让人感觉非常难受。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/aplayer.webp"
 loading="lazy"
@@ -4368,7 +4368,7 @@ alt="aplayer"
 &lt;/h2>&lt;p>在导入 js 和 jquery 插件的时候，一定要先导入 jquery 插件，防止浏览器无法解析 js 中需要用到的 jquery 语法。按照 html 的解析顺序，js 也应该是放在最后导入的。&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_43279637/article/details/82988662" target="_blank" rel="noopener"
->jquery导入方法及注意问题&lt;/a>&lt;/p></description></item><item><title>提问的智慧</title><link>https://example.com/posts/how-to-ask-question-the-smart-way/</link><pubDate>Tue, 17 Mar 2020 09:05:34 +0800</pubDate><guid>https://example.com/posts/how-to-ask-question-the-smart-way/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/timg.webp" alt="Featured image of post 提问的智慧" />&lt;p>转自: &lt;a class="link" href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way" target="_blank" rel="noopener"
+>jquery导入方法及注意问题&lt;/a>&lt;/p></description></item><item><title>提问的智慧</title><link>https://example.com/post/how-to-ask-question-the-smart-way/</link><pubDate>Tue, 17 Mar 2020 09:05:34 +0800</pubDate><guid>https://example.com/post/how-to-ask-question-the-smart-way/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/timg.webp" alt="Featured image of post 提问的智慧" />&lt;p>转自: &lt;a class="link" href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way" target="_blank" rel="noopener"
 >https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way&lt;/a>&lt;/p>
 &lt;h1 id="提问的智慧">提问的智慧
 &lt;/h1>&lt;p>&lt;a class="link" href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/pulls" target="_blank" rel="noopener"
@@ -4866,7 +4866,7 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>当你发布软件或补丁时，试着按&lt;a class="link" href="http://en.tldp.org/HOWTO/Software-Release-Practice-HOWTO/index.html" target="_blank" rel="noopener"
 >软件发布实践&lt;/a>操作。&lt;/p>
 &lt;h2 id="鸣谢">鸣谢
-&lt;/h2>&lt;p>Evelyn Mitchel 贡献了一些愚蠢问题例子并启发了编写&lt;code>如何更好地回答问题&lt;/code>这一节， Mikhail Ramendik 贡献了一些特别有价值的建议和改进。&lt;/p></description></item><item><title>i++与++i的区别</title><link>https://example.com/posts/the-difference-between-post-increment-and-pre-increment/</link><pubDate>Thu, 05 Mar 2020 17:54:56 +0800</pubDate><guid>https://example.com/posts/the-difference-between-post-increment-and-pre-increment/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/girl-scarf-winter.webp" alt="Featured image of post i++与++i的区别" />&lt;ul>
+&lt;/h2>&lt;p>Evelyn Mitchel 贡献了一些愚蠢问题例子并启发了编写&lt;code>如何更好地回答问题&lt;/code>这一节， Mikhail Ramendik 贡献了一些特别有价值的建议和改进。&lt;/p></description></item><item><title>i++与++i的区别</title><link>https://example.com/post/the-difference-between-post-increment-and-pre-increment/</link><pubDate>Thu, 05 Mar 2020 17:54:56 +0800</pubDate><guid>https://example.com/post/the-difference-between-post-increment-and-pre-increment/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/girl-scarf-winter.webp" alt="Featured image of post i++与++i的区别" />&lt;ul>
 &lt;li>&lt;code>i++&lt;/code> 表示的是先赋值，再自增&lt;/li>
 &lt;li>&lt;code>++i&lt;/code> 表示的是先自增，再赋值&lt;/li>
 &lt;/ul>
