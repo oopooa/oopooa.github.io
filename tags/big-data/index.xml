@@ -40,8 +40,35 @@ ODS 层存放业务系统获取的最原始的数据，是其他上层数据的�
 &lt;/ul>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/weixin_43674082/article/details/88028266" target="_blank" rel="noopener"
->数仓分层&lt;/a> &lt;br>
+>数仓分层
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://blog.csdn.net/BeiisBei/article/details/105723188#_19" target="_blank" rel="noopener"
->数据仓库系列（三）数仓分层的意义价值及如何设计数据分层&lt;/a> &lt;br>
+>数据仓库系列（三）数仓分层的意义价值及如何设计数据分层
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://blog.csdn.net/qq_46548855/article/details/107596208" target="_blank" rel="noopener"
->电商数仓-(数仓分层概念+数仓理论)&lt;/a>&lt;/p></description></item></channel></rss>
+>电商数仓-(数仓分层概念+数仓理论)
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item></channel></rss>

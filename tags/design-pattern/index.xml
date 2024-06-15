@@ -298,9 +298,27 @@ loading="lazy"
 &lt;/h2>&lt;p>模板方法的&lt;code>核心思想&lt;/code>是：&lt;code>父类定义骨架&lt;/code>，&lt;code>子类实现&lt;/code>某些&lt;code>细节&lt;/code>。&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://aobing.blog.csdn.net/article/details/117935005" target="_blank" rel="noopener"
->模板方法 （宝，我输液了，输的想你的夜）&lt;/a> &lt;br>
+>模板方法 （宝，我输液了，输的想你的夜）
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.liaoxuefeng.com/wiki/1252599548343744/1281319636041762" target="_blank" rel="noopener"
->模板方法 - 廖雪峰的官方网站&lt;/a>&lt;/p></description></item><item><title>[ 设计模式 ] 单例模式实现</title><link>https://example.com/post/design-pattern-singleton-pattern/</link><pubDate>Sat, 13 Mar 2021 23:11:16 +0800</pubDate><guid>https://example.com/post/design-pattern-singleton-pattern/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp" alt="Featured image of post [ 设计模式 ] 单例模式实现" />&lt;h2 id="什么是单例模式">什么是单例模式
+>模板方法 - 廖雪峰的官方网站
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>[ 设计模式 ] 单例模式实现</title><link>https://example.com/post/design-pattern-singleton-pattern/</link><pubDate>Sat, 13 Mar 2021 23:11:16 +0800</pubDate><guid>https://example.com/post/design-pattern-singleton-pattern/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp" alt="Featured image of post [ 设计模式 ] 单例模式实现" />&lt;h2 id="什么是单例模式">什么是单例模式
 &lt;/h2>&lt;p>单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点。&lt;/p>
 &lt;h2 id="优点">优点
 &lt;/h2>&lt;ul>
@@ -605,4 +623,13 @@ loading="lazy"
 &lt;/h2>&lt;p>&lt;strong>枚举类 &amp;gt; 双重检查锁 &amp;gt; 饿汉式&lt;/strong>&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://yichun.blog.csdn.net/article/details/103249751" target="_blank" rel="noopener"
->【设计模式】单例模式的八种写法分析&lt;/a>&lt;/p></description></item></channel></rss>
+>【设计模式】单例模式的八种写法分析
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item></channel></rss>

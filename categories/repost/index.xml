@@ -66,78 +66,228 @@
 &lt;/h3>&lt;p>我题目写的是不要试图从大众平台找到学习之路，注意是“学习之路”，也就是说我的观点是不能希望依靠大众平台学有所成，理由我上面已经说了。但是这不代表你绝对不能从大众平台去搜索“经验之谈”。&lt;/p>
 &lt;p>然而会学习的人和不会学习的人的其中一个区别就是，会学习的人有自己的判断或者说追求客观的判断，而不会盲从。不会学习的人很容易受到大众平台上各种言语的“蛊惑”，轻易的被别人带跑。会学习的人在看过一个回答或一个文章后，会想办法理解来龙去脉，至少应该可以看出里面论述的错误或片面或模糊的地方，会客观性的评估内容的可参考性，会通过更客观的资料来分析和认证自己认为“可能错误”的地方，从而将这部分只是真正化为己有，而不是单纯的被别人带着走。不会学习的人到死都只会发出两种感叹：“竟然不工作，求大神救救孩子！”或者“竟然能工作了，好神奇！”。&lt;/p>
 &lt;p>大众平台上有没有学习之路？我认为没有，因为它不符合学习所需要的各种条件因素。大众平台上有没有有参考性的文字？我认为有，只是你要有足够的知识水平和端正的学习态度才能较游刃有余的在正式学习之余穿梭于大众平台之中。否则我认为就会像我正文描述的那样，陷入泥沼，走上另一条远离大路的道路。&lt;/p></description></item><item><title>提问的智慧</title><link>https://example.com/post/how-to-ask-question-the-smart-way/</link><pubDate>Tue, 17 Mar 2020 09:05:34 +0800</pubDate><guid>https://example.com/post/how-to-ask-question-the-smart-way/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/timg.webp" alt="Featured image of post 提问的智慧" />&lt;p>转自: &lt;a class="link" href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way" target="_blank" rel="noopener"
->https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way&lt;/a>&lt;/p>
+>https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;h1 id="提问的智慧">提问的智慧
 &lt;/h1>&lt;p>&lt;a class="link" href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/pulls" target="_blank" rel="noopener"
 >&lt;img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square"
 loading="lazy"
 alt="PRs Welcome"
->&lt;/a>&lt;/p>
+>
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;strong>How To Ask Questions The Smart Way&lt;/strong>&lt;/p>
 &lt;p>Copyright © 2001,2006,2014 Eric S. Raymond, Rick Moen&lt;/p>
 &lt;p>本指南英文版版权为 Eric S. Raymond, Rick Moen 所有。&lt;/p>
 &lt;p>原文网址：&lt;a class="link" href="http://www.catb.org/~esr/faqs/smart-questions.html" target="_blank" rel="noopener"
->http://www.catb.org/~esr/faqs/smart-questions.html&lt;/a>&lt;/p>
+>http://www.catb.org/~esr/faqs/smart-questions.html
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>Copyleft 2001 by D.H.Grand(nOBODY/Ginux), 2010 by Gasolin, 2015 by Ryan Wu&lt;/p>
 &lt;p>本中文指南是基于原文 3.10 版以及 2010 年由 &lt;a class="link" href="https://github.com/gasolin" target="_blank" rel="noopener"
->Gasolin&lt;/a> 所翻译版本的最新翻译；&lt;/p>
+>Gasolin
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+所翻译版本的最新翻译；&lt;/p>
 &lt;p>协助指出翻译问题，&lt;strong>请&lt;a class="link" href="https://github.com/ryanhanwu/smartquestions/issues/new" target="_blank" rel="noopener"
->发 Issue&lt;/a>，或直接&lt;a class="link" href="https://github.com/ryanhanwu/smartquestions/compare/" target="_blank" rel="noopener"
->发 Pull Request&lt;/a> 给我。&lt;/strong>&lt;/p>
+>发 Issue
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+，或直接&lt;a class="link" href="https://github.com/ryanhanwu/smartquestions/compare/" target="_blank" rel="noopener"
+>发 Pull Request
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+给我。&lt;/strong>&lt;/p>
 &lt;p>本文另有&lt;a class="link" href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README.md" target="_blank" rel="noopener"
->繁體中文版&lt;/a>。&lt;/p>
+>繁體中文版
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+。&lt;/p>
 &lt;h2 id="原文版本历史httpsgithubcomryanhanwusmartquestionsblobmasterhistorymd">&lt;a class="link" href="https://github.com/ryanhanwu/smartquestions/blob/master/history.md" target="_blank" rel="noopener"
->原文版本历史&lt;/a>
+>原文版本历史
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
 &lt;/h2>&lt;h2 id="目录">目录
 &lt;/h2>&lt;ul>
-&lt;li>&lt;a class="link" href="#%e6%8f%90%e9%97%ae%e7%9a%84%e6%99%ba%e6%85%a7" >提问的智慧&lt;/a>
+&lt;li>&lt;a class="link" href="#%e6%8f%90%e9%97%ae%e7%9a%84%e6%99%ba%e6%85%a7" >提问的智慧
+&lt;/a>
 &lt;ul>
-&lt;li>&lt;a class="link" href="#%e5%8e%9f%e6%96%87%e7%89%88%e6%9c%ac%e5%8e%86%e5%8f%b2" >原文版本历史&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e7%9b%ae%e5%bd%95" >目录&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%a3%b0%e6%98%8e" >声明&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e7%ae%80%e4%bb%8b" >简介&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%9c%a8%e6%8f%90%e9%97%ae%e4%b9%8b%e5%89%8d" >在提问之前&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%bd%93%e4%bd%a0%e6%8f%90%e9%97%ae%e6%97%b6" >当你提问时&lt;/a>
+&lt;li>&lt;a class="link" href="#%e5%8e%9f%e6%96%87%e7%89%88%e6%9c%ac%e5%8e%86%e5%8f%b2" >原文版本历史
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e7%9b%ae%e5%bd%95" >目录
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%a3%b0%e6%98%8e" >声明
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e7%ae%80%e4%bb%8b" >简介
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%9c%a8%e6%8f%90%e9%97%ae%e4%b9%8b%e5%89%8d" >在提问之前
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%bd%93%e4%bd%a0%e6%8f%90%e9%97%ae%e6%97%b6" >当你提问时
+&lt;/a>
 &lt;ul>
-&lt;li>&lt;a class="link" href="#%e6%85%8e%e9%80%89%e6%8f%90%e9%97%ae%e7%9a%84%e8%ae%ba%e5%9d%9b" >慎选提问的论坛&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#stack-overflow" >Stack Overflow&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e7%bd%91%e7%ab%99%e5%92%8c-irc-%e8%ae%ba%e5%9d%9b" >网站和 IRC 论坛&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e4%bd%bf%e7%94%a8%e9%a1%b9%e7%9b%ae%e9%82%ae%e4%bb%b6%e5%88%97%e8%a1%a8" >第二步，使用项目邮件列表&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e4%bd%bf%e7%94%a8%e6%9c%89%e6%84%8f%e4%b9%89%e4%b8%94%e6%8f%8f%e8%bf%b0%e6%98%8e%e7%a1%ae%e7%9a%84%e6%a0%87%e9%a2%98" >使用有意义且描述明确的标题&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e4%bd%bf%e9%97%ae%e9%a2%98%e5%ae%b9%e6%98%93%e5%9b%9e%e5%a4%8d" >使问题容易回复&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e7%94%a8%e6%b8%85%e6%99%b0%e6%ad%a3%e7%a1%ae%e7%b2%be%e5%87%86%e5%b9%b6%e8%af%ad%e6%b3%95%e6%ad%a3%e7%a1%ae%e7%9a%84%e8%af%ad%e5%8f%a5" >用清晰、正确、精准并语法正确的语句&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e4%bd%bf%e7%94%a8%e6%98%93%e4%ba%8e%e8%af%bb%e5%8f%96%e4%b8%94%e6%a0%87%e5%87%86%e7%9a%84%e6%96%87%e4%bb%b6%e6%a0%bc%e5%bc%8f%e5%8f%91%e9%80%81%e9%97%ae%e9%a2%98" >使用易于读取且标准的文件格式发送问题&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e7%b2%be%e7%a1%ae%e5%9c%b0%e6%8f%8f%e8%bf%b0%e9%97%ae%e9%a2%98%e5%b9%b6%e8%a8%80%e4%b9%8b%e6%9c%89%e7%89%a9" >精确地描述问题并言之有物&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e8%af%9d%e4%b8%8d%e5%9c%a8%e5%a4%9a%e8%80%8c%e5%9c%a8%e7%b2%be" >话不在多而在精&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%88%ab%e5%8a%a8%e8%be%84%e5%a3%b0%e7%a7%b0%e6%89%be%e5%88%b0-bug" >别动辄声称找到 Bug&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e4%bd%8e%e5%a3%b0%e4%b8%8b%e6%b0%94%e4%b8%8d%e8%83%bd%e4%bb%a3%e6%9b%bf%e4%bd%a0%e7%9a%84%e5%8a%9f%e8%af%be" >低声下气不能代替你的功课&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e6%8f%8f%e8%bf%b0%e9%97%ae%e9%a2%98%e7%97%87%e7%8a%b6%e8%80%8c%e9%9d%9e%e4%bd%a0%e7%9a%84%e7%8c%9c%e6%b5%8b" >描述问题症状而非你的猜测&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e6%8c%89%e5%8f%91%e7%94%9f%e6%97%b6%e9%97%b4%e5%85%88%e5%90%8e%e5%88%97%e5%87%ba%e9%97%ae%e9%a2%98%e7%97%87%e7%8a%b6" >按发生时间先后列出问题症状&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e6%8f%8f%e8%bf%b0%e7%9b%ae%e6%a0%87%e8%80%8c%e4%b8%8d%e6%98%af%e8%bf%87%e7%a8%8b" >描述目标而不是过程&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%88%ab%e8%a6%81%e6%b1%82%e4%bd%bf%e7%94%a8%e7%a7%81%e4%ba%ba%e7%94%b5%e9%82%ae%e5%9b%9e%e5%a4%8d" >别要求使用私人电邮回复&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e6%b8%85%e6%a5%9a%e6%98%8e%e7%a1%ae%e7%9a%84%e8%a1%a8%e8%be%be%e4%bd%a0%e7%9a%84%e9%97%ae%e9%a2%98%e4%bb%a5%e5%8f%8a%e9%9c%80%e6%b1%82" >清楚明确的表达你的问题以及需求&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e8%af%a2%e9%97%ae%e6%9c%89%e5%85%b3%e4%bb%a3%e7%a0%81%e7%9a%84%e9%97%ae%e9%a2%98%e6%97%b6" >询问有关代码的问题时&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%88%ab%e6%8a%8a%e8%87%aa%e5%b7%b1%e5%ae%b6%e5%ba%ad%e4%bd%9c%e4%b8%9a%e7%9a%84%e9%97%ae%e9%a2%98%e8%b4%b4%e4%b8%8a%e6%9d%a5" >别把自己家庭作业的问题贴上来&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%8e%bb%e6%8e%89%e6%97%a0%e6%84%8f%e4%b9%89%e7%9a%84%e6%8f%90%e9%97%ae%e5%8f%a5" >去掉无意义的提问句&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%8d%b3%e4%bd%bf%e4%bd%a0%e5%be%88%e6%80%a5%e4%b9%9f%e4%b8%8d%e8%a6%81%e5%9c%a8%e6%a0%87%e9%a2%98%e5%86%99%e7%b4%a7%e6%80%a5" >即使你很急也不要在标题写&lt;code>紧急&lt;/code>&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e7%a4%bc%e5%a4%9a%e4%ba%ba%e4%b8%8d%e6%80%aa%e8%80%8c%e4%b8%94%e6%9c%89%e6%97%b6%e8%bf%98%e5%be%88%e6%9c%89%e5%b8%ae%e5%8a%a9" >礼多人不怪，而且有时还很有帮助&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e5%90%8e%e5%8a%a0%e4%b8%aa%e7%ae%80%e7%9f%ad%e7%9a%84%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e" >问题解决后，加个简短的补充说明&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#%e6%85%8e%e9%80%89%e6%8f%90%e9%97%ae%e7%9a%84%e8%ae%ba%e5%9d%9b" >慎选提问的论坛
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#stack-overflow" >Stack Overflow
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e7%bd%91%e7%ab%99%e5%92%8c-irc-%e8%ae%ba%e5%9d%9b" >网站和 IRC 论坛
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e4%bd%bf%e7%94%a8%e9%a1%b9%e7%9b%ae%e9%82%ae%e4%bb%b6%e5%88%97%e8%a1%a8" >第二步，使用项目邮件列表
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e4%bd%bf%e7%94%a8%e6%9c%89%e6%84%8f%e4%b9%89%e4%b8%94%e6%8f%8f%e8%bf%b0%e6%98%8e%e7%a1%ae%e7%9a%84%e6%a0%87%e9%a2%98" >使用有意义且描述明确的标题
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e4%bd%bf%e9%97%ae%e9%a2%98%e5%ae%b9%e6%98%93%e5%9b%9e%e5%a4%8d" >使问题容易回复
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e7%94%a8%e6%b8%85%e6%99%b0%e6%ad%a3%e7%a1%ae%e7%b2%be%e5%87%86%e5%b9%b6%e8%af%ad%e6%b3%95%e6%ad%a3%e7%a1%ae%e7%9a%84%e8%af%ad%e5%8f%a5" >用清晰、正确、精准并语法正确的语句
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e4%bd%bf%e7%94%a8%e6%98%93%e4%ba%8e%e8%af%bb%e5%8f%96%e4%b8%94%e6%a0%87%e5%87%86%e7%9a%84%e6%96%87%e4%bb%b6%e6%a0%bc%e5%bc%8f%e5%8f%91%e9%80%81%e9%97%ae%e9%a2%98" >使用易于读取且标准的文件格式发送问题
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e7%b2%be%e7%a1%ae%e5%9c%b0%e6%8f%8f%e8%bf%b0%e9%97%ae%e9%a2%98%e5%b9%b6%e8%a8%80%e4%b9%8b%e6%9c%89%e7%89%a9" >精确地描述问题并言之有物
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e8%af%9d%e4%b8%8d%e5%9c%a8%e5%a4%9a%e8%80%8c%e5%9c%a8%e7%b2%be" >话不在多而在精
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%88%ab%e5%8a%a8%e8%be%84%e5%a3%b0%e7%a7%b0%e6%89%be%e5%88%b0-bug" >别动辄声称找到 Bug
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e4%bd%8e%e5%a3%b0%e4%b8%8b%e6%b0%94%e4%b8%8d%e8%83%bd%e4%bb%a3%e6%9b%bf%e4%bd%a0%e7%9a%84%e5%8a%9f%e8%af%be" >低声下气不能代替你的功课
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e6%8f%8f%e8%bf%b0%e9%97%ae%e9%a2%98%e7%97%87%e7%8a%b6%e8%80%8c%e9%9d%9e%e4%bd%a0%e7%9a%84%e7%8c%9c%e6%b5%8b" >描述问题症状而非你的猜测
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e6%8c%89%e5%8f%91%e7%94%9f%e6%97%b6%e9%97%b4%e5%85%88%e5%90%8e%e5%88%97%e5%87%ba%e9%97%ae%e9%a2%98%e7%97%87%e7%8a%b6" >按发生时间先后列出问题症状
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e6%8f%8f%e8%bf%b0%e7%9b%ae%e6%a0%87%e8%80%8c%e4%b8%8d%e6%98%af%e8%bf%87%e7%a8%8b" >描述目标而不是过程
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%88%ab%e8%a6%81%e6%b1%82%e4%bd%bf%e7%94%a8%e7%a7%81%e4%ba%ba%e7%94%b5%e9%82%ae%e5%9b%9e%e5%a4%8d" >别要求使用私人电邮回复
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e6%b8%85%e6%a5%9a%e6%98%8e%e7%a1%ae%e7%9a%84%e8%a1%a8%e8%be%be%e4%bd%a0%e7%9a%84%e9%97%ae%e9%a2%98%e4%bb%a5%e5%8f%8a%e9%9c%80%e6%b1%82" >清楚明确的表达你的问题以及需求
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e8%af%a2%e9%97%ae%e6%9c%89%e5%85%b3%e4%bb%a3%e7%a0%81%e7%9a%84%e9%97%ae%e9%a2%98%e6%97%b6" >询问有关代码的问题时
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%88%ab%e6%8a%8a%e8%87%aa%e5%b7%b1%e5%ae%b6%e5%ba%ad%e4%bd%9c%e4%b8%9a%e7%9a%84%e9%97%ae%e9%a2%98%e8%b4%b4%e4%b8%8a%e6%9d%a5" >别把自己家庭作业的问题贴上来
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%8e%bb%e6%8e%89%e6%97%a0%e6%84%8f%e4%b9%89%e7%9a%84%e6%8f%90%e9%97%ae%e5%8f%a5" >去掉无意义的提问句
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%8d%b3%e4%bd%bf%e4%bd%a0%e5%be%88%e6%80%a5%e4%b9%9f%e4%b8%8d%e8%a6%81%e5%9c%a8%e6%a0%87%e9%a2%98%e5%86%99%e7%b4%a7%e6%80%a5" >即使你很急也不要在标题写&lt;code>紧急&lt;/code>
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e7%a4%bc%e5%a4%9a%e4%ba%ba%e4%b8%8d%e6%80%aa%e8%80%8c%e4%b8%94%e6%9c%89%e6%97%b6%e8%bf%98%e5%be%88%e6%9c%89%e5%b8%ae%e5%8a%a9" >礼多人不怪，而且有时还很有帮助
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e5%90%8e%e5%8a%a0%e4%b8%aa%e7%ae%80%e7%9f%ad%e7%9a%84%e8%a1%a5%e5%85%85%e8%af%b4%e6%98%8e" >问题解决后，加个简短的补充说明
+&lt;/a>
+&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e8%a7%a3%e8%af%bb%e7%ad%94%e6%a1%88" >如何解读答案&lt;/a>
+&lt;li>&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e8%a7%a3%e8%af%bb%e7%ad%94%e6%a1%88" >如何解读答案
+&lt;/a>
 &lt;ul>
-&lt;li>&lt;a class="link" href="#rtfm-%e5%92%8c-stfw%e5%a6%82%e4%bd%95%e7%9f%a5%e9%81%93%e4%bd%a0%e5%b7%b2%e5%ae%8c%e5%85%a8%e6%90%9e%e7%a0%b8%e4%ba%86" >RTFM 和 STFW：如何知道你已完全搞砸了&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%a6%82%e6%9e%9c%e8%bf%98%e6%98%af%e6%90%9e%e4%b8%8d%e6%87%82" >如果还是搞不懂&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%a4%84%e7%90%86%e6%97%a0%e7%a4%bc%e7%9a%84%e5%9b%9e%e5%ba%94" >处理无礼的回应&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#rtfm-%e5%92%8c-stfw%e5%a6%82%e4%bd%95%e7%9f%a5%e9%81%93%e4%bd%a0%e5%b7%b2%e5%ae%8c%e5%85%a8%e6%90%9e%e7%a0%b8%e4%ba%86" >RTFM 和 STFW：如何知道你已完全搞砸了
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%a6%82%e6%9e%9c%e8%bf%98%e6%98%af%e6%90%9e%e4%b8%8d%e6%87%82" >如果还是搞不懂
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%a4%84%e7%90%86%e6%97%a0%e7%a4%bc%e7%9a%84%e5%9b%9e%e5%ba%94" >处理无礼的回应
+&lt;/a>
+&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e9%81%bf%e5%85%8d%e6%89%ae%e6%bc%94%e5%a4%b1%e8%b4%a5%e8%80%85" >如何避免扮演失败者&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e4%b8%8d%e8%af%a5%e9%97%ae%e7%9a%84%e9%97%ae%e9%a2%98" >不该问的问题&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%a5%bd%e9%97%ae%e9%a2%98%e4%b8%8e%e8%a0%a2%e9%97%ae%e9%a2%98" >好问题与蠢问题&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%a6%82%e6%9e%9c%e5%be%97%e4%b8%8d%e5%88%b0%e5%9b%9e%e7%ad%94" >如果得不到回答&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e6%9b%b4%e5%a5%bd%e5%9c%b0%e5%9b%9e%e7%ad%94%e9%97%ae%e9%a2%98" >如何更好地回答问题&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e7%9b%b8%e5%85%b3%e8%b5%84%e6%ba%90" >相关资源&lt;/a>&lt;/li>
-&lt;li>&lt;a class="link" href="#%e9%b8%a3%e8%b0%a2" >鸣谢&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e9%81%bf%e5%85%8d%e6%89%ae%e6%bc%94%e5%a4%b1%e8%b4%a5%e8%80%85" >如何避免扮演失败者
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e4%b8%8d%e8%af%a5%e9%97%ae%e7%9a%84%e9%97%ae%e9%a2%98" >不该问的问题
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%a5%bd%e9%97%ae%e9%a2%98%e4%b8%8e%e8%a0%a2%e9%97%ae%e9%a2%98" >好问题与蠢问题
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%a6%82%e6%9e%9c%e5%be%97%e4%b8%8d%e5%88%b0%e5%9b%9e%e7%ad%94" >如果得不到回答
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e5%a6%82%e4%bd%95%e6%9b%b4%e5%a5%bd%e5%9c%b0%e5%9b%9e%e7%ad%94%e9%97%ae%e9%a2%98" >如何更好地回答问题
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e7%9b%b8%e5%85%b3%e8%b5%84%e6%ba%90" >相关资源
+&lt;/a>
+&lt;/li>
+&lt;li>&lt;a class="link" href="#%e9%b8%a3%e8%b0%a2" >鸣谢
+&lt;/a>
+&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
@@ -148,7 +298,16 @@ alt="PRs Welcome"
 &lt;p>如果你是因为需要某些协助而正在阅读这本指南，并且最后离开是因为发现从本指南作者们身上得不到直接的协助，那么你就是我们所说的那些白痴之一。别问我们问题，我们只会忽略你。我们在这本指南中是教你如何从那些真正懂得你所遇到软件或硬件问题的人取得协助，而 99% 的情况下那不会是我们。除非你确定本指南的作者之一刚好是你所遇到的问题领域的专家，否则请不要打扰我们，这样大家都会开心一点。&lt;/p>
 &lt;h2 id="简介">简介
 &lt;/h2>&lt;p>在&lt;a class="link" href="http://www.catb.org/~esr/faqs/hacker-howto.html" target="_blank" rel="noopener"
->黑客&lt;/a>的世界里，当你拋出一个技术问题时，最终是否能得到有用的回答，往往取决于你所提问和追问的方式。本指南将教你如何正确的提问以获得你满意的答案。&lt;/p>
+>黑客
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+的世界里，当你拋出一个技术问题时，最终是否能得到有用的回答，往往取决于你所提问和追问的方式。本指南将教你如何正确的提问以获得你满意的答案。&lt;/p>
 &lt;p>不只是黑客，现在开源（Open Source）软件已经相当盛行，你常常也可以由其他有经验的使用者身上得到好答案，这是件&lt;strong>好事&lt;/strong>；使用者比起黑客来，往往对那些新手常遇到的问题更宽容一些。然而，将有经验的使用者视为黑客，并采用本指南所提的方法与他们沟通，同样也是能从他们身上得到满意回答的最有效方式。&lt;/p>
 &lt;p>首先你应该明白，黑客们喜爱有挑战性的问题，或者能激发他们思维的好问题。如果我们并非如此，那我们也不会成为你想询问的对象。如果你给了我们一个值得反复咀嚼玩味的好问题，我们自会对你感激不尽。好问题是激励，是厚礼。好问题可以提高我们的理解力，而且通常会暴露我们以前从没意识到或者思考过的问题。对黑客而言，&amp;ldquo;好问题！&amp;ldquo;是诚挚的大力称赞。&lt;/p>
 &lt;p>尽管如此，黑客们有着蔑视或傲慢面对简单问题的坏名声，这有时让我们看起来对新手、无知者似乎较有敌意，但其实不是那样的。&lt;/p>
@@ -158,8 +317,21 @@ alt="PRs Welcome"
 &lt;p>如果你厌恶我们的态度，高高在上，或过于傲慢，不妨也设身处地想想。我们并没有要求你向我们屈服 —— 事实上，我们大多数人非常乐意与你平等地交流，只要你付出小小努力来满足基本要求，我们就会欢迎你加入我们的文化。但让我们帮助那些不愿意帮助自己的人是没有效率的。无知没有关系，但装白痴就是不行。&lt;/p>
 &lt;p>所以，你不必在技术上很在行才能吸引我们的注意，但你必须表现出能引导你变得在行的特质 &amp;ndash; 机敏、有想法、善于观察、乐于主动参与解决问题。如果你做不到这些使你与众不同的事情，我们建议你花点钱找家商业公司签个技术支持服务合同，而不是要求黑客个人无偿地帮助你。&lt;/p>
 &lt;p>如果你决定向我们求助，当然你也不希望被视为失败者，更不愿成为失败者中的一员。能立刻得到快速并有效答案的最好方法，就是像赢家那样提问 &amp;ndash; 聪明、自信、有解决问题的思路，只是偶尔在特定的问题上需要获得一点帮助。&lt;/p>
-&lt;p>（欢迎对本指南提出改进意见。你可以 email 你的建议至 &lt;a class="link" href="esr@thyrsus.com" >esr@thyrsus.com&lt;/a> 或 &lt;a class="link" href="respond-auto@linuxmafia.com" >respond-auto@linuxmafia.com&lt;/a>。然而请注意，本文并非&lt;a class="link" href="http://www.ietf.org/rfc/rfc1855.txt" target="_blank" rel="noopener"
->网络礼节&lt;/a>的通用指南，而我们通常会拒绝无助于在技术论坛得到有用答案的建议）。&lt;/p>
+&lt;p>（欢迎对本指南提出改进意见。你可以 email 你的建议至 &lt;a class="link" href="esr@thyrsus.com" >esr@thyrsus.com
+&lt;/a>
+或 &lt;a class="link" href="respond-auto@linuxmafia.com" >respond-auto@linuxmafia.com
+&lt;/a>
+。然而请注意，本文并非&lt;a class="link" href="http://www.ietf.org/rfc/rfc1855.txt" target="_blank" rel="noopener"
+>网络礼节
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+的通用指南，而我们通常会拒绝无助于在技术论坛得到有用答案的建议）。&lt;/p>
 &lt;h2 id="在提问之前">在提问之前
 &lt;/h2>&lt;p>在你准备要通过电子邮件、新闻群组或者聊天室提出技术问题前，请先做到以下事情：&lt;/p>
 &lt;ol>
@@ -173,7 +345,16 @@ alt="PRs Welcome"
 &lt;/ol>
 &lt;p>当你提出问题的时候，请先表明你已经做了上述的努力；这将有助于树立你并不是一个不劳而获且浪费别人的时间的提问者。如果你能一并表达在做了上述努力的过程中所&lt;strong>学到&lt;/strong>的东西会更好，因为我们更乐于回答那些表现出能从答案中学习的人的问题。&lt;/p>
 &lt;p>运用某些策略，比如先用 Google 搜索你所遇到的各种错误信息（既搜索 &lt;a class="link" href="http://groups.google.com/" target="_blank" rel="noopener"
->Google 论坛&lt;/a>，也搜索网页），这样很可能直接就找到了能解决问题的文件或邮件列表线索。即使没有结果，在邮件列表或新闻组寻求帮助时加上一句 &lt;code>我在 Google 中搜过下列句子但没有找到什么有用的东西&lt;/code> 也是件好事，即使它只是表明了搜索引擎不能提供哪些帮助。这么做（加上搜索过的字串）也让遇到相似问题的其他人能被搜索引擎引导到你的提问来。&lt;/p>
+>Google 论坛
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+，也搜索网页），这样很可能直接就找到了能解决问题的文件或邮件列表线索。即使没有结果，在邮件列表或新闻组寻求帮助时加上一句 &lt;code>我在 Google 中搜过下列句子但没有找到什么有用的东西&lt;/code> 也是件好事，即使它只是表明了搜索引擎不能提供哪些帮助。这么做（加上搜索过的字串）也让遇到相似问题的其他人能被搜索引擎引导到你的提问来。&lt;/p>
 &lt;p>别着急，不要指望几秒钟的 Google 搜索就能解决一个复杂的问题。在向专家求助之前，再阅读一下常见问题文件（FAQ）、放轻松、坐舒服一些，再花点时间思考一下这个问题。相信我们，他们能从你的提问看出你做了多少阅读与思考，如果你是有备而来，将更有可能得到解答。不要将所有问题一股脑拋出，只因你的第一次搜索没有找到答案（或者找到太多答案）。&lt;/p>
 &lt;p>准备好你的问题，再将问题仔细的思考过一遍，因为草率的发问只能得到草率的回答，或者根本得不到任何答案。越是能表现出在寻求帮助前你为解决问题所付出的努力，你越有可能得到实质性的帮助。&lt;/p>
 &lt;p>小心别问错了问题。如果你的问题基于错误的假设，某个普通黑客（J. Random Hacker）多半会一边在心里想着&lt;code>蠢问题…&lt;/code>， 一边用无意义的字面解释来答复你，希望着你会从问题的回答（而非你想得到的答案）中汲取教训。&lt;/p>
@@ -201,7 +382,16 @@ alt="PRs Welcome"
 &lt;p>近年来，Stack Exchange community 社区已经成为回答技术及其他问题的主要渠道，尤其是那些开放源码的项目。&lt;/p>
 &lt;p>因为 Google 索引是即时的，在看 Stack Exchange 之前先在 Google 搜索。有很高的机率某人已经问了一个类似的问题，而且 Stack Exchange 网站们往往会是搜索结果中最前面几个。如果你在 Google 上没有找到任何答案，你再到特定相关主题的网站去找。用标签（Tag）搜索能让你更缩小你的搜索结果。&lt;/p>
 &lt;p>Stack Exchange 已经成长到&lt;a class="link" href="http://stackexchange.com/sites" target="_blank" rel="noopener"
->超过一百个网站&lt;/a>，以下是最常用的几个站：&lt;/p>
+>超过一百个网站
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+，以下是最常用的几个站：&lt;/p>
 &lt;ul>
 &lt;li>Super User 是问一些通用的电脑问题，如果你的问题跟代码或是写程序无关，只是一些网络连线之类的，请到这里。&lt;/li>
 &lt;li>Stack Overflow 是问写程序有关的问题。&lt;/li>
@@ -244,16 +434,52 @@ alt="PRs Welcome"
 &lt;p>在网页论坛上，好的提问方式稍有不同，因为讨论串与特定的信息紧密结合，并且通常在讨论串外就看不到里面的内容，故通过回复提问，而非改变标题是可接受的。不是所有论坛都允许在回复中出现分离的标题，而且这样做了基本上没有人会去看。不过，通过回复提问，这本身就是暧昧的做法，因为它们只会被正在查看该标题的人读到。所以，除非你&lt;strong>只想&lt;/strong>在该讨论串当前活跃的人群中提问，不然还是另起炉灶比较好。&lt;/p>
 &lt;h3 id="使问题容易回复">使问题容易回复
 &lt;/h3>&lt;p>以&lt;code>请将你的回复发送到……&lt;/code>来结束你的问题多半会使你得不到回答。如果你觉得花几秒钟在邮件客户端设置一下回复地址都麻烦，我们也觉得花几秒钟思考你的问题更麻烦。如果你的邮件程序不支持这样做，&lt;a class="link" href="http://linuxmafia.com/faq/Mail/muas.html" target="_blank" rel="noopener"
->换个好点的&lt;/a>；如果是操作系统不支持这种邮件程序，也换个好点的。&lt;/p>
+>换个好点的
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+；如果是操作系统不支持这种邮件程序，也换个好点的。&lt;/p>
 &lt;p>在论坛，要求通过电子邮件回复是非常无礼的，除非你认为回复的信息可能比较敏感（有人会为了某些未知的原因，只让你而不是整个论坛知道答案）。如果你只是想在有人回复讨论串时得到电子邮件提醒，可以要求网页论坛发送给你。几乎所有论坛都支持诸如&lt;code>追踪此讨论串&lt;/code>、&lt;code>有回复时发送邮件提醒&lt;/code>等功能。&lt;/p>
 &lt;h3 id="用清晰正确精准并语法正确的语句">用清晰、正确、精准并语法正确的语句
 &lt;/h3>&lt;p>我们从经验中发现，粗心的提问者通常也会粗心的写程序与思考（我敢打包票）。回答粗心大意者的问题很不值得，我们宁愿把时间耗在别处。&lt;/p>
 &lt;p>正确的拼写、标点符号和大小写是很重要的。一般来说，如果你觉得这样做很麻烦，不想在乎这些，那我们也觉得麻烦，不想在乎你的提问。花点额外的精力斟酌一下字句，用不着太僵硬与正式 —— 事实上，黑客文化很看重能准确地使用非正式、俚语和幽默的语句。但它&lt;strong>必须很&lt;/strong>准确，而且有迹象表明你是在思考和关注问题。&lt;/p>
 &lt;p>正确地拼写、使用标点和大小写，不要将&lt;code>its&lt;/code>混淆为&lt;code>it's&lt;/code>，&lt;code>loose&lt;/code>搞成&lt;code>lose&lt;/code>或者将&lt;code>discrete&lt;/code>弄成&lt;code>discreet&lt;/code>。不要&lt;strong>全部用大写&lt;/strong>，这会被视为无礼的大声嚷嚷（全部小写也好不到哪去，因为不易阅读。&lt;a class="link" href="http://en.wikipedia.org/wiki/Alan_Cox" target="_blank" rel="noopener"
->Alan Cox&lt;/a> 也许可以这样做，但你不行）。&lt;/p>
+>Alan Cox
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+也许可以这样做，但你不行）。&lt;/p>
 &lt;p>更白话的说，如果你写得像是个半文盲[译注：&lt;a class="link" href="http://zh.wikipedia.org/wiki/%e5%b0%8f%e7%99%bd" target="_blank" rel="noopener"
->小白&lt;/a>]，那多半得不到理睬。也不要使用即时通信中的简写或&lt;a class="link" href="http://zh.wikipedia.org/wiki/%e7%81%ab%e6%98%9f%e6%96%87" target="_blank" rel="noopener"
->火星文&lt;/a>，如将&lt;code>的&lt;/code>简化为&lt;code>d&lt;/code>会使你看起来像一个为了少打几个键而省字的小白。更糟的是，如果像个小孩似地鬼画符那绝对是在找死，可以肯定没人会理你（或者最多是给你一大堆指责与挖苦）。&lt;/p>
+>小白
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+]，那多半得不到理睬。也不要使用即时通信中的简写或&lt;a class="link" href="http://zh.wikipedia.org/wiki/%e7%81%ab%e6%98%9f%e6%96%87" target="_blank" rel="noopener"
+>火星文
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+，如将&lt;code>的&lt;/code>简化为&lt;code>d&lt;/code>会使你看起来像一个为了少打几个键而省字的小白。更糟的是，如果像个小孩似地鬼画符那绝对是在找死，可以肯定没人会理你（或者最多是给你一大堆指责与挖苦）。&lt;/p>
 &lt;p>如果在使用非母语的论坛提问，你可以犯点拼写和语法上的小错，但决不能在思考上马虎（没错，我们通常能弄清两者的分别）。同时，除非你知道回复者使用的语言，否则请使用英语书写。繁忙的黑客一般会直接删除用他们看不懂语言写的消息。在网络上英语是通用语言，用英语书写可以将你的问题在尚未被阅读就被直接删除的可能性降到最低。&lt;/p>
 &lt;p>如果英文是你的外语（Second language），提示潜在回复者你有潜在的语言困难是很好的：
 [译注：以下附上原文以供使用]&lt;/p>
@@ -288,7 +514,16 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;/h3>&lt;p>如果你人为地将问题搞得难以阅读，它多半会被忽略，人们更愿读易懂的问题，所以：&lt;/p>
 &lt;ul>
 &lt;li>使用纯文字而不是 HTML (&lt;a class="link" href="http://archive.birdhouse.org/etc/evilmail.html" target="_blank" rel="noopener"
->关闭 HTML&lt;/a> 并不难）。&lt;/li>
+>关闭 HTML
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+并不难）。&lt;/li>
 &lt;li>使用 MIME 附件通常是可以的，前提是真正有内容（譬如附带的源代码或 patch），而不仅仅是邮件程序生成的模板（譬如只是信件内容的拷贝）。&lt;/li>
 &lt;li>不要发送一段文字只是一行句子但自动换行后会变成多行的邮件（这使得回复部分内容非常困难）。设想你的读者是在 80 个字符宽的终端机上阅读邮件，最好设置你的换行分割点小于 80 字。&lt;/li>
 &lt;li>但是，对一些特殊的文件&lt;strong>不要&lt;/strong>设置固定宽度（譬如日志档案拷贝或会话记录）。数据应该原样包含，让回复者有信心他们看到的是和你看到的一样的东西。&lt;/li>
@@ -310,8 +545,26 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>尽量去揣测一个黑客会怎样反问你，在你提问之前预先将黑客们可能遇到的问题回答一遍。&lt;/p>
 &lt;p>以上几点中，当你报告的是你认为可能在代码中的问题时，给黑客一个可以重现你的问题的环境尤其重要。当你这么做时，你得到有效的回答的机会和速度都会大大的提升。&lt;/p>
 &lt;p>&lt;a class="link" href="http://www.chiark.greenend.org.uk/~sgtatham/" target="_blank" rel="noopener"
->Simon Tatham&lt;/a> 写过一篇名为《&lt;a class="link" href="http://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html" target="_blank" rel="noopener"
->如何有效的报告 Bug&lt;/a>》的出色文章。强力推荐你也读一读。&lt;/p>
+>Simon Tatham
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+写过一篇名为《&lt;a class="link" href="http://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html" target="_blank" rel="noopener"
+>如何有效的报告 Bug
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+》的出色文章。强力推荐你也读一读。&lt;/p>
 &lt;h3 id="话不在多而在精">话不在多而在精
 &lt;/h3>&lt;p>你需要提供精确有内容的信息。这并不是要求你简单的把成堆的出错代码或者资料完全转录到你的提问中。如果你有庞大而复杂的测试样例能重现程序挂掉的情境，尽量将它剪裁得越小越好。&lt;/p>
 &lt;p>这样做的用处至少有三点。
@@ -320,7 +573,9 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 第三，在精炼你的 bug 报告的过程中，你很可能就自己找到了解决方法或权宜之计。&lt;/p>
 &lt;h3 id="别动辄声称找到-bug">别动辄声称找到 Bug
 &lt;/h3>&lt;p>当你在使用软件中遇到问题，除非你非常、&lt;strong>非常&lt;/strong>的有根据，不要动辄声称找到了 Bug。提示：除非你能提供解决问题的源代码补丁，或者提供回归测试来表明前一版本中行为不正确，否则你都多半不够完全确信。这同样适用在网页和文件，如果你（声称）发现了文件的&lt;code>Bug&lt;/code>，你应该能提供相应位置的修正或替代文件。&lt;/p>
-&lt;p>请记得，还有许多其它使用者没遇到你发现的问题，否则你在阅读文件或搜索网页时就应该发现了（你在抱怨前&lt;a class="link" href="#%e5%9c%a8%e6%8f%90%e9%97%ae%e4%b9%8b%e5%89%8d" >已经做了这些，是吧&lt;/a>？）。这也意味着很有可能是你弄错了而不是软件本身有问题。&lt;/p>
+&lt;p>请记得，还有许多其它使用者没遇到你发现的问题，否则你在阅读文件或搜索网页时就应该发现了（你在抱怨前&lt;a class="link" href="#%e5%9c%a8%e6%8f%90%e9%97%ae%e4%b9%8b%e5%89%8d" >已经做了这些，是吧
+&lt;/a>
+？）。这也意味着很有可能是你弄错了而不是软件本身有问题。&lt;/p>
 &lt;p>编写软件的人总是非常辛苦地使它尽可能完美。如果你声称找到了 Bug，也就是在质疑他们的能力，即使你是对的，也有可能会冒犯到其中某部分人。当你在标题中嚷嚷着有&lt;code>Bug&lt;/code>时，这尤其严重。&lt;/p>
 &lt;p>提问时，即使你私下非常确信已经发现一个真正的 Bug，最好写得像是&lt;strong>你&lt;/strong>做错了什么。如果真的有 Bug，你会在回复中看到这点。这样做的话，如果真有 Bug，维护者就会向你道歉，这总比你惹恼别人然后欠别人一个道歉要好一点。&lt;/p>
 &lt;h3 id="低声下气不能代替你的功课">低声下气不能代替你的功课
@@ -370,7 +625,9 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>所以，界定一下你的问题，使专家花在辨识你的问题和回答所需要付出的时间减到最少，这技巧对你有用答案相当有帮助 —— 但这技巧通常和简化问题有所区别。因此，问&lt;code>我想更好的理解 X，可否指点一下哪有好一点说明？&lt;/code>通常比问&lt;code>你能解释一下 X 吗？&lt;/code>更好。如果你的代码不能运作，通常请别人看看哪里有问题，比要求别人替你改正要明智得多。&lt;/p>
 &lt;h3 id="询问有关代码的问题时">询问有关代码的问题时
 &lt;/h3>&lt;p>别要求他人帮你调试有问题的代码，不提示一下应该从何入手。张贴几百行的代码，然后说一声：&lt;code>它不能工作&lt;/code>会让你完全被忽略。只贴几十行代码，然后说一句：&lt;code>在第七行以后，我期待它显示 &amp;lt;x&amp;gt;，但实际出现的是 &amp;lt;y&amp;gt;&lt;/code>比较有可能让你得到回应。&lt;/p>
-&lt;p>最有效描述程序问题的方法是提供最精简的 Bug 展示测试用例（bug-demonstrating test case）。什么是最精简的测试用例？那是问题的缩影；一小个程序片段能&lt;strong>刚好&lt;/strong>展示出程序的异常行为，而不包含其他令人分散注意力的内容。怎么制作最精简的测试用例？如果你知道哪一行或哪一段代码会造成异常的行为，复制下来并加入足够重现这个状况的代码（例如，足以让这段代码能被编译/直译/被应用程序处理）。如果你无法将问题缩减到一个特定区块，就复制一份代码并移除不影响产生问题行为的部分。总之，测试用例越小越好（查看&lt;a class="link" href="#%e8%af%9d%e4%b8%8d%e5%9c%a8%e5%a4%9a%e8%80%8c%e5%9c%a8%e7%b2%be" >话不在多而在精&lt;/a>一节）。&lt;/p>
+&lt;p>最有效描述程序问题的方法是提供最精简的 Bug 展示测试用例（bug-demonstrating test case）。什么是最精简的测试用例？那是问题的缩影；一小个程序片段能&lt;strong>刚好&lt;/strong>展示出程序的异常行为，而不包含其他令人分散注意力的内容。怎么制作最精简的测试用例？如果你知道哪一行或哪一段代码会造成异常的行为，复制下来并加入足够重现这个状况的代码（例如，足以让这段代码能被编译/直译/被应用程序处理）。如果你无法将问题缩减到一个特定区块，就复制一份代码并移除不影响产生问题行为的部分。总之，测试用例越小越好（查看&lt;a class="link" href="#%e8%af%9d%e4%b8%8d%e5%9c%a8%e5%a4%9a%e8%80%8c%e5%9c%a8%e7%b2%be" >话不在多而在精
+&lt;/a>
+一节）。&lt;/p>
 &lt;p>一般而言，要得到一段相当精简的测试用例并不太容易，但永远先尝试这样做的是种好习惯。这种方式可以帮助你了解如何自行解决这个问题 —— 而且即使你的尝试不成功，黑客们也会看到你在尝试取得答案的过程中付出了努力，这可以让他们更愿意与你合作。&lt;/p>
 &lt;p>如果你只是想让别人帮忙审查（Review）一下代码，在信的开头就要说出来，并且一定要提到你认为哪一部分特别需要关注以及为什么。&lt;/p>
 &lt;h3 id="别把自己家庭作业的问题贴上来">别把自己家庭作业的问题贴上来
@@ -381,7 +638,16 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>首先：如果你对问题的描述不是很好，这样问更是画蛇添足。&lt;/p>
 &lt;p>其次：由于这样问是画蛇添足，黑客们会很厌烦你 —— 而且通常会用逻辑上正确，但毫无意义的回答来表示他们的蔑视， 例如：&lt;code>没错，有人能帮你&lt;/code>或者&lt;code>不，没答案&lt;/code>。&lt;/p>
 &lt;p>一般来说，避免用 &lt;code>是或否&lt;/code>、&lt;code>对或错&lt;/code>、&lt;code>有或没有&lt;/code>类型的问句，除非你想得到&lt;a class="link" href="http://homepage.ntlworld.com./jonathan.deboynepollard/FGA/questions-with-yes-or-no-answers.html" target="_blank" rel="noopener"
->是或否类型的回答&lt;/a>。&lt;/p>
+>是或否类型的回答
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+。&lt;/p>
 &lt;h3 id="即使你很急也不要在标题写紧急">即使你很急也不要在标题写&lt;code>紧急&lt;/code>
 &lt;/h3>&lt;p>这是你的问题，不是我们的。宣称&lt;code>紧急&lt;/code>极有可能事与愿违：大多数黑客会直接删除无礼和自私地企图即时引起关注的问题。更严重的是，&lt;code>紧急&lt;/code>这个字（或是其他企图引起关注的标题）通常会被垃圾信过滤器过滤掉 —— 你希望能看到你问题的人可能永远也看不到。&lt;/p>
 &lt;p>有半个例外的情况是，如果你是在一些很高调，会使黑客们兴奋的地方，也许值得这样去做。在这种情况下，如果你有时间压力，也很有礼貌地提到这点，人们也许会有兴趣回答快一点。&lt;/p>
@@ -406,7 +672,16 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;h3 id="rtfm-和-stfw如何知道你已完全搞砸了">RTFM 和 STFW：如何知道你已完全搞砸了
 &lt;/h3>&lt;p>有一个古老而神圣的传统：如果你收到&lt;code>RTFM （Read The Fucking Manual）&lt;/code>的回应，回答者认为你&lt;strong>应该去读他妈的手册&lt;/strong>。当然，基本上他是对的，你应该去读一读。&lt;/p>
 &lt;p>RTFM 有一个年轻的亲戚。如果你收到&lt;code>STFW（Search The Fucking Web）&lt;/code>的回应，回答者认为你&lt;strong>应该到他妈的网上搜索&lt;/strong>。那人多半也是对的，去搜索一下吧。（更温和一点的说法是 &lt;strong>&lt;a class="link" href="http://lmgtfy.com/" target="_blank" rel="noopener"
->Google 是你的朋友&lt;/a>&lt;/strong>！）&lt;/p>
+>Google 是你的朋友
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/strong>！）&lt;/p>
 &lt;p>在论坛，你也可能被要求去爬爬论坛的旧文。事实上，有人甚至可能热心地为你提供以前解决此问题的讨论串。但不要依赖这种关照，提问前应该先搜索一下旧文。&lt;/p>
 &lt;p>通常，用这两句之一回答你的人会给你一份包含你需要内容的手册或者一个网址，而且他们打这些字的时候也正在读着。这些答复意味着回答者认为&lt;/p>
 &lt;ul>
@@ -423,7 +698,16 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>另一方面，你偶尔真的会碰到无礼和无聊的言行。与上述相反，对真正的冒犯者狠狠地打击，用犀利的语言将其驳得体无完肤都是可以接受的。然而，在行事之前一定要非常非常的有根据。纠正无礼的言论与开始一场毫无意义的口水战仅一线之隔，黑客们自己莽撞地越线的情况并不鲜见。如果你是新手或外人，避开这种莽撞的机会并不高。如果你想得到的是信息而不是消磨时光，这时最好不要把手放在键盘上以免冒险。&lt;/p>
 &lt;p>（有些人断言很多黑客都有轻度的自闭症或亚斯伯格综合症，缺少用于润滑人类社会&lt;strong>正常&lt;/strong>交往所需的神经。这既可能是真也可能是假的。如果你自己不是黑客，兴许你认为我们脑袋有问题还能帮助你应付我们的古怪行为。只管这么干好了，我们不在乎。我们&lt;strong>喜欢&lt;/strong>我们现在这个样子，并且通常对病患标记都有站得住脚的怀疑）。&lt;/p>
 &lt;p>Jeff Bigler 的观察总结和这个相关也值得一读 (&lt;strong>&lt;a class="link" href="http://www.mit.edu/~jcb/tact.html" target="_blank" rel="noopener"
->tact filters&lt;/a>&lt;/strong>)。&lt;/p>
+>tact filters
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/strong>)。&lt;/p>
 &lt;p>在下一节，我们会谈到另一个问题，当&lt;strong>你&lt;/strong>行为不当时所会受到的&lt;code>冒犯&lt;/code>。&lt;/p>
 &lt;h2 id="如何避免扮演失败者">如何避免扮演失败者
 &lt;/h2>&lt;p>在黑客社区的论坛中有那么几次你可能会搞砸 —— 以本指南所描述到的或类似的方式。而你会在公开场合中被告知你是如何搞砸的，也许攻击的言语中还会带点夹七夹八的颜色。&lt;/p>
@@ -438,22 +722,49 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>也别让自己卷入口水战，最好不要理睬大多数的口水战 &amp;ndash; 当然，这是在你检验它们只是口水战，并且未指出你有搞砸的地方，同时也没有巧妙地将问题真正的答案藏于其后（这也是有可能的）。&lt;/p>
 &lt;h2 id="不该问的问题">不该问的问题
 &lt;/h2>&lt;p>以下是几个经典蠢问题，以及黑客没回答时心中所想的：&lt;/p>
-&lt;p>问题：&lt;a class="link" href="#q1" >我能在哪找到 X 程序或 X 资源？&lt;/a>&lt;/p>
-&lt;p>问题：&lt;a class="link" href="#q2" >我怎样用 X 做 Y？&lt;/a>&lt;/p>
-&lt;p>问题：&lt;a class="link" href="#q3" >如何设定我的 shell 提示？&lt;/a>&lt;/p>
-&lt;p>问题：&lt;a class="link" href="#q4" >我可以用 Bass-o-matic 文件转换工具将 AcmeCorp 档案转换为 TeX 格式吗？&lt;/a>&lt;/p>
-&lt;p>问题：&lt;a class="link" href="#q5" >我的程序/设定/SQL 语句没有用&lt;/a>&lt;/p>
-&lt;p>问题：&lt;a class="link" href="#q6" >我的 Windows 电脑有问题，你能帮我吗？&lt;/a>&lt;/p>
-&lt;p>问题：&lt;a class="link" href="#q7" >我的程序不会动了，我认为系统工具 X 有问题&lt;/a>&lt;/p>
-&lt;p>问题：&lt;a class="link" href="#q8" >我在安装 Linux（或者 X ）时有问题，你能帮我吗？&lt;/a>&lt;/p>
-&lt;p>问题：&lt;a class="link" href="#q9" >我怎么才能破解 root 帐号/窃取 OP 特权/读别人的邮件呢？&lt;/a>&lt;/p>
+&lt;p>问题：&lt;a class="link" href="#q1" >我能在哪找到 X 程序或 X 资源？
+&lt;/a>
+&lt;/p>
+&lt;p>问题：&lt;a class="link" href="#q2" >我怎样用 X 做 Y？
+&lt;/a>
+&lt;/p>
+&lt;p>问题：&lt;a class="link" href="#q3" >如何设定我的 shell 提示？
+&lt;/a>
+&lt;/p>
+&lt;p>问题：&lt;a class="link" href="#q4" >我可以用 Bass-o-matic 文件转换工具将 AcmeCorp 档案转换为 TeX 格式吗？
+&lt;/a>
+&lt;/p>
+&lt;p>问题：&lt;a class="link" href="#q5" >我的程序/设定/SQL 语句没有用
+&lt;/a>
+&lt;/p>
+&lt;p>问题：&lt;a class="link" href="#q6" >我的 Windows 电脑有问题，你能帮我吗？
+&lt;/a>
+&lt;/p>
+&lt;p>问题：&lt;a class="link" href="#q7" >我的程序不会动了，我认为系统工具 X 有问题
+&lt;/a>
+&lt;/p>
+&lt;p>问题：&lt;a class="link" href="#q8" >我在安装 Linux（或者 X ）时有问题，你能帮我吗？
+&lt;/a>
+&lt;/p>
+&lt;p>问题：&lt;a class="link" href="#q9" >我怎么才能破解 root 帐号/窃取 OP 特权/读别人的邮件呢？
+&lt;/a>
+&lt;/p>
 &lt;hr>
 &lt;p>&lt;a id="q1">&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>问题：我能在哪找到 X 程序或 X 资源？&lt;/p>
 &lt;/blockquote>
 &lt;p>回答：就在我找到它的地方啊，白痴 —— 搜索引擎的那一头。天哪！难道还有人不会用 &lt;a class="link" href="http://www.google.com" target="_blank" rel="noopener"
->Google&lt;/a> 吗？&lt;/p>
+>Google
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+吗？&lt;/p>
 &lt;p>&lt;a id="q2">&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>问题：我怎样用 X 做 Y？&lt;/p>
@@ -463,7 +774,9 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;blockquote>
 &lt;p>问题：如何设定我的 shell 提示？？&lt;/p>
 &lt;/blockquote>
-&lt;p>回答：如果你有足够的智慧提这个问题，你也该有足够的智慧去 &lt;a class="link" href="#RTFM" >RTFM&lt;/a>，然后自己去找出来。&lt;/p>
+&lt;p>回答：如果你有足够的智慧提这个问题，你也该有足够的智慧去 &lt;a class="link" href="#RTFM" >RTFM
+&lt;/a>
+，然后自己去找出来。&lt;/p>
 &lt;p>&lt;a id="q4">&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>问题：我可以用 Bass-o-matic 文件转换工具将 AcmeCorp 档案转换为 TeX 格式吗？&lt;/p>
@@ -495,7 +808,16 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>问题：我在安装 Linux（或者 X ）时有问题，你能帮我吗？&lt;/p>
 &lt;/blockquote>
 &lt;p>回答：不能，我只有亲自在你的电脑上动手才能找到毛病。还是去找你当地的 Linux 使用群组者寻求实际的指导吧（你能在&lt;a class="link" href="http://www.linux.org/groups/index.html" target="_blank" rel="noopener"
->这儿&lt;/a>找到使用者群组的清单）。&lt;/p>
+>这儿
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+找到使用者群组的清单）。&lt;/p>
 &lt;p>注意：如果安装问题与某 Linux 的发行版有关，在它的邮件列表、论坛或本地使用者群组中提问也许是恰当的。此时，应描述问题的准确细节。在此之前，先用 &lt;code>Linux&lt;/code> 和&lt;strong>所有&lt;/strong>被怀疑的硬件作关键词仔细搜索。&lt;/p>
 &lt;p>&lt;a id="q9">&lt;/a>&lt;/p>
 &lt;blockquote>
@@ -508,7 +830,9 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;blockquote>
 &lt;p>我可以在哪儿找到关于 Foonly Flurbamatic 的资料？&lt;/p>
 &lt;/blockquote>
-&lt;p>这种问法无非想得到 &lt;a class="link" href="#RTFM" >STFW&lt;/a> 这样的回答。&lt;/p>
+&lt;p>这种问法无非想得到 &lt;a class="link" href="#RTFM" >STFW
+&lt;/a>
+这样的回答。&lt;/p>
 &lt;p>&lt;strong>聪明问题&lt;/strong>：&lt;/p>
 &lt;blockquote>
 &lt;p>我用 Google 搜索过 &amp;ldquo;Foonly Flurbamatic 2600&amp;rdquo;，但是没找到有用的结果。谁知道上哪儿去找对这种设备编程的资料？&lt;/p>
@@ -559,8 +883,26 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p>如果你是在研究一番后才做出的回答，&lt;strong>展现你的技巧而不是直接端出结果&lt;/strong>。毕竟&lt;code>授人以鱼不如授人以渔&lt;/code>。&lt;/p>
 &lt;h2 id="相关资源">相关资源
 &lt;/h2>&lt;p>如果你需要个人电脑、Unix 系统和网络如何运作的基础知识，参阅 &lt;a class="link" href="http://en.tldp.org/HOWTO/Unix-and-Internet-Fundamentals-HOWTO/" target="_blank" rel="noopener"
->Unix 系统和网络基本原理&lt;/a>。&lt;/p>
+>Unix 系统和网络基本原理
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+。&lt;/p>
 &lt;p>当你发布软件或补丁时，试着按&lt;a class="link" href="http://en.tldp.org/HOWTO/Software-Release-Practice-HOWTO/index.html" target="_blank" rel="noopener"
->软件发布实践&lt;/a>操作。&lt;/p>
+>软件发布实践
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+操作。&lt;/p>
 &lt;h2 id="鸣谢">鸣谢
 &lt;/h2>&lt;p>Evelyn Mitchel 贡献了一些愚蠢问题例子并启发了编写&lt;code>如何更好地回答问题&lt;/code>这一节， Mikhail Ramendik 贡献了一些特别有价值的建议和改进。&lt;/p></description></item></channel></rss>

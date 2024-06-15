@@ -298,9 +298,27 @@ loading="lazy"
 &lt;/h2>&lt;p>模板方法的&lt;code>核心思想&lt;/code>是：&lt;code>父类定义骨架&lt;/code>，&lt;code>子类实现&lt;/code>某些&lt;code>细节&lt;/code>。&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://aobing.blog.csdn.net/article/details/117935005" target="_blank" rel="noopener"
->模板方法 （宝，我输液了，输的想你的夜）&lt;/a> &lt;br>
+>模板方法 （宝，我输液了，输的想你的夜）
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.liaoxuefeng.com/wiki/1252599548343744/1281319636041762" target="_blank" rel="noopener"
->模板方法 - 廖雪峰的官方网站&lt;/a>&lt;/p></description></item><item><title>[ Java ] 双链表</title><link>https://example.com/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://example.com/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
+>模板方法 - 廖雪峰的官方网站
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>[ Java ] 双链表</title><link>https://example.com/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://example.com/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
 &lt;/h2>&lt;p>双链表也叫双向链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。&lt;/p>
 &lt;h2 id="单链表与双链表的区别">单链表与双链表的区别
 &lt;/h2>&lt;h3 id="单链表">单链表
@@ -1385,7 +1403,16 @@ loading="lazy"
 &lt;/h2>&lt;p>&lt;strong>枚举类 &amp;gt; 双重检查锁 &amp;gt; 饿汉式&lt;/strong>&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://yichun.blog.csdn.net/article/details/103249751" target="_blank" rel="noopener"
->【设计模式】单例模式的八种写法分析&lt;/a>&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://example.com/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://example.com/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
+>【设计模式】单例模式的八种写法分析
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://example.com/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://example.com/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
 &lt;/h2>&lt;p>单链表是链表的其中一种基本结构。它是构成单链表的基本结点结构。在结点中数据域用来存储数据元素，指针域用于指向下一个具有相同结构的结点。
 因为只有一个指针结点，称为单链表。&lt;/p>
 &lt;h2 id="顺序表与单链表的区别">顺序表与单链表的区别
@@ -2229,13 +2256,49 @@ loading="lazy"
 &lt;/div>
 &lt;/div>&lt;h3 id="参考资料">参考资料
 &lt;/h3>&lt;p>&lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=11" target="_blank" rel="noopener"
->2020 王道考研 数据结构【单链表的定义】&lt;/a> &lt;br>
+>2020 王道考研 数据结构【单链表的定义】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=12" target="_blank" rel="noopener"
->2020 王道考研 数据结构【单链表的插入删除】&lt;/a> &lt;br>
+>2020 王道考研 数据结构【单链表的插入删除】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=13" target="_blank" rel="noopener"
->2020 王道考研 数据结构【单链表的查找】&lt;/a> &lt;br>
+>2020 王道考研 数据结构【单链表的查找】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://blog.csdn.net/weixin_36605200/article/details/88804537" target="_blank" rel="noopener"
->Java基础&amp;ndash;单链表的实现&lt;/a>&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://example.com/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://example.com/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
+>Java基础&amp;ndash;单链表的实现
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://example.com/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://example.com/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
 &lt;/h2>&lt;h3 id="线性表">线性表
 &lt;/h3>&lt;p>线性表是具有&lt;font color=red>相同&lt;/font>数据类型的 n (n ≥ 0) 个&lt;font color=purple>数据元素&lt;/font>的有限序列&lt;/p>
 &lt;h3 id="顺序表">顺序表
@@ -2547,11 +2610,38 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=8" target="_blank" rel="noopener"
->2020 王道考研 数据结构【顺序表的定义】&lt;/a> &lt;br>
+>2020 王道考研 数据结构【顺序表的定义】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=9" target="_blank" rel="noopener"
->2020 王道考研 数据结构【顺序表的插入删除】&lt;/a> &lt;br>
+>2020 王道考研 数据结构【顺序表的插入删除】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=10" target="_blank" rel="noopener"
->2020 王道考研 数据结构【顺序表的查找】&lt;/a>&lt;/p></description></item><item><title>个人开发环境安装</title><link>https://example.com/post/personal-development-environment-installation/</link><pubDate>Sun, 05 Apr 2020 14:36:45 +0800</pubDate><guid>https://example.com/post/personal-development-environment-installation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/close-up-heterochromia-brown-hair-scarf.webp" alt="Featured image of post 个人开发环境安装" />&lt;h2 id="前言">前言
+>2020 王道考研 数据结构【顺序表的查找】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>个人开发环境安装</title><link>https://example.com/post/personal-development-environment-installation/</link><pubDate>Sun, 05 Apr 2020 14:36:45 +0800</pubDate><guid>https://example.com/post/personal-development-environment-installation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/close-up-heterochromia-brown-hair-scarf.webp" alt="Featured image of post 个人开发环境安装" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>2月份的时候电脑出了些问题，开不了机，但因为在特殊时期，前几天才有机会修好。结果太久没开机，一直卡在修复界面，得，直接重装吧。每次重装又需要的一堆环境配置，实在繁琐，就想在这整理一下，再用的时候也好参考。&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>以下安装都是在Win10系统进行的&lt;/strong>&lt;/p>
@@ -2559,9 +2649,27 @@ loading="lazy"
 &lt;h2 id="java">Java
 &lt;/h2>&lt;p>版本：JDK8&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;a class="link" href="https://pan.baidu.com/s/1_SHlvGvuQy4gXwb64P5RVA" target="_blank" rel="noopener"
->网盘下载&lt;/a> 提取码：fmjy&lt;/p>
+>网盘下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+提取码：fmjy&lt;/p>
 &lt;h3 id="安装">安装
 &lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jdk8.webp"
 loading="lazy"
@@ -2754,9 +2862,27 @@ loading="lazy"
 &lt;h2 id="mysql">MySQL
 &lt;/h2>&lt;p>版本：MySQL5.7&lt;/p>
 &lt;p>&lt;a class="link" href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;a class="link" href="https://pan.baidu.com/s/17fD4I--15Ngq9F8W_damXw" target="_blank" rel="noopener"
->网盘下载&lt;/a> 提取码: rt7r&lt;/p>
+>网盘下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+提取码: rt7r&lt;/p>
 &lt;h3 id="安装-1">安装
 &lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql.webp"
 loading="lazy"
@@ -2890,7 +3016,16 @@ loading="lazy"
 &lt;h2 id="tomcat">Tomcat
 &lt;/h2>&lt;p>版本: Tomcat8.5&lt;/p>
 &lt;p>&lt;a class="link" href="http://tomcat.apache.org/" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat.webp"
 loading="lazy"
 >&lt;/p>
@@ -2937,7 +3072,16 @@ loading="lazy"
 &lt;h2 id="maven">Maven
 &lt;/h2>&lt;p>版本: Maven3.6&lt;/p>
 &lt;p>&lt;a class="link" href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven.webp"
 loading="lazy"
 >&lt;/p>
@@ -3021,7 +3165,16 @@ loading="lazy"
 &lt;/div>&lt;h2 id="git">Git
 &lt;/h2>&lt;p>版本: Git-2.25&lt;/p>
 &lt;p>&lt;a class="link" href="https://git-scm.com/download" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;h3 id="安装-4">安装
 &lt;/h3>&lt;p>默认安装即可&lt;/p>
 &lt;h3 id="测试-4">测试
@@ -3127,4 +3280,13 @@ loading="lazy"
 &lt;/blockquote>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;strong>&lt;a class="link" href="https://blog.csdn.net/qq_31807385/article/details/83988732?depth_1-utm_source=distribute.pc_relevant.none-task&amp;amp;utm_source=distribute.pc_relevant.none-task#%E7%9C%9F%E5%AE%9E%E4%BE%8B%E9%A2%98" target="_blank" rel="noopener"
->i++的底层解释（数据原子性）&lt;/a>&lt;/strong>&lt;/p></description></item></channel></rss>
+>i++的底层解释（数据原子性）
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/strong>&lt;/p></description></item></channel></rss>

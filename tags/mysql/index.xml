@@ -6,9 +6,27 @@
 &lt;h2 id="java">Java
 &lt;/h2>&lt;p>版本：JDK8&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;a class="link" href="https://pan.baidu.com/s/1_SHlvGvuQy4gXwb64P5RVA" target="_blank" rel="noopener"
->网盘下载&lt;/a> 提取码：fmjy&lt;/p>
+>网盘下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+提取码：fmjy&lt;/p>
 &lt;h3 id="安装">安装
 &lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jdk8.webp"
 loading="lazy"
@@ -201,9 +219,27 @@ loading="lazy"
 &lt;h2 id="mysql">MySQL
 &lt;/h2>&lt;p>版本：MySQL5.7&lt;/p>
 &lt;p>&lt;a class="link" href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;a class="link" href="https://pan.baidu.com/s/17fD4I--15Ngq9F8W_damXw" target="_blank" rel="noopener"
->网盘下载&lt;/a> 提取码: rt7r&lt;/p>
+>网盘下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+提取码: rt7r&lt;/p>
 &lt;h3 id="安装-1">安装
 &lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql.webp"
 loading="lazy"
@@ -337,7 +373,16 @@ loading="lazy"
 &lt;h2 id="tomcat">Tomcat
 &lt;/h2>&lt;p>版本: Tomcat8.5&lt;/p>
 &lt;p>&lt;a class="link" href="http://tomcat.apache.org/" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat.webp"
 loading="lazy"
 >&lt;/p>
@@ -384,7 +429,16 @@ loading="lazy"
 &lt;h2 id="maven">Maven
 &lt;/h2>&lt;p>版本: Maven3.6&lt;/p>
 &lt;p>&lt;a class="link" href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven.webp"
 loading="lazy"
 >&lt;/p>
@@ -468,7 +522,16 @@ loading="lazy"
 &lt;/div>&lt;h2 id="git">Git
 &lt;/h2>&lt;p>版本: Git-2.25&lt;/p>
 &lt;p>&lt;a class="link" href="https://git-scm.com/download" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;h3 id="安装-4">安装
 &lt;/h3>&lt;p>默认安装即可&lt;/p>
 &lt;h3 id="测试-4">测试

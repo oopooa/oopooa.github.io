@@ -298,9 +298,27 @@ loading="lazy"
 &lt;/h2>&lt;p>模板方法的&lt;code>核心思想&lt;/code>是：&lt;code>父类定义骨架&lt;/code>，&lt;code>子类实现&lt;/code>某些&lt;code>细节&lt;/code>。&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://aobing.blog.csdn.net/article/details/117935005" target="_blank" rel="noopener"
->模板方法 （宝，我输液了，输的想你的夜）&lt;/a> &lt;br>
+>模板方法 （宝，我输液了，输的想你的夜）
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.liaoxuefeng.com/wiki/1252599548343744/1281319636041762" target="_blank" rel="noopener"
->模板方法 - 廖雪峰的官方网站&lt;/a>&lt;/p></description></item><item><title>[ Java ] 双链表</title><link>https://example.com/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://example.com/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
+>模板方法 - 廖雪峰的官方网站
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>[ Java ] 双链表</title><link>https://example.com/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://example.com/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
 &lt;/h2>&lt;p>双链表也叫双向链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。&lt;/p>
 &lt;h2 id="单链表与双链表的区别">单链表与双链表的区别
 &lt;/h2>&lt;h3 id="单链表">单链表
@@ -1385,7 +1403,16 @@ loading="lazy"
 &lt;/h2>&lt;p>&lt;strong>枚举类 &amp;gt; 双重检查锁 &amp;gt; 饿汉式&lt;/strong>&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://yichun.blog.csdn.net/article/details/103249751" target="_blank" rel="noopener"
->【设计模式】单例模式的八种写法分析&lt;/a>&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://example.com/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://example.com/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
+>【设计模式】单例模式的八种写法分析
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://example.com/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://example.com/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
 &lt;/h2>&lt;p>单链表是链表的其中一种基本结构。它是构成单链表的基本结点结构。在结点中数据域用来存储数据元素，指针域用于指向下一个具有相同结构的结点。
 因为只有一个指针结点，称为单链表。&lt;/p>
 &lt;h2 id="顺序表与单链表的区别">顺序表与单链表的区别
@@ -2229,13 +2256,49 @@ loading="lazy"
 &lt;/div>
 &lt;/div>&lt;h3 id="参考资料">参考资料
 &lt;/h3>&lt;p>&lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=11" target="_blank" rel="noopener"
->2020 王道考研 数据结构【单链表的定义】&lt;/a> &lt;br>
+>2020 王道考研 数据结构【单链表的定义】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=12" target="_blank" rel="noopener"
->2020 王道考研 数据结构【单链表的插入删除】&lt;/a> &lt;br>
+>2020 王道考研 数据结构【单链表的插入删除】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=13" target="_blank" rel="noopener"
->2020 王道考研 数据结构【单链表的查找】&lt;/a> &lt;br>
+>2020 王道考研 数据结构【单链表的查找】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://blog.csdn.net/weixin_36605200/article/details/88804537" target="_blank" rel="noopener"
->Java基础&amp;ndash;单链表的实现&lt;/a>&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://example.com/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://example.com/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
+>Java基础&amp;ndash;单链表的实现
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://example.com/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://example.com/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
 &lt;/h2>&lt;h3 id="线性表">线性表
 &lt;/h3>&lt;p>线性表是具有&lt;font color=red>相同&lt;/font>数据类型的 n (n ≥ 0) 个&lt;font color=purple>数据元素&lt;/font>的有限序列&lt;/p>
 &lt;h3 id="顺序表">顺序表
@@ -2547,11 +2610,38 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=8" target="_blank" rel="noopener"
->2020 王道考研 数据结构【顺序表的定义】&lt;/a> &lt;br>
+>2020 王道考研 数据结构【顺序表的定义】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=9" target="_blank" rel="noopener"
->2020 王道考研 数据结构【顺序表的插入删除】&lt;/a> &lt;br>
+>2020 王道考研 数据结构【顺序表的插入删除】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=10" target="_blank" rel="noopener"
->2020 王道考研 数据结构【顺序表的查找】&lt;/a>&lt;/p></description></item><item><title>[ LeetCode题解 ] 001-两数之和</title><link>https://example.com/post/leetcode-two-sum/</link><pubDate>Mon, 08 Feb 2021 17:04:36 +0800</pubDate><guid>https://example.com/post/leetcode-two-sum/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/screen-code.webp" alt="Featured image of post [ LeetCode题解 ] 001-两数之和" />&lt;h2 id="题目">题目
+>2020 王道考研 数据结构【顺序表的查找】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>[ LeetCode题解 ] 001-两数之和</title><link>https://example.com/post/leetcode-two-sum/</link><pubDate>Mon, 08 Feb 2021 17:04:36 +0800</pubDate><guid>https://example.com/post/leetcode-two-sum/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/screen-code.webp" alt="Featured image of post [ LeetCode题解 ] 001-两数之和" />&lt;h2 id="题目">题目
 &lt;/h2>&lt;h3 id="描述">描述
 &lt;/h3>&lt;p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 &lt;strong>和为目标值&lt;/strong> 的那 &lt;strong>两个&lt;/strong> 整数，并返回它们的数组下标。&lt;/p>
 &lt;p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。&lt;/p>
@@ -2648,7 +2738,16 @@ loading="lazy"
 loading="lazy"
 >
 打开 &lt;a class="link" href="http://lbsyun.baidu.com/" target="_blank" rel="noopener"
->百度地图开放平台&lt;/a> 官网，来到页面最下方进行注册，已有百度账号可直接登录。&lt;/p>
+>百度地图开放平台
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+官网，来到页面最下方进行注册，已有百度账号可直接登录。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap1.webp"
 loading="lazy"
 >
@@ -2836,7 +2935,16 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/liub37/article/details/83750164" target="_blank" rel="noopener"
->记录 Vue 异步加载百度地图&lt;/a>&lt;/p></description></item><item><title>算法的时间复杂度</title><link>https://example.com/post/how-long-an-algorithm-takes-to-run/</link><pubDate>Sun, 31 Jan 2021 23:32:56 +0800</pubDate><guid>https://example.com/post/how-long-an-algorithm-takes-to-run/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/cup-rem.webp" alt="Featured image of post 算法的时间复杂度" />&lt;h2 id="概念">概念
+>记录 Vue 异步加载百度地图
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>算法的时间复杂度</title><link>https://example.com/post/how-long-an-algorithm-takes-to-run/</link><pubDate>Sun, 31 Jan 2021 23:32:56 +0800</pubDate><guid>https://example.com/post/how-long-an-algorithm-takes-to-run/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/cup-rem.webp" alt="Featured image of post 算法的时间复杂度" />&lt;h2 id="概念">概念
 &lt;/h2>&lt;p>通过&lt;font color=#FF0000>事前预估&lt;/font>算法&lt;font color=#FF0000>时间开销T(n)&lt;/font>与&lt;font color=#FF0000>问题规模n&lt;/font>的关系(T 表示 time)函数，来描述该算法的运行时间。&lt;/p>
 &lt;h2 id="示例1">示例1
 &lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
@@ -3059,7 +3167,16 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://www.bilibili.com/video/BV1b7411N798?p=5" target="_blank" rel="noopener"
->2020 王道考研 数据结构【算法的时间复杂度】&lt;/a>&lt;/p></description></item><item><title>初识数仓分层</title><link>https://example.com/post/getting-to-know-data-warehouse-layering/</link><pubDate>Thu, 10 Dec 2020 14:05:51 +0800</pubDate><guid>https://example.com/post/getting-to-know-data-warehouse-layering/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@master/cover/yellow-leaves-orange-hair.webp" alt="Featured image of post 初识数仓分层" />&lt;h2 id="前言">前言
+>2020 王道考研 数据结构【算法的时间复杂度】
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>初识数仓分层</title><link>https://example.com/post/getting-to-know-data-warehouse-layering/</link><pubDate>Thu, 10 Dec 2020 14:05:51 +0800</pubDate><guid>https://example.com/post/getting-to-know-data-warehouse-layering/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@master/cover/yellow-leaves-orange-hair.webp" alt="Featured image of post 初识数仓分层" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>最近在给公司的大数据项目写操作手册，又不得不涉及到数仓分层的一些专有名词和概念。这次专门整理学习一下，加深理解记忆。&lt;/p>
 &lt;h2 id="为什么要分层">为什么要分层
 &lt;/h2>&lt;ul>
@@ -3101,17 +3218,53 @@ ODS 层存放业务系统获取的最原始的数据，是其他上层数据的�
 &lt;/ul>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/weixin_43674082/article/details/88028266" target="_blank" rel="noopener"
->数仓分层&lt;/a> &lt;br>
+>数仓分层
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://blog.csdn.net/BeiisBei/article/details/105723188#_19" target="_blank" rel="noopener"
->数据仓库系列（三）数仓分层的意义价值及如何设计数据分层&lt;/a> &lt;br>
+>数据仓库系列（三）数仓分层的意义价值及如何设计数据分层
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
 &lt;a class="link" href="https://blog.csdn.net/qq_46548855/article/details/107596208" target="_blank" rel="noopener"
->电商数仓-(数仓分层概念+数仓理论)&lt;/a>&lt;/p></description></item><item><title>新电脑如何验机</title><link>https://example.com/post/how-to-inspect-a-new-computer/</link><pubDate>Sun, 05 Jul 2020 22:40:16 +0800</pubDate><guid>https://example.com/post/how-to-inspect-a-new-computer/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@latest/cover/wink-cherry-blossom-cute-smiling.webp" alt="Featured image of post 新电脑如何验机" />&lt;font style="color:red">
+>电商数仓-(数仓分层概念+数仓理论)
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>新电脑如何验机</title><link>https://example.com/post/how-to-inspect-a-new-computer/</link><pubDate>Sun, 05 Jul 2020 22:40:16 +0800</pubDate><guid>https://example.com/post/how-to-inspect-a-new-computer/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@latest/cover/wink-cherry-blossom-cute-smiling.webp" alt="Featured image of post 新电脑如何验机" />&lt;font style="color:red">
 &lt;strong>注意：初始化设置的时候先不要联网，否则系统会自动激活，就不能七天无理由退换货了&lt;/strong>
 &lt;/font>
 &lt;h2 id="准备工作">准备工作
 &lt;/h2>&lt;p>这里需要先准备一个 U盘，因为需要在断网的环境下完成对电脑的检测，推荐一个软件：&lt;/p>
 &lt;p>&lt;strong>1.图吧工具箱&lt;/strong> &lt;a class="link" href="http://www.tbtool.cn/" target="_blank" rel="noopener"
->下载地址&lt;/a>&lt;/p>
+>下载地址
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>集成了很多 DIY 爱好者常用的硬件检测软件，这些软件功能强大，但使用起来需要一定的学习成本，不过对我们来说，其中几款常用的工具就能满足大部分的测试需求了。图吧工具箱本身只是一个启动器，完全免费。&lt;/p>
 &lt;h2 id="验机流程">验机流程
 &lt;/h2>&lt;h3 id="1检查外包装">1.检查外包装
@@ -3134,14 +3287,32 @@ ODS 层存放业务系统获取的最原始的数据，是其他上层数据的�
 &lt;p>Enjoy yourself!&lt;/p></description></item><item><title>Hexo 使用 SweetAlert 美化弹窗</title><link>https://example.com/post/add-sweetalert-in-hexo/</link><pubDate>Mon, 27 Apr 2020 12:55:04 +0800</pubDate><guid>https://example.com/post/add-sweetalert-in-hexo/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp" alt="Featured image of post Hexo 使用 SweetAlert 美化弹窗" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;blockquote>
 &lt;p>私密文章参考: &lt;a class="link" href="https://blog.csdn.net/cungudafa/article/details/104346521" target="_blank" rel="noopener"
->Hexo（sakura）设置文章置顶+私密文章&lt;/a>&lt;/p>
+>Hexo（sakura）设置文章置顶+私密文章
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;/blockquote>
 &lt;p>为 Hexo 加入了私密文章功能后，密码输入错误之后弹出的浏览器自带提示框，在整个博客中显得很不协调。
 &lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert.webp"
 loading="lazy"
 >&lt;/p>
 &lt;p>而接下来要添加的 &lt;a class="link" href="https://sweetalert.js.org/" target="_blank" rel="noopener"
->SweetAlert&lt;/a>，感官上就舒服得多，能给人更好的交互体验。&lt;/p>
+>SweetAlert
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+，感官上就舒服得多，能给人更好的交互体验。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert1.webp"
 loading="lazy"
 >&lt;/p>
@@ -3244,9 +3415,27 @@ loading="lazy"
 &lt;/div>&lt;p>&lt;font style="color:red">&lt;b>注意：由于修改了依赖库中的代码，一旦修改或更新依赖都会覆盖掉我们的修改，需要重新修改。&lt;/b>&lt;/font>&lt;/p>
 &lt;h2 id="参考文章">参考文章
 &lt;/h2>&lt;p>&lt;a class="link" href="http://yearito.cn/posts/hexo-advanced-settings.html" target="_blank" rel="noopener"
->Hexo 搭建个人博客系列：进阶设置篇&lt;/a>&lt;/p></description></item><item><title>Hexo(Sakura) 添加在线聊天 Tidio</title><link>https://example.com/post/add-tidio-in-hexo-sakura-theme/</link><pubDate>Sun, 26 Apr 2020 20:30:45 +0800</pubDate><guid>https://example.com/post/add-tidio-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp" alt="Featured image of post Hexo(Sakura) 添加在线聊天 Tidio" />&lt;h2 id="前言">前言
+>Hexo 搭建个人博客系列：进阶设置篇
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>Hexo(Sakura) 添加在线聊天 Tidio</title><link>https://example.com/post/add-tidio-in-hexo-sakura-theme/</link><pubDate>Sun, 26 Apr 2020 20:30:45 +0800</pubDate><guid>https://example.com/post/add-tidio-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp" alt="Featured image of post Hexo(Sakura) 添加在线聊天 Tidio" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>一直想给博客装款在线聊天软件，综合对比下来后，选择了 &lt;a class="link" href="https://www.tidiochat.com" target="_blank" rel="noopener"
->Tidio&lt;/a>，其界面优雅简洁，支持多渠道回复，网页、Windows、安卓、IOS，关键是免费功能对普通用户完全够用，所以理论上来说是完全免费的！(白嫖使我快乐)&lt;/p>
+>Tidio
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+，其界面优雅简洁，支持多渠道回复，网页、Windows、安卓、IOS，关键是免费功能对普通用户完全够用，所以理论上来说是完全免费的！(白嫖使我快乐)&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio.webp"
 loading="lazy"
 >&lt;/p>
@@ -3254,7 +3443,16 @@ loading="lazy"
 &lt;/h2>&lt;p>安装起来还是比较简单的，但因为是国外的网站，访问起来会有一些慢，需要点耐心。&lt;/p>
 &lt;h3 id="注册账号">注册账号
 &lt;/h3>&lt;p>访问 &lt;a class="link" href="https://www.tidio.com/panel/register" target="_blank" rel="noopener"
->Tidio&lt;/a>注册账号，一个邮箱就能搞定，非常方便。&lt;/p>
+>Tidio
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+注册账号，一个邮箱就能搞定，非常方便。&lt;/p>
 &lt;h3 id="自定义tidio">自定义Tidio
 &lt;/h3>&lt;p>进入账户界面后，可以根据自己的喜好定制，可选颜色，语言，布局，侧边栏等等。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio1.webp"
@@ -3306,7 +3504,16 @@ loading="lazy"
 &lt;/div>
 &lt;/div>&lt;h2 id="参考文章">参考文章
 &lt;/h2>&lt;p>&lt;a class="link" href="http://yearito.cn/posts/hexo-advanced-settings.html" target="_blank" rel="noopener"
->Hexo 搭建个人博客系列：进阶设置篇&lt;/a>&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件播放异常</title><link>https://example.com/post/music-plugin-playback-error-in-hexo-sakura-theme/</link><pubDate>Sun, 19 Apr 2020 15:08:06 +0800</pubDate><guid>https://example.com/post/music-plugin-playback-error-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" alt="Featured image of post Hexo(Sakura) 音乐插件播放异常" />&lt;h2 id="前言">前言
+>Hexo 搭建个人博客系列：进阶设置篇
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件播放异常</title><link>https://example.com/post/music-plugin-playback-error-in-hexo-sakura-theme/</link><pubDate>Sun, 19 Apr 2020 15:08:06 +0800</pubDate><guid>https://example.com/post/music-plugin-playback-error-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" alt="Featured image of post Hexo(Sakura) 音乐插件播放异常" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>重做博客时新发现的问题，loop按钮不显示，且循环播放功能失效。回看才发现，其实一直都存在的问题，处理了站内播放bug之后就忽略音乐插件了。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.min.gif"
 loading="lazy"
@@ -3339,7 +3546,16 @@ loading="lazy"
 >&lt;/p>
 &lt;p>网站是可以访问的，却报了 404 的错误。&lt;/p>
 &lt;p>博客是部署在 Coding 和 Github 上的，国内走 Coding，国外走 Github，我用的是 &lt;a class="link" href="https://www.googlespeed.cn/" target="_blank" rel="noopener"
->谷歌测速中文版&lt;/a>，可能是指向了 Github。&lt;/p>
+>谷歌测速中文版
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+，可能是指向了 Github。&lt;/p>
 &lt;p>打开阿里云的域名解析设置，直接停掉 Github 的两条解析记录。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/cdnclose.webp"
 loading="lazy"
@@ -3356,7 +3572,16 @@ loading="lazy"
 &lt;h2 id="node">Node
 &lt;/h2>&lt;p>版本：Node v12.16.1&lt;/p>
 &lt;p>&lt;a class="link" href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;h3 id="安装">安装
 &lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node.webp"
 loading="lazy"
@@ -3525,9 +3750,27 @@ loading="lazy"
 &lt;h2 id="java">Java
 &lt;/h2>&lt;p>版本：JDK8&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;a class="link" href="https://pan.baidu.com/s/1_SHlvGvuQy4gXwb64P5RVA" target="_blank" rel="noopener"
->网盘下载&lt;/a> 提取码：fmjy&lt;/p>
+>网盘下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+提取码：fmjy&lt;/p>
 &lt;h3 id="安装">安装
 &lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jdk8.webp"
 loading="lazy"
@@ -3720,9 +3963,27 @@ loading="lazy"
 &lt;h2 id="mysql">MySQL
 &lt;/h2>&lt;p>版本：MySQL5.7&lt;/p>
 &lt;p>&lt;a class="link" href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;a class="link" href="https://pan.baidu.com/s/17fD4I--15Ngq9F8W_damXw" target="_blank" rel="noopener"
->网盘下载&lt;/a> 提取码: rt7r&lt;/p>
+>网盘下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+提取码: rt7r&lt;/p>
 &lt;h3 id="安装-1">安装
 &lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql.webp"
 loading="lazy"
@@ -3856,7 +4117,16 @@ loading="lazy"
 &lt;h2 id="tomcat">Tomcat
 &lt;/h2>&lt;p>版本: Tomcat8.5&lt;/p>
 &lt;p>&lt;a class="link" href="http://tomcat.apache.org/" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat.webp"
 loading="lazy"
 >&lt;/p>
@@ -3903,7 +4173,16 @@ loading="lazy"
 &lt;h2 id="maven">Maven
 &lt;/h2>&lt;p>版本: Maven3.6&lt;/p>
 &lt;p>&lt;a class="link" href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven.webp"
 loading="lazy"
 >&lt;/p>
@@ -3987,7 +4266,16 @@ loading="lazy"
 &lt;/div>&lt;h2 id="git">Git
 &lt;/h2>&lt;p>版本: Git-2.25&lt;/p>
 &lt;p>&lt;a class="link" href="https://git-scm.com/download" target="_blank" rel="noopener"
->官网下载&lt;/a>&lt;/p>
+>官网下载
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
 &lt;h3 id="安装-4">安装
 &lt;/h3>&lt;p>默认安装即可&lt;/p>
 &lt;h3 id="测试-4">测试
@@ -4072,7 +4360,16 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/caidingnu/article/details/92232872" target="_blank" rel="noopener"
->用CSS解决前端图片变形问题&lt;/a>&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件问题</title><link>https://example.com/post/music-plugin-issue-of-hexo-sakura-theme/</link><pubDate>Mon, 23 Mar 2020 21:22:35 +0800</pubDate><guid>https://example.com/post/music-plugin-issue-of-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp" alt="Featured image of post Hexo(Sakura) 音乐插件问题" />&lt;h2 id="前言">前言
+>用CSS解决前端图片变形问题
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件问题</title><link>https://example.com/post/music-plugin-issue-of-hexo-sakura-theme/</link><pubDate>Mon, 23 Mar 2020 21:22:35 +0800</pubDate><guid>https://example.com/post/music-plugin-issue-of-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp" alt="Featured image of post Hexo(Sakura) 音乐插件问题" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>偶然发现的一个问题，全局的aplayer插件在站内跳转的时候会重新加载，让人感觉非常难受。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/aplayer.webp"
 loading="lazy"
@@ -4138,7 +4435,16 @@ alt="aplayer"
 &lt;/h2>&lt;p>在导入 js 和 jquery 插件的时候，一定要先导入 jquery 插件，防止浏览器无法解析 js 中需要用到的 jquery 语法。按照 html 的解析顺序，js 也应该是放在最后导入的。&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_43279637/article/details/82988662" target="_blank" rel="noopener"
->jquery导入方法及注意问题&lt;/a>&lt;/p></description></item><item><title>i++与++i的区别</title><link>https://example.com/post/the-difference-between-post-increment-and-pre-increment/</link><pubDate>Thu, 05 Mar 2020 17:54:56 +0800</pubDate><guid>https://example.com/post/the-difference-between-post-increment-and-pre-increment/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/girl-scarf-winter.webp" alt="Featured image of post i++与++i的区别" />&lt;ul>
+>jquery导入方法及注意问题
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>i++与++i的区别</title><link>https://example.com/post/the-difference-between-post-increment-and-pre-increment/</link><pubDate>Thu, 05 Mar 2020 17:54:56 +0800</pubDate><guid>https://example.com/post/the-difference-between-post-increment-and-pre-increment/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/girl-scarf-winter.webp" alt="Featured image of post i++与++i的区别" />&lt;ul>
 &lt;li>&lt;code>i++&lt;/code> 表示的是先赋值，再自增&lt;/li>
 &lt;li>&lt;code>++i&lt;/code> 表示的是先自增，再赋值&lt;/li>
 &lt;/ul>
@@ -4224,4 +4530,13 @@ alt="aplayer"
 &lt;/blockquote>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;strong>&lt;a class="link" href="https://blog.csdn.net/qq_31807385/article/details/83988732?depth_1-utm_source=distribute.pc_relevant.none-task&amp;amp;utm_source=distribute.pc_relevant.none-task#%E7%9C%9F%E5%AE%9E%E4%BE%8B%E9%A2%98" target="_blank" rel="noopener"
->i++的底层解释（数据原子性）&lt;/a>&lt;/strong>&lt;/p></description></item></channel></rss>
+>i++的底层解释（数据原子性）
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/strong>&lt;/p></description></item></channel></rss>
