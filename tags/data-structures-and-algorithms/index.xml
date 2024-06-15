@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Structures and Algorithms on Opoa</title><link>https://example.com/tags/data-structures-and-algorithms/</link><description>Recent content in Data Structures and Algorithms on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Sat, 10 Apr 2021 11:25:27 +0800</lastBuildDate><atom:link href="https://example.com/tags/data-structures-and-algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>[ Java ] 双链表</title><link>https://example.com/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://example.com/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Structures and Algorithms on Opoa</title><link>https://opoa.top/tags/data-structures-and-algorithms/</link><description>Recent content in Data Structures and Algorithms on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Sat, 10 Apr 2021 11:25:27 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/data-structures-and-algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>[ Java ] 双链表</title><link>https://opoa.top/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://opoa.top/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
 &lt;/h2>&lt;p>双链表也叫双向链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。&lt;/p>
 &lt;h2 id="单链表与双链表的区别">单链表与双链表的区别
 &lt;/h2>&lt;h3 id="单链表">单链表
@@ -778,7 +778,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="参考资料">参考资料
-&lt;/h2>&lt;p>Java8 LinkedList 源码&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://example.com/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://example.com/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
+&lt;/h2>&lt;p>Java8 LinkedList 源码&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://opoa.top/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://opoa.top/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
 &lt;/h2>&lt;p>单链表是链表的其中一种基本结构。它是构成单链表的基本结点结构。在结点中数据域用来存储数据元素，指针域用于指向下一个具有相同结构的结点。
 因为只有一个指针结点，称为单链表。&lt;/p>
 &lt;h2 id="顺序表与单链表的区别">顺序表与单链表的区别
@@ -1664,7 +1664,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://example.com/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://example.com/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
+&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://opoa.top/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://opoa.top/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
 &lt;/h2>&lt;h3 id="线性表">线性表
 &lt;/h3>&lt;p>线性表是具有&lt;font color=red>相同&lt;/font>数据类型的 n (n ≥ 0) 个&lt;font color=purple>数据元素&lt;/font>的有限序列&lt;/p>
 &lt;h3 id="顺序表">顺序表
@@ -2007,7 +2007,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>[ LeetCode题解 ] 001-两数之和</title><link>https://example.com/post/leetcode-two-sum/</link><pubDate>Mon, 08 Feb 2021 17:04:36 +0800</pubDate><guid>https://example.com/post/leetcode-two-sum/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/screen-code.webp" alt="Featured image of post [ LeetCode题解 ] 001-两数之和" />&lt;h2 id="题目">题目
+&lt;/p></description></item><item><title>[ LeetCode题解 ] 001-两数之和</title><link>https://opoa.top/post/leetcode-two-sum/</link><pubDate>Mon, 08 Feb 2021 17:04:36 +0800</pubDate><guid>https://opoa.top/post/leetcode-two-sum/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/screen-code.webp" alt="Featured image of post [ LeetCode题解 ] 001-两数之和" />&lt;h2 id="题目">题目
 &lt;/h2>&lt;h3 id="描述">描述
 &lt;/h3>&lt;p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 &lt;strong>和为目标值&lt;/strong> 的那 &lt;strong>两个&lt;/strong> 整数，并返回它们的数组下标。&lt;/p>
 &lt;p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。&lt;/p>
@@ -2094,7 +2094,7 @@ fill="currentColor">
 &lt;/div>
 &lt;/div>&lt;p>利用哈希表仅一层 for 循环就可得出答案。&lt;/p>
 &lt;p>先创建一个 &lt;code>Integer&lt;/code> 类型同时作为 key 和 value 的 &lt;code>HashMap&lt;/code>, key 是当前元素的值，value 是当前元素在数组中的下标。比如 target = 18, int[] nums = [1, 5, 7, 11],循环三次的 map 结果是 {1 = 0, 5 = 1, 7 = 2} ,判断当前 map 是否存在正确值之一的 key 存在，不存在则添加到 map 中，存在则找到答案数组，直接返回。&lt;/p>
-&lt;p>上面的例子答案是 [2, 3],循环遍历到 7 的时候，18 - 7 = 11,此时 map 中并没有 11 作为 key 存在，存入一个元素 key = 7, value = 2 到 map 中,遍历到 11 的时候， 18 - 11 = 7,由于此前存入过 7 为 key 的键值对，可得 11 和 7 为正确答案，在返回他们对应下标的数组即可。&lt;/p></description></item><item><title>算法的时间复杂度</title><link>https://example.com/post/how-long-an-algorithm-takes-to-run/</link><pubDate>Sun, 31 Jan 2021 23:32:56 +0800</pubDate><guid>https://example.com/post/how-long-an-algorithm-takes-to-run/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/cup-rem.webp" alt="Featured image of post 算法的时间复杂度" />&lt;h2 id="概念">概念
+&lt;p>上面的例子答案是 [2, 3],循环遍历到 7 的时候，18 - 7 = 11,此时 map 中并没有 11 作为 key 存在，存入一个元素 key = 7, value = 2 到 map 中,遍历到 11 的时候， 18 - 11 = 7,由于此前存入过 7 为 key 的键值对，可得 11 和 7 为正确答案，在返回他们对应下标的数组即可。&lt;/p></description></item><item><title>算法的时间复杂度</title><link>https://opoa.top/post/how-long-an-algorithm-takes-to-run/</link><pubDate>Sun, 31 Jan 2021 23:32:56 +0800</pubDate><guid>https://opoa.top/post/how-long-an-algorithm-takes-to-run/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/cup-rem.webp" alt="Featured image of post 算法的时间复杂度" />&lt;h2 id="概念">概念
 &lt;/h2>&lt;p>通过&lt;font color=#FF0000>事前预估&lt;/font>算法&lt;font color=#FF0000>时间开销T(n)&lt;/font>与&lt;font color=#FF0000>问题规模n&lt;/font>的关系(T 表示 time)函数，来描述该算法的运行时间。&lt;/p>
 &lt;h2 id="示例1">示例1
 &lt;/h2>&lt;div class="highlight">&lt;div class="chroma">

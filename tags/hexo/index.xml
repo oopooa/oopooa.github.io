@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hexo on Opoa</title><link>https://example.com/tags/hexo/</link><description>Recent content in Hexo on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Mon, 27 Apr 2020 12:55:04 +0800</lastBuildDate><atom:link href="https://example.com/tags/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hexo 使用 SweetAlert 美化弹窗</title><link>https://example.com/post/add-sweetalert-in-hexo/</link><pubDate>Mon, 27 Apr 2020 12:55:04 +0800</pubDate><guid>https://example.com/post/add-sweetalert-in-hexo/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp" alt="Featured image of post Hexo 使用 SweetAlert 美化弹窗" />&lt;h2 id="前言">前言
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hexo on Opoa</title><link>https://opoa.top/tags/hexo/</link><description>Recent content in Hexo on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Mon, 27 Apr 2020 12:55:04 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hexo 使用 SweetAlert 美化弹窗</title><link>https://opoa.top/post/add-sweetalert-in-hexo/</link><pubDate>Mon, 27 Apr 2020 12:55:04 +0800</pubDate><guid>https://opoa.top/post/add-sweetalert-in-hexo/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp" alt="Featured image of post Hexo 使用 SweetAlert 美化弹窗" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;blockquote>
 &lt;p>私密文章参考: &lt;a class="link" href="https://blog.csdn.net/cungudafa/article/details/104346521" target="_blank" rel="noopener"
 >Hexo（sakura）设置文章置顶+私密文章
@@ -138,7 +138,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>Hexo(Sakura) 添加在线聊天 Tidio</title><link>https://example.com/post/add-tidio-in-hexo-sakura-theme/</link><pubDate>Sun, 26 Apr 2020 20:30:45 +0800</pubDate><guid>https://example.com/post/add-tidio-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp" alt="Featured image of post Hexo(Sakura) 添加在线聊天 Tidio" />&lt;h2 id="前言">前言
+&lt;/p></description></item><item><title>Hexo(Sakura) 添加在线聊天 Tidio</title><link>https://opoa.top/post/add-tidio-in-hexo-sakura-theme/</link><pubDate>Sun, 26 Apr 2020 20:30:45 +0800</pubDate><guid>https://opoa.top/post/add-tidio-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp" alt="Featured image of post Hexo(Sakura) 添加在线聊天 Tidio" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>一直想给博客装款在线聊天软件，综合对比下来后，选择了 &lt;a class="link" href="https://www.tidiochat.com" target="_blank" rel="noopener"
 >Tidio
 &lt;span style="white-space: nowrap;">
@@ -227,7 +227,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件播放异常</title><link>https://example.com/post/music-plugin-playback-error-in-hexo-sakura-theme/</link><pubDate>Sun, 19 Apr 2020 15:08:06 +0800</pubDate><guid>https://example.com/post/music-plugin-playback-error-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" alt="Featured image of post Hexo(Sakura) 音乐插件播放异常" />&lt;h2 id="前言">前言
+&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件播放异常</title><link>https://opoa.top/post/music-plugin-playback-error-in-hexo-sakura-theme/</link><pubDate>Sun, 19 Apr 2020 15:08:06 +0800</pubDate><guid>https://opoa.top/post/music-plugin-playback-error-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" alt="Featured image of post Hexo(Sakura) 音乐插件播放异常" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>重做博客时新发现的问题，loop按钮不显示，且循环播放功能失效。回看才发现，其实一直都存在的问题，处理了站内播放bug之后就忽略音乐插件了。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.min.gif"
 loading="lazy"
@@ -254,7 +254,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop4.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>嗯&amp;hellip;目前双方情绪都很稳定。&lt;/p></description></item><item><title>Hexo 博客迁移</title><link>https://example.com/post/migrate-hexo-blog/</link><pubDate>Mon, 06 Apr 2020 14:22:35 +0800</pubDate><guid>https://example.com/post/migrate-hexo-blog/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp" alt="Featured image of post Hexo 博客迁移" />&lt;h2 id="前言">前言
+&lt;p>嗯&amp;hellip;目前双方情绪都很稳定。&lt;/p></description></item><item><title>Hexo 博客迁移</title><link>https://opoa.top/post/migrate-hexo-blog/</link><pubDate>Mon, 06 Apr 2020 14:22:35 +0800</pubDate><guid>https://opoa.top/post/migrate-hexo-blog/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp" alt="Featured image of post Hexo 博客迁移" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>折腾了两天，软件和环境装的差不多了，接下来把我的Hexo博客转移过来，也是第一次弄，记录一下。&lt;/p>
 &lt;h2 id="git">Git
 &lt;/h2>&lt;p>Git之前已经装过了，但它对Hexo来说太重要，这里还是提一下，要先安装Git。&lt;/p>
@@ -431,7 +431,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo2.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>到这里就迁移成功啦&lt;/p></description></item><item><title>Hexo(Sakura) 缩略图显示异常</title><link>https://example.com/post/thumbnail-display-issue-in-hexo-sakura/</link><pubDate>Thu, 26 Mar 2020 21:36:45 +0800</pubDate><guid>https://example.com/post/thumbnail-display-issue-in-hexo-sakura/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp" alt="Featured image of post Hexo(Sakura) 缩略图显示异常" />&lt;h2 id="前言">前言
+&lt;p>到这里就迁移成功啦&lt;/p></description></item><item><title>Hexo(Sakura) 缩略图显示异常</title><link>https://opoa.top/post/thumbnail-display-issue-in-hexo-sakura/</link><pubDate>Thu, 26 Mar 2020 21:36:45 +0800</pubDate><guid>https://opoa.top/post/thumbnail-display-issue-in-hexo-sakura/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp" alt="Featured image of post Hexo(Sakura) 缩略图显示异常" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp"
 loading="lazy"
 alt="异常缩略图"
@@ -505,7 +505,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件问题</title><link>https://example.com/post/music-plugin-issue-of-hexo-sakura-theme/</link><pubDate>Mon, 23 Mar 2020 21:22:35 +0800</pubDate><guid>https://example.com/post/music-plugin-issue-of-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp" alt="Featured image of post Hexo(Sakura) 音乐插件问题" />&lt;h2 id="前言">前言
+&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件问题</title><link>https://opoa.top/post/music-plugin-issue-of-hexo-sakura-theme/</link><pubDate>Mon, 23 Mar 2020 21:22:35 +0800</pubDate><guid>https://opoa.top/post/music-plugin-issue-of-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp" alt="Featured image of post Hexo(Sakura) 音乐插件问题" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>偶然发现的一个问题，全局的aplayer插件在站内跳转的时候会重新加载，让人感觉非常难受。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/aplayer.webp"
 loading="lazy"

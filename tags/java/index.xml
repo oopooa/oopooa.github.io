@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Opoa</title><link>https://example.com/tags/java/</link><description>Recent content in Java on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Fri, 02 Jul 2021 17:03:46 +0800</lastBuildDate><atom:link href="https://example.com/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>[ 设计模式 ] 模板方法</title><link>https://example.com/post/design-pattern-template-method/</link><pubDate>Fri, 02 Jul 2021 17:03:46 +0800</pubDate><guid>https://example.com/post/design-pattern-template-method/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/whitegirl.webp" alt="Featured image of post [ 设计模式 ] 模板方法" />&lt;h2 id="定义">定义
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Opoa</title><link>https://opoa.top/tags/java/</link><description>Recent content in Java on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Fri, 02 Jul 2021 17:03:46 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>[ 设计模式 ] 模板方法</title><link>https://opoa.top/post/design-pattern-template-method/</link><pubDate>Fri, 02 Jul 2021 17:03:46 +0800</pubDate><guid>https://opoa.top/post/design-pattern-template-method/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/whitegirl.webp" alt="Featured image of post [ 设计模式 ] 模板方法" />&lt;h2 id="定义">定义
 &lt;/h2>&lt;p>模板方法模式在一个方法中定义一个算法骨架，并将某些步骤推迟到子类中实现。模板方法模式可以让子类在不改变算法整体结构的情况下，重新定义算法中的某些步骤。&lt;/p>
 &lt;p>简单来说模板方法定义了一套流程，流程中有哪些操作，操作的具体顺序是什么。而操作的具体实现则交给其子类去实现，模板方法不需要关心。&lt;/p>
 &lt;h2 id="示例">示例
@@ -318,7 +318,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>[ Java ] 双链表</title><link>https://example.com/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://example.com/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
+&lt;/p></description></item><item><title>[ Java ] 双链表</title><link>https://opoa.top/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://opoa.top/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
 &lt;/h2>&lt;p>双链表也叫双向链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。&lt;/p>
 &lt;h2 id="单链表与双链表的区别">单链表与双链表的区别
 &lt;/h2>&lt;h3 id="单链表">单链表
@@ -1098,7 +1098,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="参考资料">参考资料
-&lt;/h2>&lt;p>Java8 LinkedList 源码&lt;/p></description></item><item><title>[ 设计模式 ] 单例模式实现</title><link>https://example.com/post/design-pattern-singleton-pattern/</link><pubDate>Sat, 13 Mar 2021 23:11:16 +0800</pubDate><guid>https://example.com/post/design-pattern-singleton-pattern/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp" alt="Featured image of post [ 设计模式 ] 单例模式实现" />&lt;h2 id="什么是单例模式">什么是单例模式
+&lt;/h2>&lt;p>Java8 LinkedList 源码&lt;/p></description></item><item><title>[ 设计模式 ] 单例模式实现</title><link>https://opoa.top/post/design-pattern-singleton-pattern/</link><pubDate>Sat, 13 Mar 2021 23:11:16 +0800</pubDate><guid>https://opoa.top/post/design-pattern-singleton-pattern/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp" alt="Featured image of post [ 设计模式 ] 单例模式实现" />&lt;h2 id="什么是单例模式">什么是单例模式
 &lt;/h2>&lt;p>单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点。&lt;/p>
 &lt;h2 id="优点">优点
 &lt;/h2>&lt;ul>
@@ -1412,7 +1412,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://example.com/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://example.com/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
+&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://opoa.top/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://opoa.top/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
 &lt;/h2>&lt;p>单链表是链表的其中一种基本结构。它是构成单链表的基本结点结构。在结点中数据域用来存储数据元素，指针域用于指向下一个具有相同结构的结点。
 因为只有一个指针结点，称为单链表。&lt;/p>
 &lt;h2 id="顺序表与单链表的区别">顺序表与单链表的区别
@@ -2298,7 +2298,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://example.com/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://example.com/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
+&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://opoa.top/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://opoa.top/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
 &lt;/h2>&lt;h3 id="线性表">线性表
 &lt;/h3>&lt;p>线性表是具有&lt;font color=red>相同&lt;/font>数据类型的 n (n ≥ 0) 个&lt;font color=purple>数据元素&lt;/font>的有限序列&lt;/p>
 &lt;h3 id="顺序表">顺序表
@@ -2641,7 +2641,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>个人开发环境安装</title><link>https://example.com/post/personal-development-environment-installation/</link><pubDate>Sun, 05 Apr 2020 14:36:45 +0800</pubDate><guid>https://example.com/post/personal-development-environment-installation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/close-up-heterochromia-brown-hair-scarf.webp" alt="Featured image of post 个人开发环境安装" />&lt;h2 id="前言">前言
+&lt;/p></description></item><item><title>个人开发环境安装</title><link>https://opoa.top/post/personal-development-environment-installation/</link><pubDate>Sun, 05 Apr 2020 14:36:45 +0800</pubDate><guid>https://opoa.top/post/personal-development-environment-installation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/close-up-heterochromia-brown-hair-scarf.webp" alt="Featured image of post 个人开发环境安装" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>2月份的时候电脑出了些问题，开不了机，但因为在特殊时期，前几天才有机会修好。结果太久没开机，一直卡在修复界面，得，直接重装吧。每次重装又需要的一堆环境配置，实在繁琐，就想在这整理一下，再用的时候也好参考。&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>以下安装都是在Win10系统进行的&lt;/strong>&lt;/p>
@@ -3194,7 +3194,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/git.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>能看到这两个选项，安装成功。&lt;/p></description></item><item><title>i++与++i的区别</title><link>https://example.com/post/the-difference-between-post-increment-and-pre-increment/</link><pubDate>Thu, 05 Mar 2020 17:54:56 +0800</pubDate><guid>https://example.com/post/the-difference-between-post-increment-and-pre-increment/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/girl-scarf-winter.webp" alt="Featured image of post i++与++i的区别" />&lt;ul>
+&lt;p>能看到这两个选项，安装成功。&lt;/p></description></item><item><title>i++与++i的区别</title><link>https://opoa.top/post/the-difference-between-post-increment-and-pre-increment/</link><pubDate>Thu, 05 Mar 2020 17:54:56 +0800</pubDate><guid>https://opoa.top/post/the-difference-between-post-increment-and-pre-increment/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/girl-scarf-winter.webp" alt="Featured image of post i++与++i的区别" />&lt;ul>
 &lt;li>&lt;code>i++&lt;/code> 表示的是先赋值，再自增&lt;/li>
 &lt;li>&lt;code>++i&lt;/code> 表示的是先自增，再赋值&lt;/li>
 &lt;/ul>
