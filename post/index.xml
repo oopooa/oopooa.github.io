@@ -3406,7 +3406,7 @@ loading="lazy"
 &lt;br/>
 最后，祝大家在新的一年都能实现自己的愿望或目标。
 &lt;p>2021，冲鸭！&lt;/p>
-&lt;br/></description></item><item><title>初识数仓分层</title><link>https://opoa.top/post/getting-to-know-data-warehouse-layering/</link><pubDate>Thu, 10 Dec 2020 14:05:51 +0800</pubDate><guid>https://opoa.top/post/getting-to-know-data-warehouse-layering/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@master/cover/yellow-leaves-orange-hair.webp" alt="Featured image of post 初识数仓分层" />&lt;h2 id="前言">前言
+&lt;iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&amp;id=27090349&amp;auto=0&amp;height=66">&lt;/iframe></description></item><item><title>初识数仓分层</title><link>https://opoa.top/post/getting-to-know-data-warehouse-layering/</link><pubDate>Thu, 10 Dec 2020 14:05:51 +0800</pubDate><guid>https://opoa.top/post/getting-to-know-data-warehouse-layering/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn@master/cover/yellow-leaves-orange-hair.webp" alt="Featured image of post 初识数仓分层" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>最近在给公司的大数据项目写操作手册，又不得不涉及到数仓分层的一些专有名词和概念。这次专门整理学习一下，加深理解记忆。&lt;/p>
 &lt;h2 id="为什么要分层">为什么要分层
 &lt;/h2>&lt;ul>
