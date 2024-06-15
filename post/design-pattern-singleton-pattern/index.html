@@ -1,5 +1,5 @@
 <!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点"><title>[ 设计模式 ] 单例模式实现</title>
-<link rel=canonical href=https://opoa.top/post/design-pattern-singleton-pattern/><link rel=stylesheet href=/scss/style.min.8a52d20485703a1d915336baad0e0759045632d0f2d94e56c050498f4fba15e7.css><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><meta property='og:title' content="[ 设计模式 ] 单例模式实现"><meta property='og:description' content="单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点"><meta property='og:url' content='https://opoa.top/post/design-pattern-singleton-pattern/'><meta property='og:site_name' content='Opoa'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Design Pattern'><meta property='article:tag' content='Java'><meta property='article:published_time' content='2021-03-13T23:11:16+08:00'><meta property='article:modified_time' content='2021-03-13T23:11:16+08:00'><meta property='og:image' content='https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp'><meta name=twitter:title content="[ 设计模式 ] 单例模式实现"><meta name=twitter:description content="单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp'><link rel="shortcut icon" href=/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-5TC51Z6DWN"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-5TC51Z6DWN")}</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<link rel=canonical href=https://opoa.top/post/design-pattern-singleton-pattern/><link rel=stylesheet href=/scss/style.min.2bb11a63731fd6764d098fe993d2688d41a87021eafb1bc98ff3db107205ffce.css><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><meta property='og:title' content="[ 设计模式 ] 单例模式实现"><meta property='og:description' content="单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点"><meta property='og:url' content='https://opoa.top/post/design-pattern-singleton-pattern/'><meta property='og:site_name' content='Opoa'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Design Pattern'><meta property='article:tag' content='Java'><meta property='article:published_time' content='2021-03-13T23:11:16+08:00'><meta property='article:modified_time' content='2021-03-13T23:11:16+08:00'><meta property='og:image' content='https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp'><meta name=twitter:title content="[ 设计模式 ] 单例模式实现"><meta name=twitter:description content="单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp'><link rel="shortcut icon" href=/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-5TC51Z6DWN"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-5TC51Z6DWN")}</script><link rel=stylesheet href=https://npm.elemecdn.com/@highlightjs/cdn-assets@11.7.0/styles/atom-one-dark.min.css><script src=https://npm.elemecdn.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js></script><script>hljs.initHighlightingOnLoad()</script><script>document.addEventListener("DOMContentLoaded",e=>{document.querySelectorAll("pre code").forEach(e=>{hljs.highlightElement(e)})})</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
 <span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_huc9522c74db490d479204dfcc8d873015_49072_300x0_resize_q75_h2_box_2.webp width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>Opoa</a></h1><h2 class=site-description>💻 The best thing you can do at work hard.</h2></div></header><ol class=menu-social><li><a href=https://github.com/oopooa target=_blank title=GitHub rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
 <span>主页 | Home</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
 <span>归档 | Archives</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
@@ -7,36 +7,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
 <span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#什么是单例模式>什么是单例模式</a></li><li><a href=#优点>优点</a></li><li><a href=#实现思路>实现思路</a></li><li><a href=#实现写法>实现写法</a><ol><li><a href=#1饿汉式>1.饿汉式</a></li><li><a href=#2懒汉式>2.懒汉式</a><ol><li><a href=#非线程安全>非线程安全</a></li><li><a href=#线程安全>线程安全</a></li></ol></li><li><a href=#3双重检查锁>3.双重检查锁</a></li><li><a href=#4枚举类>4.枚举类</a></li><li><a href=#tips>Tips</a></li></ol></li><li><a href=#推荐等级>推荐等级</a></li><li><a href=#参考资料>参考资料</a></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/post/design-pattern-singleton-pattern/><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp loading=lazy alt="Featured image of post [ 设计模式 ] 单例模式实现"></a></div><div class=article-details><header class=article-category><a href=/categories/tech/ style=background-color:#598dfa;color:#fff>技术</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/post/design-pattern-singleton-pattern/>[ 设计模式 ] 单例模式实现</a></h2><h3 class=article-subtitle>单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>2021-03-13</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>阅读时长: 2 分钟</time></div></footer></div></header><section class=article-content><h2 id=什么是单例模式>什么是单例模式</h2><p>单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点。</p><h2 id=优点>优点</h2><ul><li>只有一个实例对象，节省内存空间</li><li>避免频繁的创建销毁对象，提高性能</li><li>避免对共享资源的多重占用</li><li>能够全局访问</li></ul><h2 id=实现思路>实现思路</h2><ol><li>私有化构造方法，让外部不能new对象。</li><li>在类的内部创建好实例。【静态变量的目的是为了类加载的时候创建实例】</li><li>向外提供一个公有的静态方法，返回该唯一实例。</li></ol><h2 id=实现写法>实现写法</h2><h3 id=1饿汉式>1.饿汉式</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=cm>/**
+<time class=article-time--reading>阅读时长: 2 分钟</time></div></footer></div></header><section class=article-content><h2 id=什么是单例模式>什么是单例模式</h2><p>单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点。</p><h2 id=优点>优点</h2><ul><li>只有一个实例对象，节省内存空间</li><li>避免频繁的创建销毁对象，提高性能</li><li>避免对共享资源的多重占用</li><li>能够全局访问</li></ul><h2 id=实现思路>实现思路</h2><ol><li>私有化构造方法，让外部不能new对象。</li><li>在类的内部创建好实例。【静态变量的目的是为了类加载的时候创建实例】</li><li>向外提供一个公有的静态方法，返回该唯一实例。</li></ol><h2 id=实现写法>实现写法</h2><h3 id=1饿汉式>1.饿汉式</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=cm>/**
 </span></span></span><span class=line><span class=cl><span class=cm> * @description: 饿汉式
 </span></span></span><span class=line><span class=cl><span class=cm> * @author: opoa
 </span></span></span><span class=line><span class=cl><span class=cm> * @create: 2021-03-14 20:29
@@ -65,22 +36,7 @@
 </span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=n>instance</span><span class=p>;</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
-</span></span></span></code></pre></td></tr></table></div></div><p><strong><font color=green>优点</font></strong>：写法简单，在类加载的时候就创建了实例，避免了线程同步问题，线程安全。<br><strong><font color=red>缺点</font></strong>：如果实例一直没有被使用，则会造成内存空间的浪费。</p><h3 id=2懒汉式>2.懒汉式</h3><h4 id=非线程安全>非线程安全</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>public</span><span class=w> </span><span class=kd>class</span> <span class=nc>Singleton2</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span></code></pre></div><p><strong><font color=green>优点</font></strong>：写法简单，在类加载的时候就创建了实例，避免了线程同步问题，线程安全。<br><strong><font color=red>缺点</font></strong>：如果实例一直没有被使用，则会造成内存空间的浪费。</p><h3 id=2懒汉式>2.懒汉式</h3><h4 id=非线程安全>非线程安全</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>public</span><span class=w> </span><span class=kd>class</span> <span class=nc>Singleton2</span><span class=w> </span><span class=p>{</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kd>private</span><span class=w> </span><span class=nf>Singleton2</span><span class=p>()</span><span class=w> </span><span class=p>{}</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
@@ -95,22 +51,8 @@
 </span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=n>instance</span><span class=p>;</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
-</span></span></span></code></pre></td></tr></table></div></div><p>懒汉式，顾名思义，采用懒加载的方式，当需要用到的时候才初始化实例。
-这种写法在多线程运行时存在安全问题，可能有多个线程同时进入判断条件，生成多个实例。<font color=red><strong>不推荐使用</strong>。</font></p><h4 id=线程安全>线程安全</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>public</span><span class=w> </span><span class=kd>class</span> <span class=nc>Singleton3</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span></code></pre></div><p>懒汉式，顾名思义，采用懒加载的方式，当需要用到的时候才初始化实例。
+这种写法在多线程运行时存在安全问题，可能有多个线程同时进入判断条件，生成多个实例。<font color=red><strong>不推荐使用</strong>。</font></p><h4 id=线程安全>线程安全</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>public</span><span class=w> </span><span class=kd>class</span> <span class=nc>Singleton3</span><span class=w> </span><span class=p>{</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kd>private</span><span class=w> </span><span class=nf>Singleton3</span><span class=p>()</span><span class=w> </span><span class=p>{}</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
@@ -124,28 +66,7 @@
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
-</span></span></span></code></pre></td></tr></table></div></div><p><strong><font color=green>优点</font></strong>：线程安全。<br><strong><font color=red>缺点</font></strong>：效率低。</p><h3 id=3双重检查锁>3.双重检查锁</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>public</span><span class=w> </span><span class=kd>class</span> <span class=nc>Singleton4</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span></code></pre></div><p><strong><font color=green>优点</font></strong>：线程安全。<br><strong><font color=red>缺点</font></strong>：效率低。</p><h3 id=3双重检查锁>3.双重检查锁</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>public</span><span class=w> </span><span class=kd>class</span> <span class=nc>Singleton4</span><span class=w> </span><span class=p>{</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kd>private</span><span class=w> </span><span class=nf>Singleton4</span><span class=p>()</span><span class=w> </span><span class=p>{}</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
@@ -166,19 +87,8 @@
 </span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=n>instance</span><span class=p>;</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
-</span></span></span></code></pre></td></tr></table></div></div><p>volatile关键字: 线程始终能读取到volatile修饰的变量的最新值。
-这种写法线程安全，懒加载，效率高，<font color=green><strong>推荐使用</strong></font>。</p><h3 id=4枚举类>4.枚举类</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>public</span><span class=w> </span><span class=kd>enum</span><span class=w> </span><span class=n>Singleton5</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span></code></pre></div><p>volatile关键字: 线程始终能读取到volatile修饰的变量的最新值。
+这种写法线程安全，懒加载，效率高，<font color=green><strong>推荐使用</strong></font>。</p><h3 id=4枚举类>4.枚举类</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>public</span><span class=w> </span><span class=kd>enum</span><span class=w> </span><span class=n>Singleton5</span><span class=w> </span><span class=p>{</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=cm>/**
 </span></span></span><span class=line><span class=cl><span class=cm>     * 唯一实例
@@ -189,24 +99,7 @@
 </span></span></span><span class=line><span class=cl><span class=w>        </span><span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=s>&#34;doSomething&#34;</span><span class=p>);</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
-</span></span></span></code></pre></td></tr></table></div></div><p>测试代码:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>public</span><span class=w> </span><span class=kd>class</span> <span class=nc>TestSingleton5</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span></code></pre></div><p>测试代码:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>public</span><span class=w> </span><span class=kd>class</span> <span class=nc>TestSingleton5</span><span class=w> </span><span class=p>{</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nd>@Test</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kd>public</span><span class=w> </span><span class=kt>void</span><span class=w> </span><span class=nf>test</span><span class=p>()</span><span class=w> </span><span class=p>{</span><span class=w>
@@ -223,21 +116,17 @@
 </span></span></span><span class=line><span class=cl><span class=w>        </span><span class=n>instance</span><span class=p>.</span><span class=na>doSomething</span><span class=p>();</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
-</span></span></span></code></pre></td></tr></table></div></div><p>运行结果：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>true
+</span></span></span></code></pre></div><p>运行结果：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>true
 </span></span><span class=line><span class=cl>1645995473
 </span></span><span class=line><span class=cl>1645995473
 </span></span><span class=line><span class=cl>doSomething
-</span></span></code></pre></td></tr></table></div></div><p>这种写法简单高效，充分利用了枚举类的特性。是绝对的单例，即使反序列化也不会生成多个实例。<font color=green><strong>推荐使用</strong></font>。</p><h3 id=tips>Tips</h3><p>如何区分懒汉式和饿汉式</p><p><strong>懒汉式</strong>：顾名思义，它比较懒，只有需要用到的时候才会去生产，毕竟 Deadline 才是唯一生产力嘛。这里也可以理解为懒加载的形式。</p><p><strong>饿汉式</strong>：不愿意让自己多饿一分钟，宁愿先把饭做好了，饿了的话就可以直接吃饭。对应提前初始化好实例对象。</p><h2 id=推荐等级>推荐等级</h2><p><strong>枚举类 > 双重检查锁 > 饿汉式</strong></p><h2 id=参考资料>参考资料</h2><p><a class=link href=https://yichun.blog.csdn.net/article/details/103249751 target=_blank rel=noopener>【设计模式】单例模式的八种写法分析
+</span></span></code></pre></div><p>这种写法简单高效，充分利用了枚举类的特性。是绝对的单例，即使反序列化也不会生成多个实例。<font color=green><strong>推荐使用</strong></font>。</p><h3 id=tips>Tips</h3><p>如何区分懒汉式和饿汉式</p><p><strong>懒汉式</strong>：顾名思义，它比较懒，只有需要用到的时候才会去生产，毕竟 Deadline 才是唯一生产力嘛。这里也可以理解为懒加载的形式。</p><p><strong>饿汉式</strong>：不愿意让自己多饿一分钟，宁愿先把饭做好了，饿了的话就可以直接吃饭。对应提前初始化好实例对象。</p><h2 id=推荐等级>推荐等级</h2><p><strong>枚举类 > 双重检查锁 > 饿汉式</strong></p><h2 id=参考资料>参考资料</h2><p><a class=link href=https://yichun.blog.csdn.net/article/details/103249751 target=_blank rel=noopener>【设计模式】单例模式的八种写法分析
 <span style=white-space:nowrap><svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z" fill="currentcolor"/><path d="M19 19H5V5h7l-2-2H5c-1.103.0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103.0 2-.897 2-2v-5l-2-2v7z" fill="currentcolor"/></span></a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/design-pattern/>Design Pattern</a>
 <a href=/tags/java/>Java</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/post/design-pattern-template-method/><div class=article-image><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/whitegirl.webp loading=lazy data-key=design-pattern-template-method data-hash=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/whitegirl.webp></div><div class=article-details><h2 class=article-title>[ 设计模式 ] 模板方法</h2></div></a></article><article class=has-image><a href=/post/double-linked-list-in-java/><div class=article-image><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp loading=lazy data-key=double-linked-list-in-java data-hash=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp></div><div class=article-details><h2 class=article-title>[ Java ] 双链表</h2></div></a></article><article class=has-image><a href=/post/single-linked-list-in-java/><div class=article-image><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp loading=lazy data-key=single-linked-list-in-java data-hash=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp></div><div class=article-details><h2 class=article-title>[ Java ] 单链表</h2></div></a></article><article class=has-image><a href=/post/sequential-list-in-java/><div class=article-image><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp loading=lazy data-key=sequential-list-in-java data-hash=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp></div><div class=article-details><h2 class=article-title>[ Java ] 顺序表</h2></div></a></article><article class=has-image><a href=/post/personal-development-environment-installation/><div class=article-image><img src=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/close-up-heterochromia-brown-hair-scarf.webp loading=lazy data-key=personal-development-environment-installation data-hash=https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/close-up-heterochromia-brown-hair-scarf.webp></div><div class=article-details><h2 class=article-title>个人开发环境安装</h2></div></a></article></div></div></aside><script src=https://giscus.app/client.js data-repo=oopooa/oopooa.github.io data-repo-id=R_kgDOMGuQ6Q data-category=Announcements data-category-id=DIC_kwDOMGuQ6c4CgB01 data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=top data-theme=light data-lang=en crossorigin=anonymous async></script><script>function setGiscusTheme(e){let t=document.querySelector("iframe.giscus-frame");t&&t.contentWindow.postMessage({giscus:{setConfig:{theme:e}}},"https://giscus.app")}(function(){addEventListener("message",t=>{if(event.origin!=="https://giscus.app")return;e()}),window.addEventListener("onColorSchemeChange",e);function e(){setGiscusTheme(document.documentElement.dataset.scheme==="light"?"light":"dark")}})()</script><footer class=site-footer><section class=copyright>&copy;
 2020 -
 2024 蜀ICP备20005474号-1</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.26.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section><section class=total-count>发表了 23 篇文章 ·
-总计 7.31k 字</section><section class=busuanzi-count><span id=busuanzi_container_site_pv>本站总访问量 <span id=busuanzi_value_site_pv></span> 次
+总计 5.82k 字</section><section class=busuanzi-count><span id=busuanzi_container_site_pv>本站总访问量 <span id=busuanzi_value_site_pv></span> 次
 </span>·
 <span id=busuanzi_container_site_uv>总访客数 <span id=busuanzi_value_site_uv></span> 人</span></section><section class=running-time>本博客已稳定运行 🧡
 <span id=runningdays class=running-days></span></section></footer><script>runningTime(),setInterval(()=>{runningTime()},1e3);function runningTime(){let t="2020-02-02 22:22:22";t=new Date(t.replace(/-/g,"/"));let n=new Date,e=n.getTime()-t.getTime(),s=Math.floor(e/(1e3*60*60*24)),o=Math.floor(e%(1e3*60*60*24)/(1e3*60*60)),i=Math.floor(e%(1e3*60*60)/(1e3*60)),a=Math.round(e%(1e3*60*60*24)%(1e3*60*60)%(1e3*60)/1e3),r=`${s} 天 ${o} 小时 ${i} 分钟 ${a} 秒`;document.querySelector("#runningdays").innerHTML=r}</script><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
