@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Opoa</title><link>https://opoa.top/tags/java/</link><description>Recent content in Java on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Fri, 02 Jul 2021 17:03:46 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>[ 设计模式 ] 模板方法</title><link>https://opoa.top/post/design-pattern-template-method/</link><pubDate>Fri, 02 Jul 2021 17:03:46 +0800</pubDate><guid>https://opoa.top/post/design-pattern-template-method/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/whitegirl.webp" alt="Featured image of post [ 设计模式 ] 模板方法" />&lt;h2 id="定义">定义
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Opoa</title><link>https://opoa.top/tags/java/</link><description>Recent content in Java on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Fri, 02 Jul 2021 17:03:46 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>[设计模式] 模板方法</title><link>https://opoa.top/post/design-pattern-template-method/</link><pubDate>Fri, 02 Jul 2021 17:03:46 +0800</pubDate><guid>https://opoa.top/post/design-pattern-template-method/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/whitegirl.webp" alt="Featured image of post [设计模式] 模板方法" />&lt;h2 id="定义">定义
 &lt;/h2>&lt;p>模板方法模式在一个方法中定义一个算法骨架，并将某些步骤推迟到子类中实现。模板方法模式可以让子类在不改变算法整体结构的情况下，重新定义算法中的某些步骤。&lt;/p>
 &lt;p>简单来说模板方法定义了一套流程，流程中有哪些操作，操作的具体顺序是什么。而操作的具体实现则交给其子类去实现，模板方法不需要关心。&lt;/p>
 &lt;h2 id="示例">示例
 &lt;/h2>&lt;p>现有需要对接支付宝和微信支付，部分方法是公用的，另外的需要不同的实现。这里可以使用模板方法，支付流程简单定义为&lt;/p>
 &lt;ul>
-&lt;li>打开App&lt;/li>
+&lt;li>打开 App&lt;/li>
 &lt;li>输入支付金额 （公用）&lt;/li>
 &lt;li>用户校验&lt;/li>
 &lt;li>显示支付结果&lt;/li>
@@ -37,7 +37,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @param amount 支付金额
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">inputMoney&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">double&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">amount&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;当前待支付金额: &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">amount&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;元。&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;当前待支付金额:&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">amount&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;元。&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="cm">/**
@@ -71,7 +71,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nd">@Override&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">protected&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">inputPassword&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;-----微信支付界面-----&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;----- 微信支付界面 -----&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;密码输入中...&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;密码校验中...&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
@@ -82,9 +82,9 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kt">boolean&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">success&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Random&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="na">nextBoolean&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;微信支付结果:&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">success&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;支付成功!&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;支付成功！&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">else&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;支付失败!&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;支付失败！&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
@@ -98,8 +98,8 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nd">@Override&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">protected&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">faceId&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;-----支付宝界面-----&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;面容ID识别中...&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;----- 支付宝界面 -----&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;面容 ID 识别中...&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nd">@Override&lt;/span>&lt;span class="w">
@@ -108,9 +108,9 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kt">boolean&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">success&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Random&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="na">nextBoolean&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;支付宝支付结果:&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">success&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;支付成功!&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;支付成功！&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">else&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;支付失败!&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;支付失败！&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
@@ -129,23 +129,23 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="输出结果">输出结果
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">打开支付宝
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">当前待支付金额: 12.0元。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-----支付宝界面-----
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">面容ID识别中...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">当前待支付金额: 12.0 元。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">----- 支付宝界面 -----
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">面容 ID 识别中...
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">支付宝支付结果:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">支付成功!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">支付成功！
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---------------------------------
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">打开微信
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">当前待支付金额: 6.0元。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-----微信支付界面-----
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">当前待支付金额: 6.0 元。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">----- 微信支付界面 -----
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">密码输入中...
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">密码校验中...
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">微信支付结果:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">支付失败!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">支付失败！
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以看到，模板方法的优点是提升了代码的复用性和可拓展性。增加一种实现只需要增加一个子类，根据自己的业务去实现抽象方法即可。
 缺点是后续的话类的数量可能会很多，不便于维护，如果修改了抽象类，可能需要修改的类数量很多。&lt;/p>
 &lt;h2 id="总结">总结
-&lt;/h2>&lt;p>模板方法的&lt;code>核心思想&lt;/code>是：&lt;code>父类定义骨架&lt;/code>，&lt;code>子类实现&lt;/code>某些&lt;code>细节&lt;/code>。&lt;/p>
+&lt;/h2>&lt;p>模板方法的 &lt;code>核心思想&lt;/code> 是：&lt;code>父类定义骨架&lt;/code>，&lt;code>子类实现&lt;/code> 某些 &lt;code>细节&lt;/code>。&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://aobing.blog.csdn.net/article/details/117935005" target="_blank" rel="noopener"
 >模板方法 （宝，我输液了，输的想你的夜）
@@ -168,7 +168,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>[ Java ] 双链表</title><link>https://opoa.top/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://opoa.top/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
+&lt;/p></description></item><item><title>[Java] 双链表</title><link>https://opoa.top/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://opoa.top/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [Java] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
 &lt;/h2>&lt;p>双链表也叫双向链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。&lt;/p>
 &lt;h2 id="单链表与双链表的区别">单链表与双链表的区别
 &lt;/h2>&lt;h3 id="单链表">单链表
@@ -343,7 +343,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 如果头结点为空,则链表为空 新增结点既是头节点也是尾结点&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 如果头结点为空，则链表为空 新增结点既是头节点也是尾结点&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">head&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">head&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">tail&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">head&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
@@ -353,7 +353,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 新增的结点 以之前的尾结点作为前结点&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tail&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 把当前结点的地址赋值给尾结点的next&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 把当前结点的地址赋值给尾结点的 next&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">tail&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">next&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 当前结点作为新的尾结点&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">tail&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
@@ -561,7 +561,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="参考资料">参考资料
-&lt;/h2>&lt;p>Java8 LinkedList 源码&lt;/p></description></item><item><title>[ 设计模式 ] 单例模式实现</title><link>https://opoa.top/post/design-pattern-singleton-pattern/</link><pubDate>Sat, 13 Mar 2021 23:11:16 +0800</pubDate><guid>https://opoa.top/post/design-pattern-singleton-pattern/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp" alt="Featured image of post [ 设计模式 ] 单例模式实现" />&lt;h2 id="什么是单例模式">什么是单例模式
+&lt;/h2>&lt;p>Java8 LinkedList 源码&lt;/p></description></item><item><title>[设计模式] 单例模式实现</title><link>https://opoa.top/post/design-pattern-singleton-pattern/</link><pubDate>Sat, 13 Mar 2021 23:11:16 +0800</pubDate><guid>https://opoa.top/post/design-pattern-singleton-pattern/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/little-rem.webp" alt="Featured image of post [设计模式] 单例模式实现" />&lt;h2 id="什么是单例模式">什么是单例模式
 &lt;/h2>&lt;p>单例模式是一种常用的软件设计模式。定义是单例的类只能有一个实例对象，并向外提供一个全局访问点。&lt;/p>
 &lt;h2 id="优点">优点
 &lt;/h2>&lt;ul>
@@ -572,12 +572,12 @@ loading="lazy"
 &lt;/ul>
 &lt;h2 id="实现思路">实现思路
 &lt;/h2>&lt;ol>
-&lt;li>私有化构造方法，让外部不能new对象。&lt;/li>
+&lt;li>私有化构造方法，让外部不能 new 对象。&lt;/li>
 &lt;li>在类的内部创建好实例。【静态变量的目的是为了类加载的时候创建实例】&lt;/li>
 &lt;li>向外提供一个公有的静态方法，返回该唯一实例。&lt;/li>
 &lt;/ol>
 &lt;h2 id="实现写法">实现写法
-&lt;/h2>&lt;h3 id="1饿汉式">1.饿汉式
+&lt;/h2>&lt;h3 id="1-饿汉式">1. 饿汉式
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="cm">/**
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @description: 饿汉式
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @author: opoa
@@ -609,7 +609,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>&lt;font color = green>优点&lt;/font>&lt;/strong>：写法简单，在类加载的时候就创建了实例，避免了线程同步问题，线程安全。 &lt;br>
 &lt;strong>&lt;font color = red>缺点&lt;/font>&lt;/strong>：如果实例一直没有被使用，则会造成内存空间的浪费。&lt;/p>
-&lt;h3 id="2懒汉式">2.懒汉式
+&lt;h3 id="2-懒汉式">2. 懒汉式
 &lt;/h3>&lt;h4 id="非线程安全">非线程安全
 &lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">class&lt;/span> &lt;span class="nc">Singleton2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
@@ -645,7 +645,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>&lt;font color = green>优点&lt;/font>&lt;/strong>：线程安全。 &lt;br>
 &lt;strong>&lt;font color = red>缺点&lt;/font>&lt;/strong>：效率低。&lt;/p>
-&lt;h3 id="3双重检查锁">3.双重检查锁
+&lt;h3 id="3-双重检查锁">3. 双重检查锁
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">class&lt;/span> &lt;span class="nc">Singleton4&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">Singleton4&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{}&lt;/span>&lt;span class="w">
@@ -667,9 +667,9 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">instance&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>volatile关键字: 线程始终能读取到volatile修饰的变量的最新值。
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>volatile 关键字：线程始终能读取到 volatile 修饰的变量的最新值。
 这种写法线程安全，懒加载，效率高，&lt;font color = green>&lt;strong>推荐使用&lt;/strong>&lt;/font>。&lt;/p>
-&lt;h3 id="4枚举类">4.枚举类
+&lt;h3 id="4-枚举类">4. 枚举类
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">enum&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Singleton5&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="cm">/**
@@ -722,7 +722,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://opoa.top/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://opoa.top/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
+&lt;/p></description></item><item><title>[Java] 单链表</title><link>https://opoa.top/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://opoa.top/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [Java] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
 &lt;/h2>&lt;p>单链表是链表的其中一种基本结构。它是构成单链表的基本结点结构。在结点中数据域用来存储数据元素，指针域用于指向下一个具有相同结构的结点。
 因为只有一个指针结点，称为单链表。&lt;/p>
 &lt;h2 id="顺序表与单链表的区别">顺序表与单链表的区别
@@ -978,7 +978,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">throw&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">IllegalArgumentException&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;非法下标参数&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">curNode&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">head&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 下标为0 直接返回头结点&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 下标为 0 直接返回头结点&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">index&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">curNode&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
@@ -1177,7 +1177,7 @@ fill="currentColor">
 &lt;/a>
 &lt;br>
 &lt;a class="link" href="https://blog.csdn.net/weixin_36605200/article/details/88804537" target="_blank" rel="noopener"
->Java基础&amp;ndash;单链表的实现
+>Java 基础 &amp;ndash; 单链表的实现
 &lt;span style="white-space: nowrap;">
 &lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
 &lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
@@ -1186,16 +1186,16 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://opoa.top/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://opoa.top/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
+&lt;/p></description></item><item><title>[Java] 顺序表</title><link>https://opoa.top/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://opoa.top/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [Java] 顺序表" />&lt;h2 id="定义">定义
 &lt;/h2>&lt;h3 id="线性表">线性表
-&lt;/h3>&lt;p>线性表是具有&lt;font color=red>相同&lt;/font>数据类型的 n (n ≥ 0) 个&lt;font color=purple>数据元素&lt;/font>的有限序列&lt;/p>
+&lt;/h3>&lt;p>线性表是具有 &lt;font color=red> 相同 &lt;/font> 数据类型的 n (n ≥ 0) 个 &lt;font color=purple> 数据元素 &lt;/font> 的有限序列&lt;/p>
 &lt;h3 id="顺序表">顺序表
-&lt;/h3>&lt;p>&lt;strong>用 &lt;font color=red>顺序存储&lt;/font> 的方式实现线性表顺序存储&lt;/strong>。把&lt;font color=red>逻辑上相邻&lt;/font>的元素存储在&lt;font color=red>物理位置上也相邻&lt;/font>的存储单元中，元素之间的关系由存储单元的邻接关系来体现。&lt;/p>
+&lt;/h3>&lt;p>&lt;strong>用 &lt;font color=red>顺序存储&lt;/font> 的方式实现线性表顺序存储&lt;/strong>。把 &lt;font color=red> 逻辑上相邻 &lt;/font> 的元素存储在 &lt;font color=red> 物理位置上也相邻 &lt;/font> 的存储单元中，元素之间的关系由存储单元的邻接关系来体现。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sequence-list.webp"
 loading="lazy"
 alt="内存中"
 >&lt;/p>
-&lt;h2 id="java代码实现">Java代码实现
+&lt;h2 id="java-代码实现">Java 代码实现
 &lt;/h2>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nn">java.util.Arrays&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="cm">/**
@@ -1216,7 +1216,7 @@ alt="内存中"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">length&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="cm">/**
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * 最大容量 默认为10
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * 最大容量 默认为 10
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">capacity&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">10&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
@@ -1269,7 +1269,7 @@ alt="内存中"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @return 插入是否成功
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">boolean&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">str&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 如果数组长度等于最大容量, 表示已经装满, 直接返回&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 如果数组长度等于最大容量，表示已经装满，直接返回&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">length&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">capacity&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
@@ -1325,7 +1325,7 @@ alt="内存中"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="cm">/**
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * 对数组进行2倍扩容
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * 对数组进行 2 倍扩容
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">enlarge&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">strs&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">capacity&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
@@ -1379,9 +1379,9 @@ fill="currentColor">
 &lt;/span>
 &lt;/a>
 &lt;/p></description></item><item><title>个人开发环境安装</title><link>https://opoa.top/post/personal-development-environment-installation/</link><pubDate>Sun, 05 Apr 2020 14:36:45 +0800</pubDate><guid>https://opoa.top/post/personal-development-environment-installation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/close-up-heterochromia-brown-hair-scarf.webp" alt="Featured image of post 个人开发环境安装" />&lt;h2 id="前言">前言
-&lt;/h2>&lt;p>2月份的时候电脑出了些问题，开不了机，但因为在特殊时期，前几天才有机会修好。结果太久没开机，一直卡在修复界面，得，直接重装吧。每次重装又需要的一堆环境配置，实在繁琐，就想在这整理一下，再用的时候也好参考。&lt;/p>
+&lt;/h2>&lt;p>2 月份的时候电脑出了些问题，开不了机，但因为在特殊时期，前几天才有机会修好。结果太久没开机，一直卡在修复界面，得，直接重装吧。每次重装又需要的一堆环境配置，实在繁琐，就想在这整理一下，再用的时候也好参考。&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;strong>以下安装都是在Win10系统进行的&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>以下安装都是在 Win10 系统进行的&lt;/strong>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="java">Java
 &lt;/h2>&lt;p>版本：JDK8&lt;/p>
@@ -1420,12 +1420,12 @@ loading="lazy"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">JAVA_HOME
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>变量值:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">C:\Program Files\Java\jdk1.8.0_231
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red">根据自己的路径配置&lt;/font>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red"> 根据自己的路径配置 &lt;/font>&lt;/p>
 &lt;p>变量名：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">CLASSPATH
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>变量值：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">.&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">JAVA_HOME&lt;/span>&lt;span class="o">%&lt;/span>\&lt;span class="n">lib&lt;/span>\&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">jar&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">JAVA_HOME&lt;/span>&lt;span class="o">%&lt;/span>\&lt;span class="n">lib&lt;/span>\&lt;span class="n">tools&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">jar&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red">!!注意前面有个&amp;quot;.&amp;quot;!!&lt;/font>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red">!! 注意前面有个 &amp;ldquo;.&amp;rdquo;!!&lt;/font>&lt;/p>
 &lt;p>&lt;strong>编辑:&lt;/strong>&lt;/p>
 &lt;p>变量名：Path&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Path
@@ -1452,9 +1452,9 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -cp &amp;lt;目录和 zip/jar 文件的类搜索路径&amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -classpath &amp;lt;目录和 zip/jar 文件的类搜索路径&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 用 ; 分隔的目录, JAR 档案
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 和 ZIP 档案列表, 用于搜索类文件。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -D&amp;lt;名称&amp;gt;=&amp;lt;值&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 用；分隔的目录，JAR 档案
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 和 ZIP 档案列表，用于搜索类文件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -D &amp;lt;名称&amp;gt;=&amp;lt; 值 &amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 设置系统属性
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -verbose:[class|gc|jni]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 启用详细输出
@@ -1466,7 +1466,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输入 &lt;code>javac&lt;/code>&lt;/p>
 &lt;p>显示如下:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="err">用法&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">javac&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">options&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">source&lt;/span> &lt;span class="n">files&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">其中&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="err">可能的选项包括&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">其中，可能的选项包括&lt;/span>&lt;span class="p">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span> &lt;span class="err">生成所有调试信息&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">none&lt;/span> &lt;span class="err">不生成任何调试信息&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span>&lt;span class="p">:{&lt;/span>&lt;span class="n">lines&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">vars&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">source&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="err">只生成某些调试信息&lt;/span>
@@ -1479,8 +1479,8 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">bootclasspath&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">路径&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="err">覆盖引导类文件的位置&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">extdirs&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">目录&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="err">覆盖所安装扩展的位置&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">endorseddirs&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">目录&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="err">覆盖签名的标准路径的位置&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">proc&lt;/span>&lt;span class="p">:{&lt;/span>&lt;span class="n">none&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">only&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="err">控制是否执行注释处理和&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="err">或编译。&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">processor&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class1&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[,&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class2&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class3&lt;/span>&lt;span class="o">&amp;gt;...&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="err">要运行的注释处理程序的名称&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="err">绕过默认的搜索进程&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">proc&lt;/span>&lt;span class="p">:{&lt;/span>&lt;span class="n">none&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">only&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="err">控制是否执行注释处理和&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="err">或编译。&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">processor&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class1&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[,&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class2&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class3&lt;/span>&lt;span class="o">&amp;gt;...&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="err">要运行的注释处理程序的名称；绕过默认的搜索进程&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="err">截取了一部分显示&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">......&lt;/span>
@@ -1489,7 +1489,7 @@ loading="lazy"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">java version &amp;#34;1.8.0_231&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Java(TM) SE Runtime Environment (build 1.8.0_231-b11)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Java HotSpot(TM) 64-Bit Server VM (build 25.231-b11, mixed mode)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>到这里JDK就安装配置好了。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>到这里 JDK 就安装配置好了。&lt;/p>
 &lt;h2 id="mysql">MySQL
 &lt;/h2>&lt;p>版本：MySQL5.7&lt;/p>
 &lt;p>&lt;a class="link" href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener"
@@ -1553,7 +1553,7 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">C:\Program Files\MySQL\MySQL Server 5.7
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑Path：&lt;/strong>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑 Path：&lt;/strong>&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql11.webp"
 loading="lazy"
 >&lt;/p>
@@ -1573,7 +1573,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql15.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>添加/修改以下内容&lt;/p>
+&lt;p>添加 / 修改以下内容&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[mysqld]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">character-set-server=utf8
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[client]
@@ -1623,14 +1623,14 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">E:\JavaTools\apache-tomcat-8.5.14
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑Path:&lt;/strong>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑 Path:&lt;/strong>&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat3.webp"
 loading="lazy"
 >&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">%CATALINA_HOME%\bin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="测试-2">测试
 &lt;/h3>&lt;p>打开 &lt;code>cmd&lt;/code>&lt;/p>
-&lt;p>输入startup.bat 开启服务器&lt;/p>
+&lt;p>输入 startup.bat 开启服务器&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat4.webp"
 loading="lazy"
 >&lt;/p>
@@ -1638,7 +1638,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat5.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>显示这只三脚猫就说明Tomcat装好了。&lt;/p>
+&lt;p>显示这只三脚猫就说明 Tomcat 装好了。&lt;/p>
 &lt;h2 id="maven">Maven
 &lt;/h2>&lt;p>版本: Maven3.6&lt;/p>
 &lt;p>&lt;a class="link" href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener"
@@ -1664,7 +1664,7 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">E:\JavaTools\Maven3.6\apache-maven-3.6.2
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑Path：&lt;/strong>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑 Path：&lt;/strong>&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven4.webp"
 loading="lazy"
 >&lt;/p>
@@ -1675,9 +1675,9 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven5.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>能看到Maven版本就表示安装好了。&lt;/p>
+&lt;p>能看到 Maven 版本就表示安装好了。&lt;/p>
 &lt;h3 id="配置本地仓库和云仓库">配置本地仓库和云仓库
-&lt;/h3>&lt;p>打开安装目录下conf/settings.xml文件&lt;/p>
+&lt;/h3>&lt;p>打开安装目录下 conf/settings.xml 文件&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven6.webp"
 loading="lazy"
 >&lt;/p>

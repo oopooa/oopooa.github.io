@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hexo on Opoa</title><link>https://opoa.top/tags/hexo/</link><description>Recent content in Hexo on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Mon, 27 Apr 2020 12:55:04 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hexo 使用 SweetAlert 美化弹窗</title><link>https://opoa.top/post/add-sweetalert-in-hexo/</link><pubDate>Mon, 27 Apr 2020 12:55:04 +0800</pubDate><guid>https://opoa.top/post/add-sweetalert-in-hexo/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/honebami-toushirou-catanime.webp" alt="Featured image of post Hexo 使用 SweetAlert 美化弹窗" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;blockquote>
 &lt;p>私密文章参考: &lt;a class="link" href="https://blog.csdn.net/cungudafa/article/details/104346521" target="_blank" rel="noopener"
->Hexo（sakura）设置文章置顶+私密文章
+>Hexo（sakura）设置文章置顶 + 私密文章
 &lt;span style="white-space: nowrap;">
 &lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
 &lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
@@ -35,7 +35,7 @@ loading="lazy"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;!-- sweetalert --&amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script src=&amp;#34;https://unpkg.com/sweetalert/dist/sweetalert.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>修改 &lt;font color=orange>node_modules/hexo-blog-encrypt/lib/blog-encrypt.js&lt;/font> 文件&lt;/p>
-&lt;p>搜索 &lt;code>alert(WrongPassMessage)&lt;/code>，找到弹出错误密码信息的js代码段&lt;/p>
+&lt;p>搜索 &lt;code>alert(WrongPassMessage)&lt;/code>，找到弹出错误密码信息的 js 代码段&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="k">return&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">verifyContent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">hmacKey&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">decoded&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}).&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">wrongPassMessage&lt;/span>&lt;span class="p">);&lt;/span>
@@ -56,7 +56,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在 &lt;font color=orange>themes/Sakura/source/css/style.css&lt;/font> 文件中调整弹窗的样式&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* 密码错误sweetalert弹框样式修改 */&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* 密码错误 sweetalert 弹框样式修改 */&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">swal-overlay&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">transparent&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
@@ -69,7 +69,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.15&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red">&lt;b>注意：由于修改了依赖库中的代码，一旦修改或更新依赖都会覆盖掉我们的修改，需要重新修改。&lt;/b>&lt;/font>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red">&lt;b> 注意：由于修改了依赖库中的代码，一旦修改或更新依赖都会覆盖掉我们的修改，需要重新修改。&lt;/b>&lt;/font>&lt;/p>
 &lt;h2 id="参考文章">参考文章
 &lt;/h2>&lt;p>&lt;a class="link" href="http://yearito.cn/posts/hexo-advanced-settings.html" target="_blank" rel="noopener"
 >Hexo 搭建个人博客系列：进阶设置篇
@@ -81,7 +81,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>Hexo(Sakura) 添加在线聊天 Tidio</title><link>https://opoa.top/post/add-tidio-in-hexo-sakura-theme/</link><pubDate>Sun, 26 Apr 2020 20:30:45 +0800</pubDate><guid>https://opoa.top/post/add-tidio-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp" alt="Featured image of post Hexo(Sakura) 添加在线聊天 Tidio" />&lt;h2 id="前言">前言
+&lt;/p></description></item><item><title>Hexo (Sakura) 添加在线聊天 Tidio</title><link>https://opoa.top/post/add-tidio-in-hexo-sakura-theme/</link><pubDate>Sun, 26 Apr 2020 20:30:45 +0800</pubDate><guid>https://opoa.top/post/add-tidio-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/flower-water-drops.webp" alt="Featured image of post Hexo (Sakura) 添加在线聊天 Tidio" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>一直想给博客装款在线聊天软件，综合对比下来后，选择了 &lt;a class="link" href="https://www.tidiochat.com" target="_blank" rel="noopener"
 >Tidio
 &lt;span style="white-space: nowrap;">
@@ -110,7 +110,7 @@ fill="currentColor">
 &lt;/span>
 &lt;/a>
 注册账号，一个邮箱就能搞定，非常方便。&lt;/p>
-&lt;h3 id="自定义tidio">自定义Tidio
+&lt;h3 id="自定义-tidio">自定义 Tidio
 &lt;/h3>&lt;p>进入账户界面后，可以根据自己的喜好定制，可选颜色，语言，布局，侧边栏等等。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio1.webp"
 loading="lazy"
@@ -124,9 +124,9 @@ loading="lazy"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Tidio online chat&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">tidio&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">enable&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">key&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 替换为你的Public Key&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">key&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 替换为你的 Public Key&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在 &lt;font color=orange>themes/Sakura/layout/_partial/footer.ejs&lt;/font> 中添加如下代码&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;!-- 在线通讯Tidio --&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;!-- 在线通讯 Tidio --&amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;% if (theme.tidio.enable){ %&amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;script src=&amp;#34;//code.tidio.co/&amp;lt;%- theme.tidio.key %&amp;gt;.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;% } %&amp;gt;
@@ -143,8 +143,8 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>Hexo(Sakura) 音乐插件播放异常</title><link>https://opoa.top/post/music-plugin-playback-error-in-hexo-sakura-theme/</link><pubDate>Sun, 19 Apr 2020 15:08:06 +0800</pubDate><guid>https://opoa.top/post/music-plugin-playback-error-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" alt="Featured image of post Hexo(Sakura) 音乐插件播放异常" />&lt;h2 id="前言">前言
-&lt;/h2>&lt;p>重做博客时新发现的问题，loop按钮不显示，且循环播放功能失效。回看才发现，其实一直都存在的问题，处理了站内播放bug之后就忽略音乐插件了。&lt;/p>
+&lt;/p></description></item><item><title>Hexo (Sakura) 音乐插件播放异常</title><link>https://opoa.top/post/music-plugin-playback-error-in-hexo-sakura-theme/</link><pubDate>Sun, 19 Apr 2020 15:08:06 +0800</pubDate><guid>https://opoa.top/post/music-plugin-playback-error-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" alt="Featured image of post Hexo (Sakura) 音乐插件播放异常" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>重做博客时新发现的问题，loop 按钮不显示，且循环播放功能失效。回看才发现，其实一直都存在的问题，处理了站内播放 bug 之后就忽略音乐插件了。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.min.gif"
 loading="lazy"
 >&lt;/p>
@@ -170,10 +170,10 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop4.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>嗯&amp;hellip;目前双方情绪都很稳定。&lt;/p></description></item><item><title>Hexo 博客迁移</title><link>https://opoa.top/post/migrate-hexo-blog/</link><pubDate>Mon, 06 Apr 2020 14:22:35 +0800</pubDate><guid>https://opoa.top/post/migrate-hexo-blog/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp" alt="Featured image of post Hexo 博客迁移" />&lt;h2 id="前言">前言
-&lt;/h2>&lt;p>折腾了两天，软件和环境装的差不多了，接下来把我的Hexo博客转移过来，也是第一次弄，记录一下。&lt;/p>
+&lt;p>嗯&amp;hellip; 目前双方情绪都很稳定。&lt;/p></description></item><item><title>Hexo 博客迁移</title><link>https://opoa.top/post/migrate-hexo-blog/</link><pubDate>Mon, 06 Apr 2020 14:22:35 +0800</pubDate><guid>https://opoa.top/post/migrate-hexo-blog/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp" alt="Featured image of post Hexo 博客迁移" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>折腾了两天，软件和环境装的差不多了，接下来把我的 Hexo 博客转移过来，也是第一次弄，记录一下。&lt;/p>
 &lt;h2 id="git">Git
-&lt;/h2>&lt;p>Git之前已经装过了，但它对Hexo来说太重要，这里还是提一下，要先安装Git。&lt;/p>
+&lt;/h2>&lt;p>Git 之前已经装过了，但它对 Hexo 来说太重要，这里还是提一下，要先安装 Git。&lt;/p>
 &lt;h2 id="node">Node
 &lt;/h2>&lt;p>版本：Node v12.16.1&lt;/p>
 &lt;p>&lt;a class="link" href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener"
@@ -200,7 +200,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node3.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>等待安装完成Finish。&lt;/p>
+&lt;p>等待安装完成 Finish。&lt;/p>
 &lt;h3 id="测试">测试
 &lt;/h3>&lt;p>打开 &lt;code>cmd&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">node -v
@@ -209,7 +209,7 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;h3 id="环境配置">环境配置
-&lt;/h3>&lt;p>配置安装模块的路径，默认会安装到C盘下&lt;/p>
+&lt;/h3>&lt;p>配置安装模块的路径，默认会安装到 C 盘下&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node5.webp"
 loading="lazy"
 >&lt;/p>
@@ -227,7 +227,7 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">E:\Node\node_global\node_modules
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>修改用户变量Path&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>修改用户变量 Path&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node8.webp"
 loading="lazy"
 >&lt;/p>
@@ -251,7 +251,7 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="hexo">Hexo
 &lt;/h2>&lt;h3 id="安装-1">安装
-&lt;/h3>&lt;p>打开cmd&lt;/p>
+&lt;/h3>&lt;p>打开 cmd&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm install -g hexo-cli
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>进入事先准备好的博客文件根目录&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo.webp"
@@ -267,16 +267,16 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo2.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>到这里就迁移成功啦&lt;/p></description></item><item><title>Hexo(Sakura) 缩略图显示异常</title><link>https://opoa.top/post/thumbnail-display-issue-in-hexo-sakura/</link><pubDate>Thu, 26 Mar 2020 21:36:45 +0800</pubDate><guid>https://opoa.top/post/thumbnail-display-issue-in-hexo-sakura/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp" alt="Featured image of post Hexo(Sakura) 缩略图显示异常" />&lt;h2 id="前言">前言
+&lt;p>到这里就迁移成功啦&lt;/p></description></item><item><title>Hexo (Sakura) 缩略图显示异常</title><link>https://opoa.top/post/thumbnail-display-issue-in-hexo-sakura/</link><pubDate>Thu, 26 Mar 2020 21:36:45 +0800</pubDate><guid>https://opoa.top/post/thumbnail-display-issue-in-hexo-sakura/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp" alt="Featured image of post Hexo (Sakura) 缩略图显示异常" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp"
 loading="lazy"
 alt="异常缩略图"
 >&lt;/p>
-&lt;p>由于文章的头图宽高比例不是1:1，缩略图强行将它放入圆形容器中，挤压了宽度，导致了变形。&lt;/p>
+&lt;p>由于文章的头图宽高比例不是 1:1，缩略图强行将它放入圆形容器中，挤压了宽度，导致了变形。&lt;/p>
 &lt;h2 id="正文">正文
 &lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be1.webp"
 loading="lazy"
-alt="F12定位"
+alt="F12 定位"
 >&lt;/p>
 &lt;p>可以大致定位在分类页的部分:&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/dir.webp"
@@ -296,7 +296,7 @@ alt="目录"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这里要用到 CSS 属性 &lt;code>object-fit&lt;/code>，关键字选择 &lt;code>cover&lt;/code> ，让图片填满整个内容框，如有超出的部分则裁剪掉。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;150&amp;#34;&lt;/span> &lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;150&amp;#34;&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;object-fit: cover;&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;lt;%= post.photos[0] %&amp;gt;&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;attachment-post-thumbnail size-post-thumbnail wp-post-image&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red">注意：图片一定要设置宽高，否则 &lt;code>object-fit&lt;/code> 将无效。&lt;/font>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red"> 注意：图片一定要设置宽高，否则 &lt;code>object-fit&lt;/code> 将无效。&lt;/font>&lt;/p>
 &lt;h3 id="效果">效果
 &lt;/h3>&lt;p>改之前:&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp"
@@ -308,7 +308,7 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/caidingnu/article/details/92232872" target="_blank" rel="noopener"
->用CSS解决前端图片变形问题
+>用 CSS 解决前端图片变形问题
 &lt;span style="white-space: nowrap;">
 &lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
 &lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />

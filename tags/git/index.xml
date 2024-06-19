@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on Opoa</title><link>https://opoa.top/tags/git/</link><description>Recent content in Git on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Sun, 05 Apr 2020 14:36:45 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>个人开发环境安装</title><link>https://opoa.top/post/personal-development-environment-installation/</link><pubDate>Sun, 05 Apr 2020 14:36:45 +0800</pubDate><guid>https://opoa.top/post/personal-development-environment-installation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/close-up-heterochromia-brown-hair-scarf.webp" alt="Featured image of post 个人开发环境安装" />&lt;h2 id="前言">前言
-&lt;/h2>&lt;p>2月份的时候电脑出了些问题，开不了机，但因为在特殊时期，前几天才有机会修好。结果太久没开机，一直卡在修复界面，得，直接重装吧。每次重装又需要的一堆环境配置，实在繁琐，就想在这整理一下，再用的时候也好参考。&lt;/p>
+&lt;/h2>&lt;p>2 月份的时候电脑出了些问题，开不了机，但因为在特殊时期，前几天才有机会修好。结果太久没开机，一直卡在修复界面，得，直接重装吧。每次重装又需要的一堆环境配置，实在繁琐，就想在这整理一下，再用的时候也好参考。&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;strong>以下安装都是在Win10系统进行的&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>以下安装都是在 Win10 系统进行的&lt;/strong>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="java">Java
 &lt;/h2>&lt;p>版本：JDK8&lt;/p>
@@ -40,12 +40,12 @@ loading="lazy"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">JAVA_HOME
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>变量值:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">C:\Program Files\Java\jdk1.8.0_231
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red">根据自己的路径配置&lt;/font>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red"> 根据自己的路径配置 &lt;/font>&lt;/p>
 &lt;p>变量名：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">CLASSPATH
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>变量值：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="o">.&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">JAVA_HOME&lt;/span>&lt;span class="o">%&lt;/span>\&lt;span class="n">lib&lt;/span>\&lt;span class="n">dt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">jar&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">JAVA_HOME&lt;/span>&lt;span class="o">%&lt;/span>\&lt;span class="n">lib&lt;/span>\&lt;span class="n">tools&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">jar&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red">!!注意前面有个&amp;quot;.&amp;quot;!!&lt;/font>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red">!! 注意前面有个 &amp;ldquo;.&amp;rdquo;!!&lt;/font>&lt;/p>
 &lt;p>&lt;strong>编辑:&lt;/strong>&lt;/p>
 &lt;p>变量名：Path&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Path
@@ -72,9 +72,9 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -cp &amp;lt;目录和 zip/jar 文件的类搜索路径&amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -classpath &amp;lt;目录和 zip/jar 文件的类搜索路径&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 用 ; 分隔的目录, JAR 档案
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 和 ZIP 档案列表, 用于搜索类文件。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -D&amp;lt;名称&amp;gt;=&amp;lt;值&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 用；分隔的目录，JAR 档案
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 和 ZIP 档案列表，用于搜索类文件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -D &amp;lt;名称&amp;gt;=&amp;lt; 值 &amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 设置系统属性
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -verbose:[class|gc|jni]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 启用详细输出
@@ -86,7 +86,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输入 &lt;code>javac&lt;/code>&lt;/p>
 &lt;p>显示如下:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="err">用法&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">javac&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">options&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">source&lt;/span> &lt;span class="n">files&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">其中&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="err">可能的选项包括&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">其中，可能的选项包括&lt;/span>&lt;span class="p">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span> &lt;span class="err">生成所有调试信息&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="n">none&lt;/span> &lt;span class="err">不生成任何调试信息&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">g&lt;/span>&lt;span class="p">:{&lt;/span>&lt;span class="n">lines&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">vars&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">source&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="err">只生成某些调试信息&lt;/span>
@@ -99,8 +99,8 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">bootclasspath&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">路径&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="err">覆盖引导类文件的位置&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">extdirs&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">目录&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="err">覆盖所安装扩展的位置&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">endorseddirs&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">目录&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="err">覆盖签名的标准路径的位置&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">proc&lt;/span>&lt;span class="p">:{&lt;/span>&lt;span class="n">none&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">only&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="err">控制是否执行注释处理和&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="err">或编译。&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">processor&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class1&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[,&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class2&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class3&lt;/span>&lt;span class="o">&amp;gt;...&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="err">要运行的注释处理程序的名称&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="err">绕过默认的搜索进程&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">proc&lt;/span>&lt;span class="p">:{&lt;/span>&lt;span class="n">none&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">only&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="err">控制是否执行注释处理和&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="err">或编译。&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">-&lt;/span>&lt;span class="n">processor&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class1&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[,&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class2&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">class3&lt;/span>&lt;span class="o">&amp;gt;...&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="err">要运行的注释处理程序的名称；绕过默认的搜索进程&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="err">截取了一部分显示&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">......&lt;/span>
@@ -109,7 +109,7 @@ loading="lazy"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">java version &amp;#34;1.8.0_231&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Java(TM) SE Runtime Environment (build 1.8.0_231-b11)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Java HotSpot(TM) 64-Bit Server VM (build 25.231-b11, mixed mode)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>到这里JDK就安装配置好了。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>到这里 JDK 就安装配置好了。&lt;/p>
 &lt;h2 id="mysql">MySQL
 &lt;/h2>&lt;p>版本：MySQL5.7&lt;/p>
 &lt;p>&lt;a class="link" href="https://dev.mysql.com/downloads/windows/installer/8.0.html" target="_blank" rel="noopener"
@@ -173,7 +173,7 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">C:\Program Files\MySQL\MySQL Server 5.7
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑Path：&lt;/strong>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑 Path：&lt;/strong>&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql11.webp"
 loading="lazy"
 >&lt;/p>
@@ -193,7 +193,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql15.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>添加/修改以下内容&lt;/p>
+&lt;p>添加 / 修改以下内容&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[mysqld]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">character-set-server=utf8
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[client]
@@ -243,14 +243,14 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">E:\JavaTools\apache-tomcat-8.5.14
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑Path:&lt;/strong>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑 Path:&lt;/strong>&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat3.webp"
 loading="lazy"
 >&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">%CATALINA_HOME%\bin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="测试-2">测试
 &lt;/h3>&lt;p>打开 &lt;code>cmd&lt;/code>&lt;/p>
-&lt;p>输入startup.bat 开启服务器&lt;/p>
+&lt;p>输入 startup.bat 开启服务器&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat4.webp"
 loading="lazy"
 >&lt;/p>
@@ -258,7 +258,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat5.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>显示这只三脚猫就说明Tomcat装好了。&lt;/p>
+&lt;p>显示这只三脚猫就说明 Tomcat 装好了。&lt;/p>
 &lt;h2 id="maven">Maven
 &lt;/h2>&lt;p>版本: Maven3.6&lt;/p>
 &lt;p>&lt;a class="link" href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener"
@@ -284,7 +284,7 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">E:\JavaTools\Maven3.6\apache-maven-3.6.2
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑Path：&lt;/strong>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑 Path：&lt;/strong>&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven4.webp"
 loading="lazy"
 >&lt;/p>
@@ -295,9 +295,9 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven5.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>能看到Maven版本就表示安装好了。&lt;/p>
+&lt;p>能看到 Maven 版本就表示安装好了。&lt;/p>
 &lt;h3 id="配置本地仓库和云仓库">配置本地仓库和云仓库
-&lt;/h3>&lt;p>打开安装目录下conf/settings.xml文件&lt;/p>
+&lt;/h3>&lt;p>打开安装目录下 conf/settings.xml 文件&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven6.webp"
 loading="lazy"
 >&lt;/p>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Structures and Algorithms on Opoa</title><link>https://opoa.top/tags/data-structures-and-algorithms/</link><description>Recent content in Data Structures and Algorithms on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Sat, 10 Apr 2021 11:25:27 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/data-structures-and-algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>[ Java ] 双链表</title><link>https://opoa.top/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://opoa.top/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [ Java ] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Structures and Algorithms on Opoa</title><link>https://opoa.top/tags/data-structures-and-algorithms/</link><description>Recent content in Data Structures and Algorithms on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Sat, 10 Apr 2021 11:25:27 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/data-structures-and-algorithms/index.xml" rel="self" type="application/rss+xml"/><item><title>[Java] 双链表</title><link>https://opoa.top/post/double-linked-list-in-java/</link><pubDate>Sat, 10 Apr 2021 11:25:27 +0800</pubDate><guid>https://opoa.top/post/double-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/horns-three-eyes-girl.webp" alt="Featured image of post [Java] 双链表" />&lt;h2 id="什么是双链表">什么是双链表
 &lt;/h2>&lt;p>双链表也叫双向链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。&lt;/p>
 &lt;h2 id="单链表与双链表的区别">单链表与双链表的区别
 &lt;/h2>&lt;h3 id="单链表">单链表
@@ -173,7 +173,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 如果头结点为空,则链表为空 新增结点既是头节点也是尾结点&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 如果头结点为空，则链表为空 新增结点既是头节点也是尾结点&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">head&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">head&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">tail&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">head&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
@@ -183,7 +183,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 新增的结点 以之前的尾结点作为前结点&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tail&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 把当前结点的地址赋值给尾结点的next&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 把当前结点的地址赋值给尾结点的 next&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">tail&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">next&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 当前结点作为新的尾结点&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">tail&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">node&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
@@ -391,7 +391,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="参考资料">参考资料
-&lt;/h2>&lt;p>Java8 LinkedList 源码&lt;/p></description></item><item><title>[ Java ] 单链表</title><link>https://opoa.top/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://opoa.top/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [ Java ] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
+&lt;/h2>&lt;p>Java8 LinkedList 源码&lt;/p></description></item><item><title>[Java] 单链表</title><link>https://opoa.top/post/single-linked-list-in-java/</link><pubDate>Thu, 25 Feb 2021 00:01:57 +0800</pubDate><guid>https://opoa.top/post/single-linked-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-horn-dark.webp" alt="Featured image of post [Java] 单链表" />&lt;h2 id="什么是单链表">什么是单链表
 &lt;/h2>&lt;p>单链表是链表的其中一种基本结构。它是构成单链表的基本结点结构。在结点中数据域用来存储数据元素，指针域用于指向下一个具有相同结构的结点。
 因为只有一个指针结点，称为单链表。&lt;/p>
 &lt;h2 id="顺序表与单链表的区别">顺序表与单链表的区别
@@ -647,7 +647,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">throw&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">IllegalArgumentException&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;非法下标参数&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">Node&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">curNode&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">head&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 下标为0 直接返回头结点&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 下标为 0 直接返回头结点&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">index&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">curNode&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
@@ -846,7 +846,7 @@ fill="currentColor">
 &lt;/a>
 &lt;br>
 &lt;a class="link" href="https://blog.csdn.net/weixin_36605200/article/details/88804537" target="_blank" rel="noopener"
->Java基础&amp;ndash;单链表的实现
+>Java 基础 &amp;ndash; 单链表的实现
 &lt;span style="white-space: nowrap;">
 &lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
 &lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
@@ -855,16 +855,16 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>[ Java ] 顺序表</title><link>https://opoa.top/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://opoa.top/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [ Java ] 顺序表" />&lt;h2 id="定义">定义
+&lt;/p></description></item><item><title>[Java] 顺序表</title><link>https://opoa.top/post/sequential-list-in-java/</link><pubDate>Mon, 15 Feb 2021 09:35:35 +0800</pubDate><guid>https://opoa.top/post/sequential-list-in-java/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/lost-in-space-floating-astronaut-galaxy.webp" alt="Featured image of post [Java] 顺序表" />&lt;h2 id="定义">定义
 &lt;/h2>&lt;h3 id="线性表">线性表
-&lt;/h3>&lt;p>线性表是具有&lt;font color=red>相同&lt;/font>数据类型的 n (n ≥ 0) 个&lt;font color=purple>数据元素&lt;/font>的有限序列&lt;/p>
+&lt;/h3>&lt;p>线性表是具有 &lt;font color=red> 相同 &lt;/font> 数据类型的 n (n ≥ 0) 个 &lt;font color=purple> 数据元素 &lt;/font> 的有限序列&lt;/p>
 &lt;h3 id="顺序表">顺序表
-&lt;/h3>&lt;p>&lt;strong>用 &lt;font color=red>顺序存储&lt;/font> 的方式实现线性表顺序存储&lt;/strong>。把&lt;font color=red>逻辑上相邻&lt;/font>的元素存储在&lt;font color=red>物理位置上也相邻&lt;/font>的存储单元中，元素之间的关系由存储单元的邻接关系来体现。&lt;/p>
+&lt;/h3>&lt;p>&lt;strong>用 &lt;font color=red>顺序存储&lt;/font> 的方式实现线性表顺序存储&lt;/strong>。把 &lt;font color=red> 逻辑上相邻 &lt;/font> 的元素存储在 &lt;font color=red> 物理位置上也相邻 &lt;/font> 的存储单元中，元素之间的关系由存储单元的邻接关系来体现。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sequence-list.webp"
 loading="lazy"
 alt="内存中"
 >&lt;/p>
-&lt;h2 id="java代码实现">Java代码实现
+&lt;h2 id="java-代码实现">Java 代码实现
 &lt;/h2>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nn">java.util.Arrays&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="cm">/**
@@ -885,7 +885,7 @@ alt="内存中"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">length&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="cm">/**
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * 最大容量 默认为10
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * 最大容量 默认为 10
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">capacity&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">10&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
@@ -938,7 +938,7 @@ alt="内存中"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * @return 插入是否成功
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">boolean&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">str&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 如果数组长度等于最大容量, 表示已经装满, 直接返回&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// 如果数组长度等于最大容量，表示已经装满，直接返回&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">length&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">capacity&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
@@ -994,7 +994,7 @@ alt="内存中"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="cm">/**
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * 对数组进行2倍扩容
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * 对数组进行 2 倍扩容
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">enlarge&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">strs&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">capacity&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
@@ -1047,7 +1047,7 @@ fill="currentColor">
 &lt;/svg>
 &lt;/span>
 &lt;/a>
-&lt;/p></description></item><item><title>[ LeetCode题解 ] 001-两数之和</title><link>https://opoa.top/post/leetcode-two-sum/</link><pubDate>Mon, 08 Feb 2021 17:04:36 +0800</pubDate><guid>https://opoa.top/post/leetcode-two-sum/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/screen-code.webp" alt="Featured image of post [ LeetCode题解 ] 001-两数之和" />&lt;h2 id="题目">题目
+&lt;/p></description></item><item><title>[LeetCode 题解] 001 - 两数之和</title><link>https://opoa.top/post/leetcode-two-sum/</link><pubDate>Mon, 08 Feb 2021 17:04:36 +0800</pubDate><guid>https://opoa.top/post/leetcode-two-sum/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/screen-code.webp" alt="Featured image of post [LeetCode 题解] 001 - 两数之和" />&lt;h2 id="题目">题目
 &lt;/h2>&lt;h3 id="描述">描述
 &lt;/h3>&lt;p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 &lt;strong>和为目标值&lt;/strong> 的那 &lt;strong>两个&lt;/strong> 整数，并返回它们的数组下标。&lt;/p>
 &lt;p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。&lt;/p>
@@ -1055,7 +1055,7 @@ fill="currentColor">
 &lt;h3 id="示例-1">示例 1
 &lt;/h3>&lt;p>输入：nums = [2, 7, 11, 15], target = 9
 输出：[0, 1]
-解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。&lt;/p>
+解释：因为 nums [0] + nums [1] == 9 ，返回 [0, 1] 。&lt;/p>
 &lt;h3 id="示例-2">示例 2
 &lt;/h3>&lt;p>输入：nums = [3, 2, 4], target = 6
 输出：[1, 2]&lt;/p>
@@ -1095,10 +1095,10 @@ fill="currentColor">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>利用哈希表仅一层 for 循环就可得出答案。&lt;/p>
-&lt;p>先创建一个 &lt;code>Integer&lt;/code> 类型同时作为 key 和 value 的 &lt;code>HashMap&lt;/code>, key 是当前元素的值，value 是当前元素在数组中的下标。比如 target = 18, int[] nums = [1, 5, 7, 11],循环三次的 map 结果是 {1 = 0, 5 = 1, 7 = 2} ,判断当前 map 是否存在正确值之一的 key 存在，不存在则添加到 map 中，存在则找到答案数组，直接返回。&lt;/p>
-&lt;p>上面的例子答案是 [2, 3],循环遍历到 7 的时候，18 - 7 = 11,此时 map 中并没有 11 作为 key 存在，存入一个元素 key = 7, value = 2 到 map 中,遍历到 11 的时候， 18 - 11 = 7,由于此前存入过 7 为 key 的键值对，可得 11 和 7 为正确答案，在返回他们对应下标的数组即可。&lt;/p></description></item><item><title>算法的时间复杂度</title><link>https://opoa.top/post/how-long-an-algorithm-takes-to-run/</link><pubDate>Sun, 31 Jan 2021 23:32:56 +0800</pubDate><guid>https://opoa.top/post/how-long-an-algorithm-takes-to-run/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/cup-rem.webp" alt="Featured image of post 算法的时间复杂度" />&lt;h2 id="概念">概念
-&lt;/h2>&lt;p>通过&lt;font color=#FF0000>事前预估&lt;/font>算法&lt;font color=#FF0000>时间开销T(n)&lt;/font>与&lt;font color=#FF0000>问题规模n&lt;/font>的关系(T 表示 time)函数，来描述该算法的运行时间。&lt;/p>
-&lt;h2 id="示例1">示例1
+&lt;p>先创建一个 &lt;code>Integer&lt;/code> 类型同时作为 key 和 value 的 &lt;code>HashMap&lt;/code>, key 是当前元素的值，value 是当前元素在数组中的下标。比如 target = 18, int[] nums = [1, 5, 7, 11], 循环三次的 map 结果是 {1 = 0, 5 = 1, 7 = 2} , 判断当前 map 是否存在正确值之一的 key 存在，不存在则添加到 map 中，存在则找到答案数组，直接返回。&lt;/p>
+&lt;p>上面的例子答案是 [2, 3], 循环遍历到 7 的时候，18 - 7 = 11, 此时 map 中并没有 11 作为 key 存在，存入一个元素 key = 7, value = 2 到 map 中，遍历到 11 的时候， 18 - 11 = 7, 由于此前存入过 7 为 key 的键值对，可得 11 和 7 为正确答案，在返回他们对应下标的数组即可。&lt;/p></description></item><item><title>算法的时间复杂度</title><link>https://opoa.top/post/how-long-an-algorithm-takes-to-run/</link><pubDate>Sun, 31 Jan 2021 23:32:56 +0800</pubDate><guid>https://opoa.top/post/how-long-an-algorithm-takes-to-run/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/cup-rem.webp" alt="Featured image of post 算法的时间复杂度" />&lt;h2 id="概念">概念
+&lt;/h2>&lt;p>通过 &lt;font color=#FF0000> 事前预估 &lt;/font> 算法 &lt;font color=#FF0000> 时间开销 T (n)&lt;/font> 与 &lt;font color=#FF0000> 问题规模 n&lt;/font> 的关系 (T 表示 time) 函数，来描述该算法的运行时间。&lt;/p>
+&lt;h2 id="示例-1">示例 1
 &lt;/h2>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 逐步递增型爱你&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">static&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">main&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// n 为问题规模&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">loveYou&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">3000&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
@@ -1121,26 +1121,26 @@ fill="currentColor">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">I Love You 3000
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">I Love You 3001
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">I Love You More Than 3000
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>语句&lt;font color=#FF000>频度&lt;/font>:&lt;/p>
-&lt;p>(1) 执行1次&lt;/p>
-&lt;p>(2) 执行3001次&lt;/p>
-&lt;p>(3)(4) 执行3000次&lt;/p>
-&lt;p>(5) 执行1次&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>语句 &lt;font color=#FF000> 频度 &lt;/font>:&lt;/p>
+&lt;p>(1) 执行 1 次&lt;/p>
+&lt;p>(2) 执行 3001 次&lt;/p>
+&lt;p>(3)(4) 执行 3000 次&lt;/p>
+&lt;p>(5) 执行 1 次&lt;/p>
 &lt;p>T(3000) = 1 + 3001 + 2 * 3000 + 1&lt;/p>
-&lt;p>时间开销与问题规模n的关系：&lt;/p>
+&lt;p>时间开销与问题规模 n 的关系：&lt;/p>
 &lt;p>T(n) = 3n + 3 ≈ 3n&lt;/p>
 &lt;p>&lt;font color=#FF000>&lt;strong>时间复杂度表达式可以只考虑阶数高的部分&lt;/strong>&lt;/font>&lt;/p>
-&lt;p>上述表达式可以简化为 T(n) = O(n)&lt;/p>
-&lt;p>&lt;strong>大O表示&amp;quot;同阶&amp;quot;，同等数量级。即：当n→∞时，二者之比为常数&lt;/strong>&lt;/p>
+&lt;p>上述表达式可以简化为 T (n) = O (n)&lt;/p>
+&lt;p>&lt;strong>大 O 表示&amp;quot;同阶&amp;quot;，同等数量级。即：当 n→∞时，二者之比为常数&lt;/strong>&lt;/p>
 &lt;h3 id="计算技巧">计算技巧
 &lt;/h3>&lt;p>&lt;strong>（a）加法规则&lt;/strong>&lt;/p>
 &lt;p>T(n) = T&lt;sub>1&lt;/sub>(n) + T&lt;sub>2&lt;/sub>(n) = O(f(n)) + O(g(n)) = O(max(f(n), g(n)))&lt;/p>
 &lt;p>↓&amp;mdash;↓&amp;mdash;↓&amp;mdash;↓&lt;/p>
-&lt;p>&lt;font color=ff6b00>多项相加，只保留最高阶的项，且系数变为 1&lt;/font>&lt;/p>
+&lt;p>&lt;font color=ff6b00> 多项相加，只保留最高阶的项，且系数变为 1&lt;/font>&lt;/p>
 &lt;p>&lt;strong>（b）乘法规则&lt;/strong>&lt;/p>
 &lt;p>T(n) = T&lt;sub>1&lt;/sub>(n) * T&lt;sub>2&lt;/sub>(n) = O(f(n)) * O(g(n)) = O(f(n) * g(n))&lt;/p>
 &lt;p>↓&amp;mdash;↓&amp;mdash;↓&amp;mdash;↓&lt;/p>
-&lt;p>&lt;font color=ff6b00>多项相乘，都保留&lt;/font>&lt;/p>
+&lt;p>&lt;font color=ff6b00> 多项相乘，都保留 &lt;/font>&lt;/p>
 &lt;p>&lt;strong>时间复杂度大小关系&lt;/strong>&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/time-complexity1.webp"
 loading="lazy"
@@ -1148,7 +1148,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/time-complexity.webp"
 loading="lazy"
 >&lt;/p>
-&lt;h2 id="示例2">示例2
+&lt;h2 id="示例-2">示例 2
 &lt;/h2>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 嵌套循环型爱你&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">static&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">loveYou&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
@@ -1161,9 +1161,9 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;I Love You More Than &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>时间开销与问题规模n的关系：
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>时间开销与问题规模 n 的关系：
 T(n) = O(n)+O(n&lt;sup>2&lt;/sup>) = O(n&lt;sup>2&lt;/sup>)&lt;/p>
-&lt;h2 id="示例3">示例3
+&lt;h2 id="示例-3">示例 3
 &lt;/h2>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 指数递增型爱你&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">static&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">loveYou&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
@@ -1187,11 +1187,11 @@ T(n) = O(n)+O(n&lt;sup>2&lt;/sup>) = O(n&lt;sup>2&lt;/sup>)&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">I Love You 2048
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">I Love You 4096
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">I Love You More Than 3000
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>计算上述算法的时间复杂度 T(n):&lt;/p>
-&lt;p>设最深层循环的语句频度(总共循环次数)为 x,则由循环条件可知，循环结束时刚好满足 2&lt;sup>x&lt;/sup>&amp;gt;n&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>计算上述算法的时间复杂度 T (n):&lt;/p>
+&lt;p>设最深层循环的语句频度 (总共循环次数) 为 x, 则由循环条件可知，循环结束时刚好满足 2&lt;sup>x&lt;/sup>&amp;gt;n&lt;/p>
 &lt;p>x = log&lt;sub>2&lt;/sub>n + 1&lt;/p>
 &lt;p>T(n) = O(x) = O(log&lt;sub>2&lt;/sub>n)&lt;del>+O(1)&lt;/del> = O(log&lt;sub>2&lt;/sub>n)&lt;/p>
-&lt;h2 id="示例4">示例4
+&lt;h2 id="示例-4">示例 4
 &lt;/h2>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// flag 数组中乱序存放了 1~n 这些数&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">[]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">...&lt;/span>&lt;span class="na">n&lt;/span>&lt;span class="p">};&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">loveYou&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">3000&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
@@ -1199,16 +1199,16 @@ T(n) = O(n)+O(n&lt;sup>2&lt;/sup>) = O(n&lt;sup>2&lt;/sup>)&lt;/p>
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">static&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">loveYou&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">[]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;I&amp;#39;m Iron Man&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">for&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 从第一个元素开始查找&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 找到元素n&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">if&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 找到元素 n&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;I Love You &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 跳出循环&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>计算上述算法的时间复杂度 T(n):&lt;/p>
-&lt;p>&lt;font color=red>最好&lt;/font>情况： 元素n在第一个位置 =&amp;gt; T(n) = O(1) &lt;br>
-&lt;font color=red>最坏&lt;/font>情况： 元素n在最后一个位置 =&amp;gt; T(n) = O(n) &lt;br>
-&lt;font color=red>平均&lt;/font>情况： 假设元素n在任意位置的概率相同为 1 / n =&amp;gt; T(n) = O(n)&lt;/p>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>计算上述算法的时间复杂度 T (n):&lt;/p>
+&lt;p>&lt;font color=red> 最好 &lt;/font> 情况： 元素 n 在第一个位置 =&amp;gt; T (n) = O (1) &lt;br>
+&lt;font color=red> 最坏 &lt;/font> 情况： 元素 n 在最后一个位置 =&amp;gt; T (n) = O (n) &lt;br>
+&lt;font color=red> 平均 &lt;/font> 情况： 假设元素 n 在任意位置的概率相同为 1 / n =&amp;gt; T (n) = O (n)&lt;/p>
 &lt;h2 id="总结">总结
 &lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/time-complexity2.webp"
 loading="lazy"

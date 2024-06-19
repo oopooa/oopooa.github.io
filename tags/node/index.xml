@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Node on Opoa</title><link>https://opoa.top/tags/node/</link><description>Recent content in Node on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Mon, 06 Apr 2020 14:22:35 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/node/index.xml" rel="self" type="application/rss+xml"/><item><title>Hexo 博客迁移</title><link>https://opoa.top/post/migrate-hexo-blog/</link><pubDate>Mon, 06 Apr 2020 14:22:35 +0800</pubDate><guid>https://opoa.top/post/migrate-hexo-blog/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp" alt="Featured image of post Hexo 博客迁移" />&lt;h2 id="前言">前言
-&lt;/h2>&lt;p>折腾了两天，软件和环境装的差不多了，接下来把我的Hexo博客转移过来，也是第一次弄，记录一下。&lt;/p>
+&lt;/h2>&lt;p>折腾了两天，软件和环境装的差不多了，接下来把我的 Hexo 博客转移过来，也是第一次弄，记录一下。&lt;/p>
 &lt;h2 id="git">Git
-&lt;/h2>&lt;p>Git之前已经装过了，但它对Hexo来说太重要，这里还是提一下，要先安装Git。&lt;/p>
+&lt;/h2>&lt;p>Git 之前已经装过了，但它对 Hexo 来说太重要，这里还是提一下，要先安装 Git。&lt;/p>
 &lt;h2 id="node">Node
 &lt;/h2>&lt;p>版本：Node v12.16.1&lt;/p>
 &lt;p>&lt;a class="link" href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener"
@@ -28,7 +28,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node3.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>等待安装完成Finish。&lt;/p>
+&lt;p>等待安装完成 Finish。&lt;/p>
 &lt;h3 id="测试">测试
 &lt;/h3>&lt;p>打开 &lt;code>cmd&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">node -v
@@ -37,7 +37,7 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;h3 id="环境配置">环境配置
-&lt;/h3>&lt;p>配置安装模块的路径，默认会安装到C盘下&lt;/p>
+&lt;/h3>&lt;p>配置安装模块的路径，默认会安装到 C 盘下&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node5.webp"
 loading="lazy"
 >&lt;/p>
@@ -55,7 +55,7 @@ loading="lazy"
 loading="lazy"
 >&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">E:\Node\node_global\node_modules
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>修改用户变量Path&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>修改用户变量 Path&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node8.webp"
 loading="lazy"
 >&lt;/p>
@@ -79,7 +79,7 @@ loading="lazy"
 >&lt;/p>
 &lt;h2 id="hexo">Hexo
 &lt;/h2>&lt;h3 id="安装-1">安装
-&lt;/h3>&lt;p>打开cmd&lt;/p>
+&lt;/h3>&lt;p>打开 cmd&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm install -g hexo-cli
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>进入事先准备好的博客文件根目录&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo.webp"
