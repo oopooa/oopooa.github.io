@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JavaScript on Opoa</title><link>https://opoa.top/tags/javascript/</link><description>Recent content in JavaScript on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Mon, 23 Mar 2020 21:22:35 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>Hexo(Sakura) 音乐插件问题</title><link>https://opoa.top/post/music-plugin-issue-of-hexo-sakura-theme/</link><pubDate>Mon, 23 Mar 2020 21:22:35 +0800</pubDate><guid>https://opoa.top/post/music-plugin-issue-of-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp" alt="Featured image of post Hexo(Sakura) 音乐插件问题" />&lt;h2 id="前言">前言
-&lt;/h2>&lt;p>偶然发现的一个问题，全局的aplayer插件在站内跳转的时候会重新加载，让人感觉非常难受。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JavaScript on Opoa</title><link>https://opoa.top/tags/javascript/</link><description>Recent content in JavaScript on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Mon, 23 Mar 2020 21:22:35 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>Hexo (Sakura) 音乐插件问题</title><link>https://opoa.top/post/music-plugin-issue-of-hexo-sakura-theme/</link><pubDate>Mon, 23 Mar 2020 21:22:35 +0800</pubDate><guid>https://opoa.top/post/music-plugin-issue-of-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp" alt="Featured image of post Hexo (Sakura) 音乐插件问题" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>偶然发现的一个问题，全局的 aplayer 插件在站内跳转的时候会重新加载，让人感觉非常难受。&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/aplayer.webp"
 loading="lazy"
 alt="aplayer"
 >&lt;/p>
 &lt;h2 id="正文">正文
-&lt;/h2>&lt;p>回去跑了几天前的代码，发现是ok的，可这几天改动的地方很多，很难定位问题在哪里。这里先记上一笔:&lt;/p>
+&lt;/h2>&lt;p>回去跑了几天前的代码，发现是 ok 的，可这几天改动的地方很多，很难定位问题在哪里。这里先记上一笔:&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;b>&lt;font color="red">版本控制太重要了!!&lt;/font>&lt;/b>&lt;/p>
-&lt;p>&lt;b>&lt;font color="red">版本控制太重要了!!&lt;/font>&lt;/b>&lt;/p>
-&lt;p>&lt;b>&lt;font color="red">版本控制太重要了!!&lt;/font>&lt;/b>&lt;/p>
+&lt;p>&lt;b>&lt;font color="red"> 版本控制太重要了！！&lt;/font>&lt;/b>&lt;/p>
+&lt;p>&lt;b>&lt;font color="red"> 版本控制太重要了！！&lt;/font>&lt;/b>&lt;/p>
+&lt;p>&lt;b>&lt;font color="red"> 版本控制太重要了！！&lt;/font>&lt;/b>&lt;/p>
 &lt;/blockquote>
-&lt;p>初步判断问题出在&lt;u>&lt;font color="orange">&lt;b>博客根目录\themes\Sakura\layout\_partial\footer.ejs&lt;/b>&lt;/font>&lt;/u>, debug过程对我这个前端小白来说有些残忍,直接上代码:&lt;/p>
+&lt;p>初步判断问题出在 &lt;u>&lt;font color="orange">&lt;b > 博客根目录 \themes\Sakura\layout\_partial\footer.ejs&lt;/b>&lt;/font>&lt;/u>, debug 过程对我这个前端小白来说有些残忍，直接上代码:&lt;/p>
 &lt;h3 id="错误代码">错误代码
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/js/lib.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/js/InsightSearch.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- fancybox大图查看 需jq --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- fancybox 大图查看 需 jq --&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/css/jquery.fancybox.min.css&amp;#34;&lt;/span> &lt;span class="na">media&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;all&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/js/jquery.fancybox.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -28,7 +28,7 @@ alt="aplayer"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/js/InsightSearch.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- fancybox大图查看 需jq --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- fancybox 大图查看 需 jq --&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/css/jquery.fancybox.min.css&amp;#34;&lt;/span> &lt;span class="na">media&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;all&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/js/jquery.fancybox.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>最后运行，搞定。&lt;/p>
@@ -36,7 +36,7 @@ alt="aplayer"
 &lt;/h2>&lt;p>在导入 js 和 jquery 插件的时候，一定要先导入 jquery 插件，防止浏览器无法解析 js 中需要用到的 jquery 语法。按照 html 的解析顺序，js 也应该是放在最后导入的。&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_43279637/article/details/82988662" target="_blank" rel="noopener"
->jquery导入方法及注意问题
+>jquery 导入方法及注意问题
 &lt;span style="white-space: nowrap;">
 &lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
 &lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />

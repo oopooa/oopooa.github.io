@@ -1717,7 +1717,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/git.webp"
 loading="lazy"
 >&lt;/p>
-&lt;p>能看到这两个选项，安装成功。&lt;/p></description></item><item><title>i++与++i的区别</title><link>https://opoa.top/post/the-difference-between-post-increment-and-pre-increment/</link><pubDate>Thu, 05 Mar 2020 17:54:56 +0800</pubDate><guid>https://opoa.top/post/the-difference-between-post-increment-and-pre-increment/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/girl-scarf-winter.webp" alt="Featured image of post i++与++i的区别" />&lt;ul>
+&lt;p>能看到这两个选项，安装成功。&lt;/p></description></item><item><title>i++ 与 ++i 的区别</title><link>https://opoa.top/post/the-difference-between-post-increment-and-pre-increment/</link><pubDate>Thu, 05 Mar 2020 17:54:56 +0800</pubDate><guid>https://opoa.top/post/the-difference-between-post-increment-and-pre-increment/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/girl-scarf-winter.webp" alt="Featured image of post i++ 与 ++i 的区别" />&lt;ul>
 &lt;li>&lt;code>i++&lt;/code> 表示的是先赋值，再自增&lt;/li>
 &lt;li>&lt;code>++i&lt;/code> 表示的是先自增，再赋值&lt;/li>
 &lt;/ul>
@@ -1731,14 +1731,14 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这道题程序员都不会陌生，答案是 i = 0;&lt;/p>
 &lt;p>可为什么会是 0 呢，这就需要了解 &lt;code>i++&lt;/code> 的底层到底是如何运算的。&lt;/p>
-&lt;h2 id="模拟i底层实现">模拟i++底层实现
+&lt;h2 id="模拟-i-底层实现">模拟 i++ 底层实现
 &lt;/h2>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="o">-------------&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">temp&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">temp&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以看到i的值先是被赋给了一个临时变量,此时 temp = 0,i 再进行自增1运算, i = 1,最后把temp的值赋给了i;结果就是i = 0。&lt;/p>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以看到 i 的值先是被赋给了一个临时变量，此时 temp = 0,i 再进行自增 1 运算，i = 1, 最后把 temp 的值赋给了 i; 结果就是 i = 0。&lt;/p>
 &lt;h2 id="i">++i
 &lt;/h2>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">class&lt;/span> &lt;span class="nc">Test&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">static&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">main&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="p">){&lt;/span>&lt;span class="w">
@@ -1754,7 +1754,7 @@ loading="lazy"
 &lt;blockquote>
 &lt;p>​ &lt;code>i++&lt;/code> 是先赋值，再自增&lt;/p>
 &lt;p>​ &lt;code>++i&lt;/code> 是先自增，再赋值&lt;/p>
-&lt;p>如何才能不混淆呢，你可以想象算式的左边有一个赋值号，&lt;code>i++&lt;/code> 想象成 = i++，然后利用“就近原则”，此时i与赋值号更近，所以先进行赋值的操作，再自增，同理，如果是 &lt;code>++i&lt;/code> 的话，+离赋值号更近，就先进行自增，再赋值。&lt;/p>
+&lt;p>如何才能不混淆呢，你可以想象算式的左边有一个赋值号，&lt;code>i++&lt;/code> 想象成 = i++，然后利用 “就近原则”，此时 i 与赋值号更近，所以先进行赋值的操作，再自增，同理，如果是 &lt;code>++i&lt;/code> 的话，+ 离赋值号更近，就先进行自增，再赋值。&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;strong>&lt;a class="link" href="https://blog.csdn.net/qq_31807385/article/details/83988732?depth_1-utm_source=distribute.pc_relevant.none-task&amp;amp;utm_source=distribute.pc_relevant.none-task#%E7%9C%9F%E5%AE%9E%E4%BE%8B%E9%A2%98" target="_blank" rel="noopener"
