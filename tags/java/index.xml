@@ -1,4 +1,391 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Opoa</title><link>https://opoa.top/tags/java/</link><description>Recent content in Java on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Thu, 01 Sep 2022 23:10:50 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>响应式编程 Spring Webflux 详解（三）</title><link>https://opoa.top/post/dive-into-spring-webflux-3/</link><pubDate>Thu, 01 Sep 2022 23:10:50 +0800</pubDate><guid>https://opoa.top/post/dive-into-spring-webflux-3/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/pink-girl.webp" alt="Featured image of post 响应式编程 Spring Webflux 详解（三）" />&lt;h2 id="操作符">操作符
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Opoa</title><link>https://opoa.top/tags/java/</link><description>Recent content in Java on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Mon, 12 Sep 2022 22:40:24 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>响应式编程 Spring Webflux 详解（四）</title><link>https://opoa.top/post/dive-into-spring-webflux-4/</link><pubDate>Mon, 12 Sep 2022 22:40:24 +0800</pubDate><guid>https://opoa.top/post/dive-into-spring-webflux-4/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/pond-tea-rem.webp" alt="Featured image of post 响应式编程 Spring Webflux 详解（四）" />&lt;h2 id="测试与调试">测试与调试
+&lt;/h2>&lt;p>添加测试需要的依赖：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-xml" data-lang="xml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;dependency&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;groupId&amp;gt;&lt;/span>io.projectreactor&lt;span class="nt">&amp;lt;/groupId&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;artifactId&amp;gt;&lt;/span>reactor-test&lt;span class="nt">&amp;lt;/artifactId&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;version&amp;gt;&lt;/span>3.1.4.RELEASE&lt;span class="nt">&amp;lt;/version&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;scope&amp;gt;&lt;/span>test&lt;span class="nt">&amp;lt;/scope&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/dependency&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;dependency&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;groupId&amp;gt;&lt;/span>junit&lt;span class="nt">&amp;lt;/groupId&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;artifactId&amp;gt;&lt;/span>junit&lt;span class="nt">&amp;lt;/artifactId&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;version&amp;gt;&lt;/span>4.12&lt;span class="nt">&amp;lt;/version&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;scope&amp;gt;&lt;/span>test&lt;span class="nt">&amp;lt;/scope&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/dependency&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在命令式编程中，调试通常都是非常直观的：直接看栈调用能定位到问题位置，是否自己代码实现有问题，还是调用的第三方库报错等等。&lt;/p>
+&lt;p>响应式的异步代码测试和调试起来会比命令式编程麻烦的多，不过我们先了解一个基本的单元测试工具 ——
+&lt;code>StepVerifier&lt;/code>。&lt;/p>
+&lt;p>当测试时关注于每一个数据元素的时候，就非常适合 &lt;code>StepVerifier&lt;/code> 的使用场景：下一个期望的数据或信号是什么？是否想要某一个特别的值等等。&lt;/p>
+&lt;p>以发出 1-6 的 &lt;code>Flux&lt;/code> 为例：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Integer&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">generateFlux&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">just&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">3&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">6&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nd">@Test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">testVerify&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">StepVerifier&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">generateFlux&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">expectNext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">3&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">6&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">expectComplete&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">verify&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>expectNext&lt;/code> 用于测试下一个期望的数据元素。&lt;/li>
+&lt;li>&lt;code>expectComplete&lt;/code> 用于测试下一个元素是否为完成信号。&lt;/li>
+&lt;/ul>
+&lt;p>以一个错误的数据流为例：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Void&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">generateError&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">RuntimeException&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;some error&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nd">@Test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">testVerify&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">StepVerifier&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">generateError&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">expectErrorMessage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;some error&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">verify&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>expectErrorMessage&lt;/code> 用于测试是否有指定信息的异常信号。&lt;/li>
+&lt;/ul>
+&lt;p>对于终止事件，相应的期望方法（比如 &lt;code>expectComplete()&lt;/code>、&lt;code>expectError()&lt;/code>，及其所有的变体方法）使用之后就不能再继续增加别的期望方法，最后只能对 &lt;code>StepVerifier&lt;/code> 触发校验（&lt;code>verify()&lt;/code>）。&lt;/p>
+&lt;p>再看一个例子：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Integer&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">getMonoWithException&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">filter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">single&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
+&lt;li>&lt;code>single&lt;/code> 方法必须且只能接收一个元素，没有和多了都会导致异常。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@Test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">testBug&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">getMonoWithException&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>运行用例，异常信息：&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-test-case1.webp"
+loading="lazy"
+alt="spring-webflux-test-case"
+>&lt;/p>
+&lt;p>能看到异常内容大部分都是 Reactor 库内部的调用，上边 stack trace 的问题还是出自 &lt;code>.subcribe()&lt;/code> 那一行。
+在命令式编程的方式中比较容易使用 IDEA 的工具进行调试，但在异步编程方式下，就不太好使了。所以还是得使用响应式编程库本身提供的调试工具。&lt;/p>
+&lt;h3 id="开启调试模式">开启调试模式
+&lt;/h3>&lt;blockquote>
+&lt;p>Hooks.onOperatorDebug();&lt;/p>
+&lt;/blockquote>
+&lt;p>调试模式能在抛出异常时打印一些有用的信息，把这一行加上：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@Test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">testBug&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">Hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">onOperatorDebug&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">getMonoWithException&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这时再运行，增加了以下内容：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Assembly trace from producer [reactor.core.publisher.MonoSingle] :
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> reactor.core.publisher.Flux.single(Flux.java:7989)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> com.opoa.WebfluxTest.getMonoWithException(WebfluxTest.java:21)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Error has been observed at the following site(s):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> *__Flux.single ⇢ at com.opoa.WebfluxTest.getMonoWithException(WebfluxTest.java:21)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样就能定位到问题根源。&lt;/p>
+&lt;p>&lt;code>Hooks.onOperatorDebug()&lt;/code> 是一种全局性的 Hook，会影响到应用中所有的操作符，所以带来的性能成本也是比较大的。如果我们大概知道问题可能在哪，而对整个应用开启调试模式，也容易被茫茫多的调试信息淹没。这时，我们需要一种更精准的定位方式。&lt;/p>
+&lt;h3 id="使用-checkpoint-定位">使用 checkpoint() 定位
+&lt;/h3>&lt;p>如果我们知道问题出在哪个链上，就可以针对这个链使用 &lt;code>checkpoint()&lt;/code> 进行问题定位。
+&lt;code>checkpoint()&lt;/code> 操作符就像一个 Hook，但它的作用范围仅限于这个链上。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@Test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">testBug&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">getMonoWithException&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">checkpoint&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>出现异常时仍然可以打印出调试信息：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl"> Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Assembly trace from producer [reactor.core.publisher.MonoSingle] :
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> reactor.core.publisher.Mono.checkpoint(Mono.java:2177)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> com.opoa.WebfluxTest.testBug(WebfluxTest.java:27)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Error has been observed at the following site(s):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> *__checkpoint() ⇢ at com.opoa.WebfluxTest.testBug(WebfluxTest.java:27)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;br>
+&lt;h2 id="调度器与线程模型">调度器与线程模型
+&lt;/h2>&lt;p>在以往的多线程开放场景中，使用 &lt;code>Executors&lt;/code> 可以创建四种线程池：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>newCachedThreadPool&lt;/code> 创建一个弹性大小缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收线程，则创建线程；&lt;/li>
+&lt;li>&lt;code>newFixedThreadPool&lt;/code> 创建一个大小固定的线程池，可控制线程最大并发数，超出的线程会在队列中等待；&lt;/li>
+&lt;li>&lt;code>newScheduledThreadPool&lt;/code> 创建一个大小固定的线程池，支持定时及周期性的任务执行；&lt;/li>
+&lt;li>&lt;code>newSingleThreadExecutor&lt;/code> 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序执行。&lt;/li>
+&lt;/ul>
+&lt;p>Reactor 让线程管理和任务调度更加简单 —— &lt;strong>调度器（Scheduler）&lt;/strong> 帮我们搞定这件事。
+&lt;code>Scheduler&lt;/code> 是一个拥有多个实现类的抽象接口。&lt;code>Schedulers&lt;/code> 类提供的静态方法可以搭建以下几种线程执行环境：&lt;/p>
+&lt;ul>
+&lt;li>当前线程（&lt;code>Schedulers.immediate()&lt;/code>）；&lt;/li>
+&lt;li>可重用的单线程（&lt;code>Schedulers.single()&lt;/code>）。这个方法对所有调用者都提供同一个线程使用，直到该调度器被废弃。如果想使用独占的线程，请使用 &lt;code>Schedulers.newSingle()&lt;/code>；&lt;/li>
+&lt;li>弹性线程池（&lt;code>Schedulers.elastic()&lt;/code>）。它根据需要创建一个线程池，重用空闲线程。线程如果空闲时间过长（默认为 60s）就会被销毁。对于 I/O 阻塞的场景比较适用。&lt;code>Schedulers.elastic()&lt;/code> 能够方便地给一个阻塞的任务分配它自己的线程，而不会妨碍其他任务和资源。&lt;/li>
+&lt;li>固定大小线程池（&lt;code>Schedulers.parallel()&lt;/code>），所创建的线程池的大小与 CPU 个数相同。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>Schedulers&lt;/code> 类已经预先创建了几种常用的线程池：使用 &lt;code>single()&lt;/code>、&lt;code>elastic()&lt;/code> 和 &lt;code>parallel()&lt;/code> 方法可以分别使用内置的单线程、弹性线程池和固定大小线程池。如果想创建新的线程池，可以使用 &lt;code>newSingle()&lt;/code>、&lt;code>newElastic()&lt;/code> 和 &lt;code>newParallel()&lt;/code> 方法。&lt;/p>
+&lt;p>&lt;code>Executors&lt;/code> 提供的几种线程池在 Reactor 中都支持：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Schedulers.single()&lt;/code> 和 &lt;code>Schedulers.newSingle()&lt;/code> 对应 &lt;code>Executors.newSingleThreadExecutor()&lt;/code>;&lt;/li>
+&lt;li>&lt;code>Schedulers.elastic()&lt;/code> 和 &lt;code>Schedulers.newElastic()&lt;/code> 对应 &lt;code>Executors.newCachedThreadPool()&lt;/code>;&lt;/li>
+&lt;li>&lt;code>Schedulers.parallel()&lt;/code> 和 &lt;code>Schedulers.newParallel()&lt;/code> 对应 &lt;code>Executors.newFixedThreadPool()&lt;/code>;&lt;/li>
+&lt;/ul>
+&lt;h3 id="包装一个同步阻塞的调用">包装一个同步阻塞的调用
+&lt;/h3>&lt;p>很多时候，信息源是同步和阻塞。在 Reactor 中，我们可以用以下方式处理：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Mono&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">fromCallable&lt;/span>&lt;span class="p">(()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="cm">/* make a remote synchronous call */&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">})&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribeOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Schedulers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">boundedElastic&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
+&lt;li>使用 &lt;code>fromCallable&lt;/code> 生成一个 &lt;code>Mono&lt;/code>;&lt;/li>
+&lt;li>返回同步阻塞的资源；（比如通过 http 请求查询一个数据）&lt;/li>
+&lt;li>使用 &lt;code>Schedulers.elastic()&lt;/code> 确保每个订阅运行在一个专门的线程上。&lt;/li>
+&lt;/ol>
+&lt;h3 id="切换调度器">切换调度器
+&lt;/h3>&lt;p>Reactor 提供了两种在响应式链中调整调度器 Scheduler 的方法：&lt;code>publishOn&lt;/code> 和 &lt;code>subcribeOn&lt;/code>。它们都接受一个 &lt;code>Scheduler&lt;/code> 作为参数，能够改变调度器。但是 &lt;code>publishOn&lt;/code> 在链中出现的位置是有讲究的，而 &lt;code>subscribeOn&lt;/code> 就无所谓。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@Test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">testScheduling&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">throws&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">InterruptedException&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">10&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">log&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">publishOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Schedulers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">elastic&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">filter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// .log() // 2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">publishOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Schedulers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">parallel&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">doOnNext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;int: &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c1">// .log() // 3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribeOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Schedulers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">single&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">Thread&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">5000&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
+&lt;li>只保留这个 &lt;code>log()&lt;/code> 的话，源头数据流是执行在 &lt;code>single&lt;/code> 线程池上的。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler1.webp"
+loading="lazy"
+alt="scheduler1"
+>&lt;/p>
+&lt;ol start="2">
+&lt;li>只保留这个 &lt;code>log()&lt;/code> 的话，可以看到，&lt;code>publishOn&lt;/code> 之后的数据流是在 &lt;code>elastic&lt;/code> 线程池上执行的。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler2.webp"
+loading="lazy"
+alt="scheduler2"
+>&lt;/p>
+&lt;ol start="3">
+&lt;li>只保留这个 &lt;code>log()&lt;/code> 的话，可以看到，&lt;code>publishOn&lt;/code> 之后的数据流切换到了 &lt;code>parallel&lt;/code> 线程池上执行。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler3.webp"
+loading="lazy"
+alt="scheduler3"
+>&lt;/p>
+&lt;p>通过以上 &lt;code>log()&lt;/code> 的输出，能总结出以下操作链：&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler4.webp"
+loading="lazy"
+alt="scheduler4"
+>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>publishOn&lt;/code> &lt;strong>会影响链中之后的操作符&lt;/strong>，比如第一个 &lt;code>publishOn&lt;/code> 调整调度器为 &lt;code>el&lt;/code>astic，则 &lt;code>filter&lt;/code> 的处理是在弹性线程池中执行的；同理，&lt;code>doOnNext&lt;/code> 是在 parallel 线程池中执行的；&lt;/li>
+&lt;li>&lt;code>subscribeOn&lt;/code> &lt;strong>无论出现在什么位置，只影响源头的执行环境&lt;/strong>，也就是 &lt;code>map&lt;/code> 方法是执行在单线程中的，直至被第一个 &lt;code>publishOn&lt;/code> 切换调度器。&lt;/li>
+&lt;/ul>
+&lt;h3 id="并行执行">并行执行
+&lt;/h3>&lt;p>对于一些能够在一个线程中顺序处理的任务，即使调度到 ParallelScheduler 上，通常也只由一个 Worker 来执行，
+比如：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@Test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">testParallelFlux&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">throws&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">InterruptedException&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">10&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">publishOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Schedulers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">parallel&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">log&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">TimeUnit&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">SECONDS&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输出：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">12:20:51.189 [main] INFO reactor.Flux.PublishOn.1 - | onSubscribe([Fuseable] FluxPublishOn.PublishOnSubscriber)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.191 [main] INFO reactor.Flux.PublishOn.1 - | request(unbounded)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onNext(1)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onNext(2)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onNext(3)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onNext(4)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onNext(5)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onNext(6)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onNext(7)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onNext(8)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onNext(9)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onNext(10)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:20:51.205 [parallel-1] INFO reactor.Flux.PublishOn.1 - | onComplete()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果我们想要一些任务能够 &amp;ldquo;均匀&amp;rdquo; 分布在不同的工作线程中执行，就需要用到 &lt;code>ParallelFlux&lt;/code>。
+你可以对任务 &lt;code>Flux&lt;/code> 使用 &lt;code>parallel()&lt;/code> 操作符来得到一个 &lt;code>ParallelFlux&lt;/code>。不过它本身并不会进行并行处理，而是将负载划分到多个执行 &amp;ldquo;轨道&amp;rdquo; 上（默认情况下，轨道个数与 CPU 核心数相同）。&lt;/p>
+&lt;p>为了配置 &lt;code>ParallelFlux&lt;/code> 如何并行地执行每一个轨道，需要使用 &lt;code>runOn(Scheduler)&lt;/code>，&lt;code>Schedulers.parallel&lt;/code> 是比较推荐的专门用于并行处理的调度器。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@Test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">testParallelFlux&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">throws&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">InterruptedException&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">10&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">parallel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">3&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">runOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Schedulers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">parallel&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">log&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">TimeUnit&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">SECONDS&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输出：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">12:32:57.483 [main] INFO reactor.Parallel.RunOn.1 - onSubscribe([Fuseable] FluxPublishOn.PublishOnSubscriber)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.485 [main] INFO reactor.Parallel.RunOn.1 - request(unbounded)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.497 [main] INFO reactor.Parallel.RunOn.1 - onSubscribe([Fuseable] FluxPublishOn.PublishOnSubscriber)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.497 [main] INFO reactor.Parallel.RunOn.1 - request(unbounded)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.497 [main] INFO reactor.Parallel.RunOn.1 - onSubscribe([Fuseable] FluxPublishOn.PublishOnSubscriber)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.497 [main] INFO reactor.Parallel.RunOn.1 - request(unbounded)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-1] INFO reactor.Parallel.RunOn.1 - onNext(1)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-2] INFO reactor.Parallel.RunOn.1 - onNext(2)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-1] INFO reactor.Parallel.RunOn.1 - onNext(4)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-2] INFO reactor.Parallel.RunOn.1 - onNext(5)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-3] INFO reactor.Parallel.RunOn.1 - onNext(3)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-2] INFO reactor.Parallel.RunOn.1 - onNext(8)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-1] INFO reactor.Parallel.RunOn.1 - onNext(7)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-3] INFO reactor.Parallel.RunOn.1 - onNext(6)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-1] INFO reactor.Parallel.RunOn.1 - onNext(10)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-3] INFO reactor.Parallel.RunOn.1 - onNext(9)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-1] INFO reactor.Parallel.RunOn.1 - onComplete()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-2] INFO reactor.Parallel.RunOn.1 - onComplete()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12:32:57.498 [parallel-3] INFO reactor.Parallel.RunOn.1 - onComplete()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以看到，各个元素的 &lt;code>OnNext&lt;/code>&amp;quot; 均匀 &amp;ldquo;分布执行在三个线程上，最后每个线程都有独立的&lt;code>onComplete&lt;/code> 事件。&lt;/p>
+&lt;p>
+&lt;div class="notice notice-warning" >
+&lt;div class="notice-title">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 576 512" fill="hsl(0, 65%, 65%)">&lt;path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zM124 296c-6.6.0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6.0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H124z"/>&lt;/svg>&lt;/div>&lt;p>&lt;code>Schedulers.elastic()&lt;/code> 存在可能会创建过多线程的问题，不应该在生产环境中使用。该方法已经被标记为过时，并且会在 reactor-core3.5 版本中删除。取而代之应该使用 &lt;code>Schedulers.boundedElastic()&lt;/code> 有界弹性线程池，最大线程数为 CPU 可用核心数 * 10。&lt;/p>&lt;/div>
+&lt;br>&lt;/p>
+&lt;h2 id="hot-vs-cold">Hot vs Cold
+&lt;/h2>&lt;p>无论是 &lt;code>Flux&lt;/code> 还是 &lt;code>Mono&lt;/code>，都有一个特点：订阅前什么都不会发生。当我们 &amp;ldquo;创建&amp;rdquo; 了一个 &lt;code>Flux&lt;/code> 的时候，我们只是 &amp;ldquo;声明&amp;rdquo;/&amp;ldquo;组装&amp;rdquo; 了它，但是如果不调用 &lt;code>subscribe&lt;/code> 来订阅它，它就不会开始发出元素。&lt;/p>
+&lt;p>我们前面常用的 &lt;code>Mono.just&lt;/code> 就属于 &amp;ldquo;冷&amp;rdquo; 的发布者。&lt;/p>
+&lt;h3 id="冷序列">冷序列
+&lt;/h3>&lt;p>想象一下，你登陆 B 站打开一个喜欢的视频，你可以在任何时间开始观看，与此同时，可能有几百个人在不同的地方和你看同一个视频，它们是不同的数据流。可能我已经看到一半了，别人才刚刚开始看。B 站的视频播放就像是一个 &amp;ldquo;冷的发布者&amp;rdquo;。&lt;/p>
+&lt;blockquote>
+&lt;p>冷发布者不会产生任何数据除非至少有一个人订阅它。并且它会为每个订阅者创建新的数据。&lt;/p>
+&lt;/blockquote>
+&lt;p>我们把这个方法当作获取视频的流数据&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">private&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stream&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">getVideo&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Got the video streaming request&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Stream&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">of&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;scene 1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;scene 2&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;scene 3&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;scene 4&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s">&amp;#34;scene 5&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>videoFlux 实现如下：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 每间隔一秒播放一个画面&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">fromStream&lt;/span>&lt;span class="p">(()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">getVideo&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">delayElements&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Duration&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">ofSeconds&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Tom are watching &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">Thread&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">4000&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Jerry are watching &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输出：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">Got the video streaming request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Got the video streaming request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>我们发现，&amp;ldquo;Got the video streaming request&amp;rdquo; 输出了两次，说明每次新的订阅都会触发 &lt;code>getVideo&lt;/code> 请求，Tom 比 Jerry 先开始看视频，当 Jerry 开始看视频时，Tom 已经看完了 3 个画面，Tom 和 Jerry 在并行地看同一个视频，但是在不同的画面。Jerry 并不会因为开始时间晚而错过任何画面。&lt;/p>
+&lt;h3 id="热序列">热序列
+&lt;/h3>&lt;p>想象有一个直播间，它不关心是否有人真的在看，一直持续地播放视频流，用户可以在它开播期间任意时间打开，并且直播间内的所有用户在同一时刻都看到同样的画面（数据），如果有人进来晚了，就只能错过之前的片段。直播间就像一个 &amp;ldquo;热的发布者&amp;rdquo;。&lt;/p>
+&lt;h4 id="share">share
+&lt;/h4>&lt;p>还是之前的 videoFlux，我们只需要添加一个 &lt;code>share&lt;/code>，让这个 &lt;code>Flux&lt;/code>&amp;rdquo; 变 &amp;ldquo;成一个直播间。&lt;code>share&lt;/code> 把冷序列转换成了对多个订阅者广播数据的热序列。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 每间隔一秒播放一个画面&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">fromStream&lt;/span>&lt;span class="p">(()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">getVideo&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">delayElements&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Duration&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">ofSeconds&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">share&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Tom are watching &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">Thread&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">4000&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Jerry are watching &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输出：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">Got the video streaming request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>从输出来看，Jerry 因为来晚了，错过了前面 3 秒的画面，但他能和 Tom 一样观看最新的画面。&lt;/p>
+&lt;p>如果第二个订阅者加入时，数据已经发送完成了，那么第二个订阅会让序列重复发送流程，就像电影院中，一部影片放映完了，还会有后续的放映。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 每间隔一秒播放一个画面&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">fromStream&lt;/span>&lt;span class="p">(()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">getVideo&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">delayElements&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Duration&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">ofSeconds&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">share&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Tom are watching &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c1">// Tom 看完电影&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">Thread&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">6000&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Jerry are watching &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输出：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">Got the video streaming request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Got the video streaming request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="cache">cache
+&lt;/h4>&lt;p>如果我们不想让序列重复，可以使用 &lt;code>cache&lt;/code>，它会缓存历史数据并广播给多个订阅者。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 每间隔一秒播放一个画面&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">fromStream&lt;/span>&lt;span class="p">(()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">getVideo&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">delayElements&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Duration&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">ofSeconds&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">cache&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Tom are watching &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">Thread&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">6000&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">videoFlux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Jerry are watching &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">scene&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输出：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">Got the video streaming request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Jerry are watching scene 5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以看到，&lt;code>getVideo()&lt;/code> 只调用了一次，但是 Jerry 仍然可以观看的所有的画面，cache 为以后的订阅者缓存了所有的数据。&lt;/p>
+&lt;p>如果不想缓存，可以使用 &lt;code>cache(0)&lt;/code>。&lt;/p>
+&lt;p>输出：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">Got the video streaming request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Tom are watching scene 5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;br>
+&lt;details>
+&lt;summary>此时的 Jerry&lt;/summary>
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jerry-shock.webp"
+loading="lazy"
+alt="jerry-shock"
+>
+&lt;/details>
+&lt;h3 id="总结">总结
+&lt;/h3>&lt;ul>
+&lt;li>冷序列：不管订阅者在何时订阅，都能收到数据流中的全部数据。&lt;/li>
+&lt;li>热序列：热序列持续产生数据，订阅者只能获取到其订阅之后的数据。&lt;/li>
+&lt;/ul></description></item><item><title>响应式编程 Spring Webflux 详解（三）</title><link>https://opoa.top/post/dive-into-spring-webflux-3/</link><pubDate>Thu, 01 Sep 2022 23:10:50 +0800</pubDate><guid>https://opoa.top/post/dive-into-spring-webflux-3/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/pink-girl.webp" alt="Featured image of post 响应式编程 Spring Webflux 详解（三）" />&lt;h2 id="操作符">操作符
 &lt;/h2>&lt;p>通常情况下，我们需要对发布者发出的原始数据进行多个阶段的处理，并最终得到我们需要的数据。这种感觉就像是一条流水线，从流水线的源头进入传送带的是原料，经过流水线上各个工位的处理，逐渐从原料变成半成品、零件、组件、成品，最终成为消费者需要的包装品。这其中，流水线源头的下料机就相当于发布者，消费者就相当于订阅者，流水线上的一道道工序就相当于一个个操作符。&lt;/p>
 &lt;p>下面介绍一些常用的操作符。&lt;/p>
 &lt;h3 id="map">map
