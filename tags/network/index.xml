@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network on Opoa</title><link>https://opoa.top/tags/network/</link><description>Recent content in Network on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Fri, 21 Apr 2023 11:38:30 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/network/index.xml" rel="self" type="application/rss+xml"/><item><title>超时异常处理指南</title><link>https://opoa.top/post/guide-to-handling-timeout-exception/</link><pubDate>Fri, 21 Apr 2023 11:38:30 +0800</pubDate><guid>https://opoa.top/post/guide-to-handling-timeout-exception/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/pretty-butterfly-outfit-red-eyes.webp" alt="Featured image of post 超时异常处理指南" />
+&lt;div class="notice notice-note" >
+&lt;div class="notice-title">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512" fill="hsl(200, 65%, 65%)">&lt;path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zm-248 50a46 46 0 100 92 46 46 0 000-92zm-44-165l8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z"/>&lt;/svg>&lt;/div>&lt;p>超时异常，指一个操作未能在规定的时间内完成，抛出的异常。&lt;/p>&lt;/div>
+&lt;h2 id="常见超时异常">常见超时异常
+&lt;/h2>&lt;h3 id="connection-timeout">Connection timeout
+&lt;/h3>&lt;blockquote>
+&lt;p>当一个客户端尝试连接到一个服务器时，等待服务器响应的时间超过了预设的最长时间，导致建立连接失败。通常是由于网络拥塞或服务器繁忙引起的。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="socket-timeout">Socket timeout
+&lt;/h3>&lt;blockquote>
+&lt;p>当客户端和服务器建立连接后，一段时间内没接收到数据，则抛出该异常。&lt;/p>
+&lt;/blockquote>
+&lt;p>比如设置超时 100ms，服务器向客户端发送数据，每个数据包的发送间隔不能超过 100ms，否则报错。&lt;/p>
+&lt;h3 id="read-timeout">Read timeout
+&lt;/h3>&lt;blockquote>
+&lt;p>当一个客户端从服务器端读取数据时，在一定时间内没有接收到任何数据，则会出现读取超时异常。
+通常是由于网络连接中断、服务器响应慢或网络防火墙设置问题引起的。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="请求链路">请求链路
+&lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/api-request-chain.webp"
+loading="lazy"
+alt="api-request-chain"
+>&lt;/p>
+&lt;p>以一个简单的请求举例，SLB 和 Gateway 的超时时间都是 60 秒（其实是 Gateway 向 SLB 看齐），Nginx 由于历史遗留原因超时为 300 秒，但整体还是 60 秒，不管后端设置的请求超时时间是多少，处理需要多久，都需要在 60 秒之内返回，否则网关会把该请求以超时处理。即：&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/api-gateway-504.webp"
+loading="lazy"
+alt="api-gateway-504"
+>&lt;/p>
+&lt;h2 id="处理流程之-read-timeout">处理流程之 Read timeout
+&lt;/h2>&lt;ol>
+&lt;li>检查处理过程中是否调用了慢接口&lt;/li>
+&lt;li>请求工具是否设置了超时时间&lt;/li>
+&lt;li>如设置了超时时间，仍超时，需要检查超时时间是否生效&lt;/li>
+&lt;li>是否接口异常，且设置了过大的重试次数&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>如何设置超时时间及重试次数&lt;/strong>&lt;/p>
+&lt;p>比如一个接口，平均耗时为 3s，3s 可以作为参考，建议手动请求 10 次或者更多，取耗时最长的一次再稍微向上取整，假设最长耗时 8s，则设置超时时间为 10s，已经能够覆盖这个接口大部分的响应耗时。10s 的情况能够重试 5 次，还在超时范围之内，重试 5 次都不能成功，则将异常返回给用户，让用户决定是否继续重试。&lt;/p></description></item></channel></rss>

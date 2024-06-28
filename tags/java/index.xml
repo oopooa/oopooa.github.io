@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Opoa</title><link>https://opoa.top/tags/java/</link><description>Recent content in Java on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Sun, 02 Oct 2022 23:13:17 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>响应式编程 Spring Webflux 详解（五）</title><link>https://opoa.top/post/dive-into-spring-webflux-5/</link><pubDate>Sun, 02 Oct 2022 23:13:17 +0800</pubDate><guid>https://opoa.top/post/dive-into-spring-webflux-5/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/kimi-no-na-wa.webp" alt="Featured image of post 响应式编程 Spring Webflux 详解（五）" />&lt;h2 id="自定义数据流">自定义数据流
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Opoa</title><link>https://opoa.top/tags/java/</link><description>Recent content in Java on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Mon, 25 Sep 2023 21:06:18 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>WinSW 使用</title><link>https://opoa.top/post/winsw-usage/</link><pubDate>Mon, 25 Sep 2023 21:06:18 +0800</pubDate><guid>https://opoa.top/post/winsw-usage/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-loli-yukata.webp" alt="Featured image of post WinSW 使用" />&lt;h2 id="简介">简介
+&lt;/h2>&lt;p>一款可以将应用打包成 Windows 服务的开源工具。&lt;/p>
+&lt;div class="github">
+&lt;div class="logo">
+&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon github-icon" viewBox="0 0 16 16">&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M2 2.5C2 1.83696 2.26339 1.20107 2.73223 0.732233C3.20108 0.263392 3.83696 0 4.5 0L13.25 0C13.4489 0 13.6397 0.0790176 13.7803 0.21967C13.921 0.360322 14 0.551088 14 0.75V13.25C14 13.4489 13.921 13.6397 13.7803 13.7803C13.6397 13.921 13.4489 14 13.25 14H10.75C10.5511 14 10.3603 13.921 10.2197 13.7803C10.079 13.6397 10 13.4489 10 13.25C10 13.0511 10.079 12.8603 10.2197 12.7197C10.3603 12.579 10.5511 12.5 10.75 12.5H12.5V10.5H4.5C4.30308 10.5 4.11056 10.5582 3.94657 10.6672C3.78257 10.7762 3.65442 10.9312 3.57816 11.1128C3.50191 11.2943 3.48096 11.4943 3.51793 11.6878C3.5549 11.8812 3.64816 12.0594 3.786 12.2C3.92524 12.3422 4.0023 12.5338 4.00024 12.7328C3.99818 12.9318 3.91716 13.1218 3.775 13.261C3.63285 13.4002 3.4412 13.4773 3.24222 13.4752C3.04325 13.4732 2.85324 13.3922 2.714 13.25C2.25571 12.7829 1.99929 12.1544 2 11.5V2.5ZM12.5 1.5V9H4.5C4.144 9 3.806 9.074 3.5 9.208V2.5C3.5 2.23478 3.60536 1.98043 3.79289 1.79289C3.98043 1.60536 4.23478 1.5 4.5 1.5H12.5ZM5 12.25V15.5C5 15.5464 5.01293 15.5919 5.03734 15.6314C5.06175 15.6709 5.09667 15.7028 5.1382 15.7236C5.17972 15.7444 5.22621 15.7532 5.27245 15.749C5.31869 15.7448 5.36286 15.7279 5.4 15.7L6.85 14.613C6.89328 14.5805 6.94591 14.563 7 14.563C7.05409 14.563 7.10673 14.5805 7.15 14.613L8.6 15.7C8.63714 15.7279 8.68131 15.7448 8.72755 15.749C8.77379 15.7532 8.82028 15.7444 8.8618 15.7236C8.90333 15.7028 8.93826 15.6709 8.96266 15.6314C8.98707 15.5919 9 15.5464 9 15.5V12.25C9 12.1837 8.97366 12.1201 8.92678 12.0732C8.87989 12.0263 8.81631 12 8.75 12H5.25C5.1837 12 5.12011 12.0263 5.07322 12.0732C5.02634 12.1201 5 12.1837 5 12.25Z"/>&lt;/svg>
+&lt;a class="name" href=https://github.com/winsw/winsw target="_blank">winsw&lt;/a>
+&lt;/div>
+&lt;div class="visibility">public&lt;/div>
+&lt;div class="description">A wrapper executable that can run any executable as a Windows service, in a permissive license.&lt;/div>
+&lt;div class="language">
+&lt;span class="language-color" style="background-color: #448319">&lt;/span>
+&lt;span class="language-name">C#&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="使用流程">使用流程
+&lt;/h3>
+&lt;div class="notice notice-note" >
+&lt;div class="notice-title">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512" fill="hsl(200, 65%, 65%)">&lt;path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zm-248 50a46 46 0 100 92 46 46 0 000-92zm-44-165l8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z"/>&lt;/svg>&lt;/div>&lt;p>以运行 Java 应用举例&lt;/p>&lt;/div>
+&lt;h4 id="下载软件和准备配置文件">下载软件和准备配置文件
+&lt;/h4>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw1.webp"
+loading="lazy"
+alt="winsw1"
+>&lt;/p>
+&lt;p>把他们的命名修改统一，exe 自动加载同名配置文件&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw2.webp"
+loading="lazy"
+alt="winsw2"
+>&lt;/p>
+&lt;h4 id="xml-配置">Xml 配置
+&lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-xml" data-lang="xml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;service&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 服务 id --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;id&amp;gt;&lt;/span>Api-Gateway&lt;span class="nt">&amp;lt;/id&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 服务名称 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;name&amp;gt;&lt;/span>Api-Gateway&lt;span class="nt">&amp;lt;/name&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 服务描述 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;description&amp;gt;&lt;/span>Api 网关应用 &lt;span class="nt">&amp;lt;/description&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 启动模式 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;startmode&amp;gt;&lt;/span>Automatic&lt;span class="nt">&amp;lt;/startmode&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 可执行命令 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;executable&amp;gt;&lt;/span>java&lt;span class="nt">&amp;lt;/executable&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 命令参数 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;arguments&amp;gt;&lt;/span>-Xms256m -Xmx256m -Dspring.profiles.active=dev -Dfile.encoding=UTF-8 -jar api-gateway.jar&lt;span class="nt">&amp;lt;/arguments&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 日志路径 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;logpath&amp;gt;&lt;/span>logs&lt;span class="nt">&amp;lt;/logpath&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 日志模式 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;log&lt;/span> &lt;span class="na">mode=&lt;/span>&lt;span class="s">&amp;#34;roll&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&amp;lt;/log&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/service&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="安装启动">安装启动
+&lt;/h4>&lt;p>以 &lt;font color="red"> 管理员身份 &lt;/font> 打开命令窗口&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw3.webp"
+loading="lazy"
+alt="winsw3"
+>&lt;/p>
+&lt;p>显示服务安装成功&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw4.webp"
+loading="lazy"
+alt="winsw4"
+>&lt;/p>
+&lt;p>命令启动服务&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">net start api-gateway
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw5.webp"
+loading="lazy"
+alt="winsw5"
+>&lt;/p>
+&lt;p>Windows 服务中查看&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw6.webp"
+loading="lazy"
+alt="winsw6"
+>&lt;/p>
+&lt;h4 id="应用日志查看">应用日志查看
+&lt;/h4>&lt;p>同目录下的 logs 文件夹下&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw7.webp"
+loading="lazy"
+alt="winsw7"
+>&lt;/p>
+&lt;p>其他命令&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 启动服务&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">net start xxx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 停止服务&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">net stop xxx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 查看所有服务&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sc query
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 查看指定服务&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sc query xxx
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 删除指定服务&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sc delete xxx
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="其他实践">其他实践
+&lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/u013737132/article/details/130910298" target="_blank" rel="noopener"
+>Nacos 打包成 Windows 服务
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item><item><title>超时异常处理指南</title><link>https://opoa.top/post/guide-to-handling-timeout-exception/</link><pubDate>Fri, 21 Apr 2023 11:38:30 +0800</pubDate><guid>https://opoa.top/post/guide-to-handling-timeout-exception/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/pretty-butterfly-outfit-red-eyes.webp" alt="Featured image of post 超时异常处理指南" />
+&lt;div class="notice notice-note" >
+&lt;div class="notice-title">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512" fill="hsl(200, 65%, 65%)">&lt;path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zm-248 50a46 46 0 100 92 46 46 0 000-92zm-44-165l8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z"/>&lt;/svg>&lt;/div>&lt;p>超时异常，指一个操作未能在规定的时间内完成，抛出的异常。&lt;/p>&lt;/div>
+&lt;h2 id="常见超时异常">常见超时异常
+&lt;/h2>&lt;h3 id="connection-timeout">Connection timeout
+&lt;/h3>&lt;blockquote>
+&lt;p>当一个客户端尝试连接到一个服务器时，等待服务器响应的时间超过了预设的最长时间，导致建立连接失败。通常是由于网络拥塞或服务器繁忙引起的。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="socket-timeout">Socket timeout
+&lt;/h3>&lt;blockquote>
+&lt;p>当客户端和服务器建立连接后，一段时间内没接收到数据，则抛出该异常。&lt;/p>
+&lt;/blockquote>
+&lt;p>比如设置超时 100ms，服务器向客户端发送数据，每个数据包的发送间隔不能超过 100ms，否则报错。&lt;/p>
+&lt;h3 id="read-timeout">Read timeout
+&lt;/h3>&lt;blockquote>
+&lt;p>当一个客户端从服务器端读取数据时，在一定时间内没有接收到任何数据，则会出现读取超时异常。
+通常是由于网络连接中断、服务器响应慢或网络防火墙设置问题引起的。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="请求链路">请求链路
+&lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/api-request-chain.webp"
+loading="lazy"
+alt="api-request-chain"
+>&lt;/p>
+&lt;p>以一个简单的请求举例，SLB 和 Gateway 的超时时间都是 60 秒（其实是 Gateway 向 SLB 看齐），Nginx 由于历史遗留原因超时为 300 秒，但整体还是 60 秒，不管后端设置的请求超时时间是多少，处理需要多久，都需要在 60 秒之内返回，否则网关会把该请求以超时处理。即：&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/api-gateway-504.webp"
+loading="lazy"
+alt="api-gateway-504"
+>&lt;/p>
+&lt;h2 id="处理流程之-read-timeout">处理流程之 Read timeout
+&lt;/h2>&lt;ol>
+&lt;li>检查处理过程中是否调用了慢接口&lt;/li>
+&lt;li>请求工具是否设置了超时时间&lt;/li>
+&lt;li>如设置了超时时间，仍超时，需要检查超时时间是否生效&lt;/li>
+&lt;li>是否接口异常，且设置了过大的重试次数&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>如何设置超时时间及重试次数&lt;/strong>&lt;/p>
+&lt;p>比如一个接口，平均耗时为 3s，3s 可以作为参考，建议手动请求 10 次或者更多，取耗时最长的一次再稍微向上取整，假设最长耗时 8s，则设置超时时间为 10s，已经能够覆盖这个接口大部分的响应耗时。10s 的情况能够重试 5 次，还在超时范围之内，重试 5 次都不能成功，则将异常返回给用户，让用户决定是否继续重试。&lt;/p></description></item><item><title>响应式编程 Spring Webflux 详解（五）</title><link>https://opoa.top/post/dive-into-spring-webflux-5/</link><pubDate>Sun, 02 Oct 2022 23:13:17 +0800</pubDate><guid>https://opoa.top/post/dive-into-spring-webflux-5/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/kimi-no-na-wa.webp" alt="Featured image of post 响应式编程 Spring Webflux 详解（五）" />&lt;h2 id="自定义数据流">自定义数据流
 &lt;/h2>&lt;p>我们可以通过定义相应的事件（&lt;code>onNext&lt;/code>、&lt;code>onError&lt;/code> 和 &lt;code>onComplete&lt;/code>）创建一个 &lt;code>Flux&lt;/code> 或 &lt;code>Mono&lt;/code>。Reactort 提供了 &lt;code>generate&lt;/code>、&lt;code>create&lt;/code>、&lt;code>push&lt;/code> 和 &lt;code>handle&lt;/code> 等方法，所有这些方法都使用 sink（池）来生成数据流。&lt;/p>
 &lt;p>sink，顾名思义，就是池子，可以想象一下厨房水池的样子。如图所示：&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/data-flow.webp"

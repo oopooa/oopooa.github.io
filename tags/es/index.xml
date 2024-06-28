@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Es on Opoa</title><link>https://opoa.top/tags/es/</link><description>Recent content in Es on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Thu, 20 Jul 2023 13:40:21 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/es/index.xml" rel="self" type="application/rss+xml"/><item><title>Es fielddata 占用过高问题排查</title><link>https://opoa.top/post/resolve-es-fielddata-issue/</link><pubDate>Thu, 20 Jul 2023 13:40:21 +0800</pubDate><guid>https://opoa.top/post/resolve-es-fielddata-issue/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/raingirl.webp" alt="Featured image of post Es fielddata 占用过高问题排查" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>有同事反馈 ApiEs 集群的 fielddata 占用过高&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue1.webp"
+loading="lazy"
+alt="es-fielddata-issue1"
+>&lt;/p>
+&lt;p>我的心情 be like：&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/cat-shock.gif"
+loading="lazy"
+alt="cat-shock"
+>&lt;/p>
+&lt;p>fielddata 是个啥&lt;/p>
+&lt;blockquote>
+&lt;p>Elasticsearch 的 fielddata 是用于聚合和排序文本类型字段的机制。它将字段数据加载到内存中，提供更灵活的查询和聚合操作。但需要注意 fielddata 可能占用大量内存，严重时会导致整个集群不可用。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="排查过程">排查过程
+&lt;/h2>&lt;h3 id="day-1">Day 1
+&lt;/h3>&lt;p>先在 Es 中查询各个索引的 fielddata 占用情况&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">indices: 查看集群中所有 index 的详细信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">GET _cat/indices?v&amp;amp;h=index,fielddata.memory_size&amp;amp;s=fielddata.memory_size:desc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;ul>
+&lt;li>GET _cat/indices：获取索引相关的信息&lt;/li>
+&lt;li>?v：verbose 返回详细的输出信息，包括表头信息&lt;/li>
+&lt;li>&amp;amp;h：header 指定返回结果中所需的字段信息&lt;/li>
+&lt;li>&amp;amp;s：sort 按特定字段对结果进行排序&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>也可使用简称&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">GET _cat/indices?v&amp;amp;h=i,fm&amp;amp;s=fm:desc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>结果：&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue2.webp"
+loading="lazy"
+alt="es-fielddata-issue2"
+>&lt;/p>
+&lt;p>发现并没有特别异常的情况，考虑到可能是被清理了。&lt;/p>
+&lt;p>联想到最近新上的查询计费索引的业务，可能是计费导出接口引起的。
+于是现场提交了一个较大的导出任务，持续观察 fielddata 占用情况&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue3.webp"
+loading="lazy"
+alt="es-fielddata-issue3"
+>&lt;/p>
+&lt;p>那再观察观察&lt;/p>
+&lt;h3 id="day-2">Day 2
+&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue4.webp"
+loading="lazy"
+alt="es-fielddata-issue4"
+>&lt;/p>
+&lt;p>早上一来，又出现了。必须得好好排查一下&lt;/p>
+&lt;p>首先在官方文档里面寻找解决方案&lt;/p>
+&lt;p>&lt;a class="link" href="https://help.aliyun.com/document_detail/444716.html?spm=a2c4g.149443.0.0.2e495b295jcbO5#task-2238595" target="_blank" rel="noopener"
+>如何处理 fielddata 内存使用率高问题 - 阿里云帮助中心
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p>
+&lt;p>从中可以看到一些常见的场景和关键信息&lt;/p>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://www.elastic.co/guide/en/elasticsearch/reference/7.10/mapping-id-field.html?spm=a2c4g.444716.0.0.b2c41a2eNdciE1" target="_blank" rel="noopener"
+>Elasticsearch 官方文档
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+中指出禁止对_id 进行聚合、排序和脚本操作&lt;/li>
+&lt;li>fielddata 会占用大量的堆内存，并且堆内存占用是永久的&lt;/li>
+&lt;/ol>
+&lt;p>根据文档一一排查&lt;/p>
+&lt;p>&amp;hellip;&lt;/p>
+&lt;p>获取占用 fielddata 内存占用高的字段，分析和业务的哪类查询相关。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">GET _cat/fielddata?v&amp;amp;s=size:desc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue5.webp"
+loading="lazy"
+alt="es-fielddata-issue5"
+>&lt;/p>
+&lt;p>&lt;strong>确认是使用了_id 进行聚合、排序和脚本操作引起的&lt;/strong>&lt;/p>
+&lt;p>接下来是定位异常的语句&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue6.webp"
+loading="lazy"
+alt="es-fielddata-issue6"
+>&lt;/p>
+&lt;p>对近 30 天 fielddata 的使用情况排查，发现两个明显的异常节点，7 月 11 日和 7 月 18 日，针对这两个时间段进行日志查询&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue7.webp"
+loading="lazy"
+alt="es-fielddata-issue7"
+>&lt;/p>
+&lt;p>由于日志查询仅支持查询近 7 天的数据，只能选择 7 月 18 日的时间段&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue8.webp"
+loading="lazy"
+alt="es-fielddata-issue8"
+>&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue9.webp"
+loading="lazy"
+alt="es-fielddata-issue9"
+>&lt;/p>
+&lt;p>占用陡增时间段在 00:50 至 01:10 之间&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">uri: api_custom_biz_log
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>排查该段时间计费日志索引的查询语句&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue10.webp"
+loading="lazy"
+alt="es-fielddata-issue10"
+>&lt;/p>
+&lt;p>发现了使用 &lt;code>_id&lt;/code> 排序的语句&lt;/p>
+&lt;p>&lt;strong>精简后部分语句&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;size&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;query&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;bool&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;filter&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;term&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;api_id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;XXXXXX&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;boost&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;sort&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;_id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;order&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;asc&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>通过查询语句找到对应的项目和平台，定位到代码处，反馈给负责人进行修改。&lt;/p>
+&lt;h2 id="解决方案">解决方案
+&lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue11.webp"
+loading="lazy"
+alt="es-fielddata-issue11"
+>&lt;/p>
+&lt;p>_id 取自 request_id，字段中有保存并且是 keyword 类型&lt;/p>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/es-fielddata-issue12.webp"
+loading="lazy"
+alt="es-fielddata-issue12"
+>&lt;/p>
+&lt;p>将 &lt;code>_id&lt;/code> 替换为 &lt;code>request_id&lt;/code>&lt;/p>
+&lt;h2 id="总结">总结
+&lt;/h2>&lt;ol>
+&lt;li>先从阿里云官方文档中寻找解决方案&lt;/li>
+&lt;li>借助性能监控，定位到异常发生的时间段，缩小排查范围&lt;/li>
+&lt;/ol>
+&lt;h2 id="参考资料">参考资料
+&lt;/h2>&lt;p>&lt;a class="link" href="https://blog.51cto.com/u_15707676/5734644" target="_blank" rel="noopener"
+>一文带你彻底弄懂 ES 中的 doc_values 和 fielddata
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;br>
+&lt;a class="link" href="https://developer.aliyun.com/article/1231437?spm=a2c6h.14164896.0.0.3b247559jlzmCz" target="_blank" rel="noopener"
+>白话 Elasticsearch51 - 深入聚合数据分析之 text field 聚合以及 fielddata 原理
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+&lt;/p></description></item></channel></rss>
