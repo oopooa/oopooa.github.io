@@ -9,9 +9,13 @@
 &lt;li>用户校验&lt;/li>
 &lt;li>显示支付结果&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/templatemethod-uml.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/templatemethod-uml.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/templatemethod-uml.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="abstractpaymentprocess">AbstractPaymentProcess
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">abstract&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">class&lt;/span> &lt;span class="nc">AbstractPaymentProcess&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">

@@ -4,9 +4,12 @@
 &lt;li>Element-UI 2.13.2&lt;/li>
 &lt;/ul>
 &lt;h2 id="准备工作">准备工作
-&lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap.webp"
-loading="lazy"
->
+&lt;/h2>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap.webp" alt="" />
+&lt;/a>
+&lt;/div>
 打开 &lt;a class="link" href="http://lbsyun.baidu.com/" target="_blank" rel="noopener"
 >百度地图开放平台
 &lt;span style="white-space: nowrap;">
@@ -18,18 +21,27 @@ fill="currentColor">
 &lt;/span>
 &lt;/a>
 官网，来到页面最下方进行注册，已有百度账号可直接登录。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap1.webp"
-loading="lazy"
->
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap1.webp" alt="" />
+&lt;/a>
+&lt;/div>
 从导航栏处点击进入到控制台&lt;/p>
 &lt;p>左侧菜单 —&amp;gt; 应用管理 —&amp;gt; 我的应用 —&amp;gt; 创建应用&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap2.webp"
-loading="lazy"
->
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap2.webp" alt="" />
+&lt;/a>
+&lt;/div>
 应用名称可随意填写，应用类型选择浏览器端。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap3.webp"
-loading="lazy"
->
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap3.webp" alt="" />
+&lt;/a>
+&lt;/div>
 创建完成之后我的应用中就可以看到，AK (Access Key) 待会儿需要用到。&lt;/p>
 &lt;h2 id="接入项目">接入项目
 &lt;/h2>&lt;p>新建一个单独的 js 文件，作用是传入 ak 的值，在页面的 Header 动态拼接一个加载百度地图 js 的 Script 标签。文件名称和位置随意，我这里文件的名称是 &lt;code>gis.js&lt;/code>。&lt;/p>
@@ -112,9 +124,12 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/style&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>效果图&lt;/strong>
-&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap4.webp"
-loading="lazy"
->&lt;/p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/baidumap4.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/liub37/article/details/83750164" target="_blank" rel="noopener"
 >记录 Vue 异步加载百度地图

@@ -17,15 +17,21 @@
 &lt;div class="notice notice-note" >
 &lt;div class="notice-title">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512" fill="hsl(200, 65%, 65%)">&lt;path d="M504 256a248 248 0 11-496 0 248 248 0 01496 0zm-248 50a46 46 0 100 92 46 46 0 000-92zm-44-165l8 136c0 6 5 11 12 11h48c7 0 12-5 12-11l8-136c0-7-5-13-12-13h-64c-7 0-12 6-12 13z"/>&lt;/svg>&lt;/div>&lt;p>以运行 Java 应用举例&lt;/p>&lt;/div>
 &lt;h4 id="下载软件和准备配置文件">下载软件和准备配置文件
-&lt;/h4>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw1.webp"
-loading="lazy"
-alt="winsw1"
->&lt;/p>
+&lt;/h4>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw1.webp" alt="winsw1" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>把他们的命名修改统一，exe 自动加载同名配置文件&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw2.webp"
-loading="lazy"
-alt="winsw2"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw2.webp" alt="winsw2" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h4 id="xml-配置">Xml 配置
 &lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-xml" data-lang="xml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;service&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 服务 id --&amp;gt;&lt;/span>
@@ -47,32 +53,47 @@ alt="winsw2"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/service&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="安装启动">安装启动
 &lt;/h4>&lt;p>以 &lt;font color="red"> 管理员身份 &lt;/font> 打开命令窗口&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw3.webp"
-loading="lazy"
-alt="winsw3"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw3.webp" alt="winsw3" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>显示服务安装成功&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw4.webp"
-loading="lazy"
-alt="winsw4"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw4.webp" alt="winsw4" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>命令启动服务&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">net start api-gateway
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw5.webp"
-loading="lazy"
-alt="winsw5"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw5.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw5.webp" alt="winsw5" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>Windows 服务中查看&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw6.webp"
-loading="lazy"
-alt="winsw6"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw6.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw6.webp" alt="winsw6" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h4 id="应用日志查看">应用日志查看
 &lt;/h4>&lt;p>同目录下的 logs 文件夹下&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw7.webp"
-loading="lazy"
-alt="winsw7"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw7.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/winsw7.webp" alt="winsw7" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>其他命令&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 启动服务&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">net start xxx

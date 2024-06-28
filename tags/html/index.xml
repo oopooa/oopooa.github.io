@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HTML on Opoa</title><link>https://opoa.top/tags/html/</link><description>Recent content in HTML on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Sun, 19 Apr 2020 15:08:06 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/html/index.xml" rel="self" type="application/rss+xml"/><item><title>Hexo (Sakura) 音乐插件播放异常</title><link>https://opoa.top/post/music-plugin-playback-error-in-hexo-sakura-theme/</link><pubDate>Sun, 19 Apr 2020 15:08:06 +0800</pubDate><guid>https://opoa.top/post/music-plugin-playback-error-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" alt="Featured image of post Hexo (Sakura) 音乐插件播放异常" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>重做博客时新发现的问题，loop 按钮不显示，且循环播放功能失效。回看才发现，其实一直都存在的问题，处理了站内播放 bug 之后就忽略音乐插件了。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.min.gif"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.min.gif">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.min.gif" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="原因">原因
 &lt;/h2>&lt;p>查看源代码，发现 autoplay 和 loop 都没能被正确赋值。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.png"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.png">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.png" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>感觉可能是 neat 压缩 html 出错了，毕竟也是有过前科的。(被换行注释坑惨了)&lt;/p>
 &lt;p>关掉 neat 的 html 压缩，然后&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop2.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop2.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>查看源代码&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop1.png"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop1.png">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop1.png" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="解决办法">解决办法
 &lt;/h2>&lt;p>neat 压缩静态资源很重要，又不想顶着残缺的 aplayer 插件，目前最简单的方式就是把主题配置文件 _config.yml 下出错的地方注释掉，让它采用默认值。既然 neat 你看不惯，那我帮你摁死好了。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop3.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop4.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop3.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop4.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>嗯&amp;hellip; 目前双方情绪都很稳定。&lt;/p></description></item></channel></rss>

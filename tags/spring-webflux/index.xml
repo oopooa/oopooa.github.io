@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spring Webflux on Opoa</title><link>https://opoa.top/tags/spring-webflux/</link><description>Recent content in Spring Webflux on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Sun, 02 Oct 2022 23:13:17 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/spring-webflux/index.xml" rel="self" type="application/rss+xml"/><item><title>响应式编程 Spring Webflux 详解（五）</title><link>https://opoa.top/post/dive-into-spring-webflux-5/</link><pubDate>Sun, 02 Oct 2022 23:13:17 +0800</pubDate><guid>https://opoa.top/post/dive-into-spring-webflux-5/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/kimi-no-na-wa.webp" alt="Featured image of post 响应式编程 Spring Webflux 详解（五）" />&lt;h2 id="自定义数据流">自定义数据流
 &lt;/h2>&lt;p>我们可以通过定义相应的事件（&lt;code>onNext&lt;/code>、&lt;code>onError&lt;/code> 和 &lt;code>onComplete&lt;/code>）创建一个 &lt;code>Flux&lt;/code> 或 &lt;code>Mono&lt;/code>。Reactort 提供了 &lt;code>generate&lt;/code>、&lt;code>create&lt;/code>、&lt;code>push&lt;/code> 和 &lt;code>handle&lt;/code> 等方法，所有这些方法都使用 sink（池）来生成数据流。&lt;/p>
 &lt;p>sink，顾名思义，就是池子，可以想象一下厨房水池的样子。如图所示：&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/data-flow.webp"
-loading="lazy"
-alt="data-flow"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/data-flow.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/data-flow.webp" alt="data-flow" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>sink 通常至少会暴露三个方法给我们，&lt;code>next&lt;/code>、&lt;code>error&lt;/code> 和 &lt;code>complete&lt;/code>。next 和 error 相当于两个下水口，我们不断将自定义的数据放到 next 口，Reactor 就会帮我们串成一个 publisher 数据流，直到有一个错误数据放到 error 口，或者按了一下 &lt;code>compelete&lt;/code> 按钮，数据流就会终止了。&lt;/p>
 &lt;h3 id="flux-create">Flux Create
 &lt;/h3>&lt;p>&lt;code>create&lt;/code> 方法接受一个 &lt;code>FluxSink&amp;lt;T&amp;gt;&lt;/code> 消费者，也就是说，你需要提供一个 &lt;code>FluxSink&lt;/code> 的实例用来给下游的订阅者们发送 0 到 N 个元素。每个订阅者都会获得一个 &lt;code>FluxSink&lt;/code> 的实例发送元素。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/flux-create.webp"
-loading="lazy"
-alt="flux-create"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/flux-create.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/flux-create.webp" alt="flux-create" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>这个例子用 &lt;code>Flux.create&lt;/code> 创建了一个序列。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Integer&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">integerFlux&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">create&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="n">FluxSink&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Integer&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">fluxSink&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">IntStream&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -397,10 +403,13 @@ alt="flux-create"
 &lt;/h2>&lt;h3 id="什么是背压">什么是背压
 &lt;/h3>&lt;p>在响应式数据流中，背压定义了如何调节数据流元素的传输。换句话说，控制消费者能接收到的数据量。
 我们用一个例子来说明：&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure1.webp"
-loading="lazy"
-alt="backpressure1"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure1.webp" alt="backpressure1" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;ul>
 &lt;li>这个系统包含发布者，消费者，GUI&lt;/li>
 &lt;li>发布者每秒发送 10000 个数据给消费者&lt;/li>
@@ -416,10 +425,13 @@ alt="backpressure1"
 &lt;li>&lt;font color="orange"> 缓存额外的数据元素 &lt;/font>。用这种方式，消费者缓存剩下的数据元素直到它能够处理为止。主要的缺点是可能会导致内存崩溃。&lt;/li>
 &lt;li>&lt;font color="orange"> 丢弃额外的元素 &lt;/font>。虽然这个解决办法也不是很理想，不过这样至少系统不会崩溃。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure2.webp"
-loading="lazy"
-alt="backpressure2"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure2.webp" alt="backpressure2" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="背压控制">背压控制
 &lt;/h3>&lt;p>我们应该专注于让发布者控制数据的发送。有以下策略：&lt;/p>
 &lt;ul>
@@ -427,10 +439,13 @@ alt="backpressure2"
 &lt;li>&lt;font color="orange"> 限制客户端能够接收到元素的数量 &lt;/font>。作为限制的推送策略，发布者每次只能向客户端发送不超过指定数量的元素。&lt;/li>
 &lt;li>&lt;font color="orange"> 当消费者不能处理更多的数据时取消数据流 &lt;/font>。这种情况下，接收者能在任何给定的时间终止数据传输并在稍后重新订阅流。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure3.webp"
-loading="lazy"
-alt="backpressure3"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure3.webp" alt="backpressure3" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="背压机制的实现">背压机制的实现
 &lt;/h3>&lt;h4 id="request">Request
 &lt;/h4>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@Test&lt;/span>&lt;span class="w">
@@ -519,10 +534,13 @@ alt="backpressure3"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">limitRate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">10&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">delayElements&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Duration&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">ofMillis&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">100&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="n">println&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure4.webp"
-loading="lazy"
-alt="backpressure4"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure4.webp" alt="backpressure4" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>输出：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">00:17:08.045 [main] INFO reactor.Flux.Range.1 - | onSubscribe([Synchronous Fuseable] FluxRange.RangeSubscription)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">00:17:08.048 [main] INFO reactor.Flux.Range.1 - | request(10)
@@ -561,10 +579,13 @@ alt="backpressure4"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">99
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">100
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>一旦有 75% 的数据被发出，它就会自动请求并重新装满该数额。这就是为什么我们首先看到请求 10 个元素，之后每次都会看到请求 8 个元素。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure5.webp"
-loading="lazy"
-alt="backpressure5"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure5.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/backpressure5.webp" alt="backpressure5" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h4 id="cancel">Cancel
 &lt;/h4>&lt;p>更好地控制数据流的方式是在需要的时候取消订阅。你可以用 &lt;code>BaseSubscriber::hookOnNext&lt;/code> 订阅生产者。
 参考下面的例子，生产者只有在订阅者发送 &lt;code>request(1)&lt;/code> 时才会发送下一个元素。实际上，这个生产者可以是一个数据库，而订阅者可以是一个 I/O 设备。为了配置运算的速度，I/O 设备可以请求一批数据并处理，然后再请求下一批数据，以此类推。&lt;/p>
@@ -656,10 +677,13 @@ fill="currentColor">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">onComplete&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>当执行 &lt;code>subscribe&lt;/code> 方法时，发布者会回调订阅者的 &lt;code>onSubscribe&lt;/code> 方法，这个方法中，通常订阅者会借助传入的 &lt;code>Subscription&lt;/code> 向发布者请求 n 个数据。然后发布者通过不断调用订阅者的 &lt;code>onNext&lt;/code> 方法向订阅者发出最多 n 个数据。如果数据全部发送完，则会调用 &lt;code>onComplete&lt;/code> 信号告知订阅者流已经发完；如果有错误发生，则通过 &lt;code>onError&lt;/code> 发出错误信号并终止数据流。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle1.webp"
-loading="lazy"
-alt="principle1"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle1.webp" alt="principle1" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;ol>
 &lt;li>&lt;code>Subscription&lt;/code> 是 &lt;code>Publisher&lt;/code> 和 &lt;code>Subscriber&lt;/code> 的 &amp;ldquo;中间人&amp;rdquo;。&lt;/li>
 &lt;/ol>
@@ -801,10 +825,13 @@ alt="principle1"
 &lt;li>&lt;code>FluxArray&lt;/code> 的 &lt;code>subscribe&lt;/code> 方法会返回给订阅者一个 &lt;code>Subscription&lt;/code> 实现类的对象，这个 &lt;code>ArraySubscription&lt;/code> 是 &lt;code>FluxArray&lt;/code> 的静态内部类，它定义了 &amp;ldquo;如何发布元素&amp;rdquo; 的逻辑&lt;/li>
 &lt;li>订阅者可以通过这个 &lt;code>ArraySubscription&lt;/code> 对象向发布者请求 n 个数据，发布者也可以借助这个 &lt;code>ArraySubscription&lt;/code> 对象向订阅者传递数据元素（&lt;code>onNext&lt;/code>/&lt;code>onError&lt;/code>/&lt;code>onComplete&lt;/code>）。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle2.webp"
-loading="lazy"
-alt="principle2"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle2.webp" alt="principle2" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>上图的这个过程基本适用于大多数的用于生成 &lt;code>Flux&lt;/code>/&lt;code>Mono&lt;/code> 的静态工厂方法，如 &lt;code>Flux.just&lt;/code>、&lt;code>Flux.range&lt;/code> 等等。&lt;/p>
 &lt;p>首先，使用类似 &lt;code>Flux.just&lt;/code> 的方法创建发布者后，会创建一个具体的发布者（&lt;code>Publisher&lt;/code>），如 &lt;code>FluxArray&lt;/code>。&lt;/p>
 &lt;ol>
@@ -878,10 +905,13 @@ alt="principle2"
 &lt;li>&lt;code>map&lt;/code> 操作符并不产生数据，只是数据的搬运工。收到 &lt;code>request&lt;/code> 后要发出的数据来自上游。&lt;/li>
 &lt;/ol>
 &lt;p>所以 &lt;code>MapSubscriber&lt;/code> 同时也应该是一个订阅者，它订阅上游的发布者，并将数据传递给下游的订阅者。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle3.webp"
-loading="lazy"
-alt="principle3"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle3.webp" alt="principle3" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>&lt;strong>对下游作为发布者，传递上游的数据到下游，对上游是订阅者，传递下游的请求到上游。&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">static&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">class&lt;/span> &lt;span class="nc">MapSubscriber&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">implements&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Subscriber&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Subscription&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1">// 1&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">...&lt;/span>&lt;span class="w">
@@ -965,10 +995,13 @@ alt="principle3"
 &lt;li>向上：有一个自下而上的 &amp;ldquo;订阅链&amp;rdquo;，这个订阅链可以用来传递 &lt;code>request&lt;/code>，因此背压（backpressure）可以实现从下游向上游传递。&lt;/li>
 &lt;/ul>
 &lt;p>这一节最开头的那一段代码执行过程如下：&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle4.webp"
-loading="lazy"
-alt="principle4"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle4.webp" alt="principle4" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="lambdasubscriber">LambdaSubscriber
 &lt;/h3>&lt;p>&lt;code>subscribe&lt;/code> 方法有几个不同的变种：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">subscribe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Consumer&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">consumer&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -985,10 +1018,13 @@ alt="principle4"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nd">@Nullable&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Runnable&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">completeConsumer&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nd">@Nullable&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Consumer&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Subscription&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">subscriptionConsumer&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>用起来很方便，但响应式流规范中只定义了一个订阅方法 &lt;code>subscribe(Subscriber subscriber)&lt;/code>。实际上，这几个方法最终都是调用的 &lt;code>subscribe(LambdaSubscriber subscriber)&lt;/code>，并通过 &lt;code>LambdaSubscriber&lt;/code> 实现了对不同个数参数的组装。如图所示：&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle5.webp"
-loading="lazy"
-alt="principle5"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle5.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-principle5.webp" alt="principle5" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>因此，&lt;code>flux.subscribe(System.out::println, System.err::println)&lt;/code>;
 是调用的 &lt;code>flux.subscribe(new LambdaSubscriber(System.out::println, System.err::println, null, null));&lt;/code>&lt;/p>
 &lt;h2 id="heading">🕳🕳🕳
@@ -1266,10 +1302,13 @@ fill="currentColor">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">subscribe&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>运行用例，异常信息：&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-test-case1.webp"
-loading="lazy"
-alt="spring-webflux-test-case"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-test-case1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-test-case1.webp" alt="spring-webflux-test-case" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>能看到异常内容大部分都是 Reactor 库内部的调用，上边 stack trace 的问题还是出自 &lt;code>.subcribe()&lt;/code> 那一行。
 在命令式编程的方式中比较容易使用 IDEA 的工具进行调试，但在异步编程方式下，就不太好使了。所以还是得使用响应式编程库本身提供的调试工具。&lt;/p>
 &lt;h3 id="开启调试模式">开启调试模式
@@ -1364,29 +1403,41 @@ alt="spring-webflux-test-case"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
 &lt;li>只保留这个 &lt;code>log()&lt;/code> 的话，源头数据流是执行在 &lt;code>single&lt;/code> 线程池上的。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler1.webp"
-loading="lazy"
-alt="scheduler1"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler1.webp" alt="scheduler1" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;ol start="2">
 &lt;li>只保留这个 &lt;code>log()&lt;/code> 的话，可以看到，&lt;code>publishOn&lt;/code> 之后的数据流是在 &lt;code>elastic&lt;/code> 线程池上执行的。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler2.webp"
-loading="lazy"
-alt="scheduler2"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler2.webp" alt="scheduler2" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;ol start="3">
 &lt;li>只保留这个 &lt;code>log()&lt;/code> 的话，可以看到，&lt;code>publishOn&lt;/code> 之后的数据流切换到了 &lt;code>parallel&lt;/code> 线程池上执行。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler3.webp"
-loading="lazy"
-alt="scheduler3"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler3.webp" alt="scheduler3" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>通过以上 &lt;code>log()&lt;/code> 的输出，能总结出以下操作链：&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler4.webp"
-loading="lazy"
-alt="scheduler4"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/scheduler4.webp" alt="scheduler4" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>publishOn&lt;/code> &lt;strong>会影响链中之后的操作符&lt;/strong>，比如第一个 &lt;code>publishOn&lt;/code> 调整调度器为 &lt;code>el&lt;/code>astic，则 &lt;code>filter&lt;/code> 的处理是在弹性线程池中执行的；同理，&lt;code>doOnNext&lt;/code> 是在 parallel 线程池中执行的；&lt;/li>
 &lt;li>&lt;code>subscribeOn&lt;/code> &lt;strong>无论出现在什么位置，只影响源头的执行环境&lt;/strong>，也就是 &lt;code>map&lt;/code> 方法是执行在单线程中的，直至被第一个 &lt;code>publishOn&lt;/code> 切换调度器。&lt;/li>
@@ -1579,10 +1630,11 @@ alt="scheduler4"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;br>
 &lt;details>
 &lt;summary>此时的 Jerry&lt;/summary>
-&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jerry-shock.webp"
-loading="lazy"
-alt="jerry-shock"
->
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jerry-shock.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jerry-shock.webp" alt="jerry-shock" />
+&lt;/a>
+&lt;/div>
 &lt;/details>
 &lt;h3 id="总结">总结
 &lt;/h3>&lt;ul>
@@ -1593,10 +1645,13 @@ alt="jerry-shock"
 &lt;p>下面介绍一些常用的操作符。&lt;/p>
 &lt;h3 id="map">map
 &lt;/h3>&lt;p>&lt;code>map&lt;/code> 操作可以将元素进行转换 / 映射，得到一个新的元素。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-map.webp"
-loading="lazy"
-alt="operator-map"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-map.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-map.webp" alt="operator-map" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">V&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">V&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Function&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">V&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">mapper&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Function&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">mapper&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>上面是 &lt;code>Flux&lt;/code> 的 &lt;code>map&lt;/code> 操作示意图，上方的箭头是原始序列的时间轴，下方箭头是经过 &lt;code>map&lt;/code> 处理后的数据序列时间轴。
@@ -1619,10 +1674,13 @@ alt="operator-map"
 &lt;/ol>
 &lt;h3 id="flatmap">flatMap
 &lt;/h3>&lt;p>&lt;code>flatMap&lt;/code> 操作可以将每个数据元素转换 / 映射为一个流，然后将这些流合并为一个大的数据流。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-flatmap.webp"
-loading="lazy"
-alt="operator-flatmap"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-flatmap.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-flatmap.webp" alt="operator-flatmap" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>流的合并是异步的，先到先得，并非是按照原始序列的顺序（途中绿色和黄色方块是交叉的）。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">flatMap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Function&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Publisher&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">mapper&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">flatMap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Function&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">transformer&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -1674,10 +1732,13 @@ alt="operator-flatmap"
 &lt;/ol>
 &lt;h3 id="filter">filter
 &lt;/h3>&lt;p>&lt;code>filter&lt;/code> 操作可以对数据元素进行筛选&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-filter.webp"
-loading="lazy"
-alt="operator-filter"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-filter.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-filter.webp" alt="operator-filter" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">filter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Predicate&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">filter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Predicate&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">tester&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>filter&lt;/code> 接受一个 &lt;code>Predicate&lt;/code> 的函数式接口为参数，这个函数式的作用是进行判断并返回 Boolean。
@@ -1695,10 +1756,13 @@ alt="operator-filter"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="switchifempty">switchIfEmpty
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-switchifempty.webp"
-loading="lazy"
-alt="operator-switchifempty"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-switchifempty.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-switchifempty.webp" alt="operator-switchifempty" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>&lt;code>switchIfEmpty&lt;/code> 操作在一个序列元素为空时，替换为另一个元素&lt;/p>
 &lt;p>举例说明：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@Data&lt;/span>&lt;span class="w">
@@ -1752,10 +1816,13 @@ alt="operator-switchifempty"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="defer">defer
 &lt;/h3>&lt;p>&lt;code>defer&lt;/code> 把元素加入流中，但是延时加载，直到 &lt;code>subsribe()&lt;/code> 时才会加载&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-defer.webp"
-loading="lazy"
-alt="operator-defer"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-defer.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-defer.webp" alt="operator-defer" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>举例说明：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">dateTime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">just&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">LocalDateTime&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">now&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="na">toString&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;t0: &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">dateTime&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">block&lt;/span>&lt;span class="p">());&lt;/span>&lt;span class="w">
@@ -1788,10 +1855,13 @@ alt="operator-defer"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Mono&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">defer&lt;/span>&lt;span class="p">(()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">RuntimeException&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;异常&amp;#34;&lt;/span>&lt;span class="p">)));&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="then">then
 &lt;/h3>&lt;p>&lt;code>then&lt;/code> 操作符会忽略前一个流的结果，并将序列转换为另一个 &lt;code>Mono&amp;lt;V&amp;gt;&lt;/code> 或者 &lt;code>Mono&amp;lt;Void&amp;gt;&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-then.webp"
-loading="lazy"
-alt="operator-then"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-then.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-then.webp" alt="operator-then" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">V&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">V&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">V&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">other&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">Void&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">then&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;br>
@@ -1832,19 +1902,25 @@ alt="operator-then"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/then-example.webp"
-loading="lazy"
-alt="then-example"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/then-example.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/then-example.webp" alt="then-example" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>参考自保存 Session 的网关过滤器 &lt;code>SaveSessionGatewayFilterFactory&lt;/code>，&lt;code>filter&lt;/code> 方法中，&lt;code>map&lt;/code> 调用了 &lt;code>save()&lt;/code>，该方法返回值是 &lt;code>Mono&amp;lt;Void&amp;gt;&lt;/code>，该序列会因为没有元素发出而终止。这里使用 &lt;code>then&lt;/code>，不管上游序列的输出是 &lt;code>Mono&amp;lt;Void&amp;gt;&lt;/code> 还是其他元素，将其忽略，并向下继续调用其他过滤器的方法。&lt;/p>
 &lt;blockquote>
 &lt;p>如果你关心前一个流的结果，可以使用 &lt;code>map&lt;/code>, &lt;code>flatMap&lt;/code> 或者其他 &lt;code>map&lt;/code> 的变种方法，如果你只想要前一个流完成，不关心流的数据，则使用 &lt;code>then&lt;/code>。&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="doonnext">doOnNext
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-doonnext.webp"
-loading="lazy"
-alt="operator-doonnext"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-doonnext.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-doonnext.webp" alt="operator-doonnext" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>&lt;code>doOnNext&lt;/code> 操作符，当一个可用且存在的数据成功发出时，触发添加的无副作用行为。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">doOnNext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Consumer&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">onNext&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">doOnNext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Consumer&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">onNext&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -1860,10 +1936,13 @@ alt="operator-doonnext"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Bob
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="doonsuccess">doOnSuccess
 &lt;/h3>&lt;p>&lt;code>doOnSuccess&lt;/code> 操作符，在 &lt;code>Mono&lt;/code> 序列成功完成时触发，不管结果是 &lt;code>T&lt;/code> 还是 &lt;code>null&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-doonsuccess.webp"
-loading="lazy"
-alt="operator-doonsuccess"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-doonsuccess.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-doonsuccess.webp" alt="operator-doonsuccess" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>举例说明：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Mono&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">empty&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">doOnSuccess&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;on success: &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
@@ -1885,10 +1964,13 @@ alt="operator-doonsuccess"
 &lt;/ul>
 &lt;h3 id="dofinally">doFinally
 &lt;/h3>&lt;p>&lt;code>doFinally&lt;/code> 操作符，会添加一个行为，当 &lt;code>Mono&lt;/code> 序列因为任何原因终止时触发。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-dofinally.webp"
-loading="lazy"
-alt="operator-dofinally"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-dofinally.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-dofinally.webp" alt="operator-dofinally" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">doFinally&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Consumer&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">SignalType&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">onFinally&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Flux&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">doFinally&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Consumer&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">SignalType&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">onFinally&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>doFinally&lt;/code> 接收一个 &lt;code>Consumer&lt;/code> 函数，入参为 &lt;code>SignalType&lt;/code> 信号类型，包括取消、完成、错误信号等等。&lt;/p>
@@ -1938,10 +2020,13 @@ alt="operator-dofinally"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">finally - &lt;span class="m">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="doonerror">doOnError
 &lt;/h3>&lt;p>&lt;code>doOnError&lt;/code> 操作符，会添加一个行为，当序列因为异常终止时触发。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-doonerror.webp"
-loading="lazy"
-alt="operator-doonerror"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-doonerror.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-doonerror.webp" alt="operator-doonerror" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">doOnError&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Consumer&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Throwable&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">onError&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">E&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Throwable&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">doOnError&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Class&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">E&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">exceptionType&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Consumer&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">E&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">onError&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -1966,10 +2051,13 @@ alt="operator-doonerror"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ...&lt;span class="o">(&lt;/span>略&lt;span class="o">)&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="onerrorresume">onErrorResume
 &lt;/h3>&lt;p>&lt;code>onErrorResume&lt;/code>，当序列发生错误时，订阅一个备用的发布者 &lt;code>Mono/Flux&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-onerrorresume.webp"
-loading="lazy"
-alt="operator-onerrorresume"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-onerrorresume.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-onerrorresume.webp" alt="operator-onerrorresume" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">onErrorResume&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Function&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">super&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Throwable&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">fallback&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">final&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">E&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">extends&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Throwable&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Mono&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">onErrorResume&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Class&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">E&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">type&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
@@ -1995,10 +2083,13 @@ alt="operator-onerrorresume"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="repeat">repeat
 &lt;/h3>&lt;p>&lt;code>repeat&lt;/code> 会在当前序列发送完成信号时，重新订阅。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-repeat.webp"
-loading="lazy"
-alt="operator-repeat"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-repeat.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-repeat.webp" alt="operator-repeat" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>举例说明：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Mono&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">just&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">doOnNext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;next 1&amp;#34;&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
@@ -2018,10 +2109,13 @@ alt="operator-repeat"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">next &lt;span class="m">3&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="repeatwhen">repeatWhen
 &lt;/h3>&lt;p>&lt;code>repeatWhen&lt;/code> 当满足特定条件时，会重复订阅这个序列。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-repeatwhen.webp"
-loading="lazy"
-alt="operator-repeatwhen"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-repeatwhen.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-repeatwhen.webp" alt="operator-repeatwhen" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>举例说明：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Mono&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">just&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">doOnNext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;next 1&amp;#34;&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
@@ -2090,15 +2184,21 @@ alt="operator-repeatwhen"
 &lt;/ol>
 &lt;p>输出：
 当第一次获取锁结果为 &lt;code>true&lt;/code> 时&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/repeatwhen-demo1.webp"
-loading="lazy"
-alt="operator-repeatwhen-demo1"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/repeatwhen-demo1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/repeatwhen-demo1.webp" alt="operator-repeatwhen-demo1" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>当第一次获取锁结果为 &lt;code>false&lt;/code> 时&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/repeatwhen-demo2.webp"
-loading="lazy"
-alt="operator-repeatwhen-demo2"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/repeatwhen-demo2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/repeatwhen-demo2.webp" alt="operator-repeatwhen-demo2" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>当第一次获取锁失败时，&lt;code>repeatWhen&lt;/code> 触发，但 &lt;code>tryLock&lt;/code> 只会执行一次，所以这段代码会一直拿不到锁，导致卡死。&lt;/p>
 &lt;p>为了确保 &lt;code>tryLock&lt;/code> 每次重复时都执行，需要把它放到 &lt;code>defer&lt;/code> 操作符中。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@GetMapping&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;/getLock&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
@@ -2112,17 +2212,23 @@ alt="operator-repeatwhen-demo2"
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">doFinally&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;释放锁&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输出：&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/repeatwhen-demo3.webp"
-loading="lazy"
-alt="operator-repeatwhen-demo3"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/repeatwhen-demo3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/repeatwhen-demo3.webp" alt="operator-repeatwhen-demo3" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>当获取锁失败时，能正确执行 &lt;code>tryLock&lt;/code>，每次都去重新获取。&lt;/p>
 &lt;h3 id="retry">retry
 &lt;/h3>&lt;p>&lt;code>retry&lt;/code> 会在当前序列发送任何异常信号时，重新订阅。如果不指定重试次数时，默认重试次数为 &lt;code>Long&lt;/code> 的最大值。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-retry.webp"
-loading="lazy"
-alt="operator-retry"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-retry.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/operator-retry.webp" alt="operator-retry" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>举例：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">doOnNext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;emitted: &amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">))&lt;/span>&lt;span class="w">
@@ -2187,15 +2293,21 @@ fill="currentColor">
 项目，拿到项目后，你需要使用操作符，完成 &amp;ldquo;Todo&amp;rdquo; 的代码，让所有的 &lt;code>@Test&lt;/code> 绿灯就 Ok 了。完成这些测试后，对常见的操作符就能了然于胸了。&lt;/li>
 &lt;li>在日常开发中，也可以通过 IDEA 进行查询，比如：&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/idea-hint.webp"
-loading="lazy"
-alt="idea-hint"
->&lt;/p></description></item><item><title>响应式编程 Spring Webflux 详解（二）</title><link>https://opoa.top/post/dive-into-spring-webflux-2/</link><pubDate>Sat, 27 Aug 2022 16:22:43 +0800</pubDate><guid>https://opoa.top/post/dive-into-spring-webflux-2/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-face-portrait-close.webp" alt="Featured image of post 响应式编程 Spring Webflux 详解（二）" />&lt;h2 id="hello-reactive-world">Hello Reactive World
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/idea-hint.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/idea-hint.webp" alt="idea-hint" />
+&lt;/a>
+&lt;/div>
+&lt;/p></description></item><item><title>响应式编程 Spring Webflux 详解（二）</title><link>https://opoa.top/post/dive-into-spring-webflux-2/</link><pubDate>Sat, 27 Aug 2022 16:22:43 +0800</pubDate><guid>https://opoa.top/post/dive-into-spring-webflux-2/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/rem-face-portrait-close.webp" alt="Featured image of post 响应式编程 Spring Webflux 详解（二）" />&lt;h2 id="hello-reactive-world">Hello Reactive World
 &lt;/h2>&lt;h3 id="引入依赖">引入依赖
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/init-spring-webflux-project.webp"
-loading="lazy"
-alt="init-spring-webflux-project"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/init-spring-webflux-project.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/init-spring-webflux-project.webp" alt="init-spring-webflux-project" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>在新建项目的时候引入 Spring Reactive Web，为了方便也引入了 Lombok。&lt;/p>
 &lt;h3 id="编写-controller">编写 Controller
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">@RestController&lt;/span>&lt;span class="w">
@@ -2212,10 +2324,13 @@ alt="init-spring-webflux-project"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span> main&lt;span class="o">]&lt;/span> o.s.b.web.embedded.netty.NettyWebServer : Netty started on port &lt;span class="m">8080&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>启动服务，可以看到程序是运行在 Netty 服务上的。&lt;/p>
 &lt;h3 id="请求">请求
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-hello-world-demo.webp"
-loading="lazy"
-alt="spring-webflux-hello-world-demo"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-hello-world-demo.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/spring-webflux-hello-world-demo.webp" alt="spring-webflux-hello-world-demo" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>WebFlux 提供了与之前 WebMVC 相同的一套注解来定义请求的处理，使得 Spring 使用者迁移到响应式开发方式的过程变得异常轻松。&lt;/p>
 &lt;h2 id="flux-与-mono">Flux 与 Mono
 &lt;/h2>&lt;p>Reactor 中的发布者 (Publisher) 由 &lt;code>Flux&lt;/code> 和 &lt;code>Mono&lt;/code> 两个类定义，它们都提供了丰富的操作符 (operator)。&lt;/p>
@@ -2226,17 +2341,23 @@ alt="spring-webflux-hello-world-demo"
 &lt;/ul>
 &lt;p>作为 &amp;ldquo;数据流&amp;rdquo; 的发布者，&lt;code>Flux&lt;/code> 和 &lt;code>Mono&lt;/code> 都可以发出三种 &amp;ldquo;数据信号&amp;rdquo;：元素值、错误信号、完成信号，错误信号和完成信号都是终止信号，完成信号用于告知下游订阅者该数据流正常结束，错误信号终止数据流的同时将错误传递给下游订阅者。&lt;/p>
 &lt;p>下图是一个 &lt;code>Flux&lt;/code> 类型的数据流，黑色箭头是时间轴。它连续发出 1 - 6 共 6 个元素值，以及一个完成新信号（图中 6 后边的加粗竖线）, 完成信号告知订阅者数据流已经结束。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/flux-graphic.webp"
-loading="lazy"
-alt="flux"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/flux-graphic.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/flux-graphic.webp" alt="flux" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>用代码声明：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Flux&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">just&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">3&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">4&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">5&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">6&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>下图是一个 &lt;code>Mono&lt;/code> 类型的数据流，它发出一个元素值后，又发出一个完成信号。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mono-graphic.webp"
-loading="lazy"
-alt="mono"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mono-graphic.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mono-graphic.webp" alt="mono" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>用代码声明：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Mono&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">just&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">1&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>Flux&lt;/code> 和 &lt;code>Mono&lt;/code> 提供了多种创建数据流的方法，&lt;code>just&lt;/code> 是一种比较直接的声明数据流的方式，其参数就是数据元素。
@@ -2328,10 +2449,13 @@ alt="mono"
 &lt;p>注意，&lt;code>Flux.just(1, 2, 3, 4, 4, 5, 6)&lt;/code> 仅仅声明了数据流，此时数据元素并未发出，只有 &lt;code>subcriber()&lt;/code> 方法调用时才会触发数据流。所以，&lt;strong>订阅前什么都不会发生&lt;/strong>。&lt;/p></description></item><item><title>响应式编程 Spring Webflux 详解（一）</title><link>https://opoa.top/post/dive-into-spring-webflux-1/</link><pubDate>Mon, 22 Aug 2022 15:36:26 +0800</pubDate><guid>https://opoa.top/post/dive-into-spring-webflux-1/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/miku-miko-twintails-aqua-eyes-mouse.webp" alt="Featured image of post 响应式编程 Spring Webflux 详解（一）" />&lt;h2 id="简介">简介
 &lt;/h2>&lt;p>Spring WebFlux 是 Spring 在 5.0 版本后提供的一套 &lt;code>非阻塞异步&lt;/code> 开发框架，它的核心是基于 Reactor 相关 API 实现的，能够运行在 Netty、Undertow 以及 3.1 + 版本的的 Servlet 容器上。&lt;/p>
 &lt;h2 id="spring-webflux-与-spring-mvc">Spring WebFlux 与 Spring MVC
-&lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/difference-between-webflux-and-mvc.webp"
-loading="lazy"
-alt="difference-between-webflux-and-mvc"
->&lt;/p>
+&lt;/h2>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/difference-between-webflux-and-mvc.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/difference-between-webflux-and-mvc.webp" alt="difference-between-webflux-and-mvc" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>WebFlux 是异步非阻塞 IO 模型，只需少量的工作线程就能够处理并响应请求，无需阻塞等待方法返回，提高了并发处理请求的能力，即系统吞吐量。&lt;/p>
@@ -2346,10 +2470,13 @@ alt="difference-between-webflux-and-mvc"
 &lt;br>
 &lt;h2 id="五种-io-模型">五种 IO 模型
 &lt;/h2>&lt;p>为了便于理解 IO 模型的基本概念，我们以应用之间的消息通信举例。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model1.webp"
-loading="lazy"
-alt="io-model"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model1.webp" alt="io-model" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;ol>
 &lt;li>应用 A 把消息发送到 TCP 发送缓冲区。&lt;/li>
 &lt;li>TCP 发送缓冲区再把消息发送出去，经过网络传递后，消息会发送到 B 服务器的 TCP 接收缓冲区。&lt;/li>
@@ -2363,32 +2490,44 @@ alt="io-model"
 &lt;h3 id="复用-io-模型">复用 IO 模型
 &lt;/h3>&lt;p>&lt;strong>思考一个问题：&lt;/strong>&lt;/p>
 &lt;p>如果在并发环境下，有 N 个人向应用 B 发送消息，应用 B 就需要创建多个线程去读取数据，情况如下图：&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model2.webp"
-loading="lazy"
-alt="io-model"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model2.webp" alt="io-model" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>并发情况下服务器很可能一瞬间收到几十万的请求，应用 B 就需要创建几十万个线程去读取数据，同时因为线程不知道数据什么时候准备好，为了确保消息能即使读取到，那么这些线程自己会不断请求获取数据。&lt;/p>
 &lt;p>先不说服务器能不能扛得住这么多线程，就算扛得住，这种方式也非常浪费资源，大量的线程用于读取数据，意味着能做其它事情的线程就会变少。&lt;/p>
 &lt;p>那能不能提供一种方式，可以由一个线程监控多个网络请求，当有数据准备就绪之后再分配对应的线程去读取数据，这样就能节省出大量的线程资源，这个就是 IO 复用模型的思路。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model3.webp"
-loading="lazy"
-alt="io-model"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model3.webp" alt="io-model" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>正如上图，IO 复用模型的思路就是提供了一种函数可以同时监控多个 fd 的操作，这个函数正是我们常说到的 select、poll、epoll 函数，select 函数监控的 fd 中只要有任何一个数据状态准备就绪，select 就会返回可读状态，这时询问线程再去通知处理数据的线程，对应线程再去发起请求读取数据。&lt;/p>
 &lt;p>&lt;strong>总结：&lt;/strong> 复用 IO 的基本思路就是通过 slect 或 poll、epoll 来监控多 fd ，来达到不必为每个 fd 创建一个对应的监控线程，从而减少线程资源创建的目的。&lt;/p>
 &lt;h3 id="信号驱动-io-模型">信号驱动 IO 模型
 &lt;/h3>&lt;p>复用 IO 模型可以通过一个线程监控多个 fd，但由于是采用轮询的方式，大部分情况下的轮询都是无效的，而且随着监控的 fd 越来越多，效率也直线下降。那么能不能不要我总是去询问你数据有没有准备好，而是你数据就绪之后就通知后，由此衍生了信号驱动 IO 模型。&lt;/p>
 &lt;p>信号驱动 IO 是在调用 sigaction 的时候建立一个 SIGIO 信号联系，当数据准备好之后通过 SIGIO 信号通知线程，线程收到数据就绪的状态后，再发起读取数据的请求，因为信号驱动 IO 模型下的应用线程在发出信号监控后可立即返回，不会阻塞，所以这样的方式下，一个应用线程也可以监控多个 fd。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model4.webp"
-loading="lazy"
-alt="io-model"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model4.webp" alt="io-model" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>&lt;strong>总结：&lt;/strong> 信号驱动 IO 模型通过这种建立信号关联的方式，实现了发出请求后只需要等待数据就绪的通知，这样就可以避免大量无效的数据状态轮询操作。&lt;/p>
 &lt;h3 id="异步-io-模型">异步 IO 模型
 &lt;/h3>&lt;p>通过观察发现，不管是 IO 复用还是信号驱动，我们要获取数据总是要发起两个阶段的请求，第一次发送请求询问数据状态是否准备好，第二次发送请求读取数据。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model5.webp"
-loading="lazy"
-alt="io-model"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model5.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/io-model5.webp" alt="io-model" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>于是有人设计了一种方案，应用只需要发送一个获取数据请求，告诉内核它要读取数据后立刻返回，内核收到请求后建立一个信号联系，当数据准备就绪后，内核会主动把数据复制到用户空间，等所有操作完成之后，内核会发起一个通知告诉应用，这种一劳永逸的模式就是异步 IO 模型。&lt;/p>
 &lt;p>&lt;strong>总结：&lt;/strong> 在异步 IO 的模型下，只需要发送一次读取请求就可以完成状态询问和数据拷贝的所有操作。&lt;/p></description></item></channel></rss>

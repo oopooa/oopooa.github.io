@@ -17,15 +17,21 @@
 通常是由于网络连接中断、服务器响应慢或网络防火墙设置问题引起的。&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="请求链路">请求链路
-&lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/api-request-chain.webp"
-loading="lazy"
-alt="api-request-chain"
->&lt;/p>
+&lt;/h2>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/api-request-chain.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/api-request-chain.webp" alt="api-request-chain" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>以一个简单的请求举例，SLB 和 Gateway 的超时时间都是 60 秒（其实是 Gateway 向 SLB 看齐），Nginx 由于历史遗留原因超时为 300 秒，但整体还是 60 秒，不管后端设置的请求超时时间是多少，处理需要多久，都需要在 60 秒之内返回，否则网关会把该请求以超时处理。即：&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/api-gateway-504.webp"
-loading="lazy"
-alt="api-gateway-504"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/api-gateway-504.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/api-gateway-504.webp" alt="api-gateway-504" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="处理流程之-read-timeout">处理流程之 Read timeout
 &lt;/h2>&lt;ol>
 &lt;li>检查处理过程中是否调用了慢接口&lt;/li>

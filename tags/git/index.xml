@@ -28,9 +28,13 @@ fill="currentColor">
 &lt;/a>
 提取码：fmjy&lt;/p>
 &lt;h3 id="安装">安装
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jdk8.webp"
-loading="lazy"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jdk8.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jdk8.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>这里可以选择安装的路径，我采用的默认，点下一步，下一步，等待安装完成即可。&lt;/p>
 &lt;h3 id="配置环境">配置环境
 &lt;/h3>&lt;p>我的电脑右键 &amp;ndash;&amp;gt; 属性 &amp;ndash;&amp;gt; 高级系统设置 &amp;ndash;&amp;gt; 环境变量&lt;/p>
@@ -52,9 +56,13 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>变量值：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">%JAVA_HOME%\bin
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%JAVA_HOME%\jre\bin
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jdk81.webp"
-loading="lazy"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jdk81.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/jdk81.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>都配好之后点确定，在命令行窗口进行测试。&lt;/p>
 &lt;h3 id="测试">测试
 &lt;/h3>&lt;p>Win+R 键 &amp;mdash;&amp;gt; 输入 cmd &amp;mdash;&amp;gt; 回车 弹出一个黑窗口&lt;/p>
@@ -135,64 +143,124 @@ fill="currentColor">
 &lt;/a>
 提取码: rt7r&lt;/p>
 &lt;h3 id="安装-1">安装
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql1.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql2.webp"
-loading="lazy"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql1.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql2.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>等待安装完成，点击 Next&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql3.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql4.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql5.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql6.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql7.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql8.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql3.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql4.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql5.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql5.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql6.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql6.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql7.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql7.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql8.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql8.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>完成之后点击 Finish&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql9.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql9.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql9.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>最后 Finish&lt;/p>
 &lt;h3 id="配置环境-1">配置环境
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql10.webp"
-loading="lazy"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql10.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql10.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">C:\Program Files\MySQL\MySQL Server 5.7
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑 Path：&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql11.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql11.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql11.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">%MYSQL_HOME%\bin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="测试-1">测试
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mysql -uroot -p
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql12.webp"
-loading="lazy"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql12.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql12.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="数据库编码格式">数据库编码格式
 &lt;/h3>&lt;p>在数据库里查看数据库编码格式:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">show&lt;/span> &lt;span class="n">variables&lt;/span> &lt;span class="n">like&lt;/span> &lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="si">%c&lt;/span>&lt;span class="s1">haracter%&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql14.webp"
-loading="lazy"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql14.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql14.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>这里需要把数据库编码格式设置成 utf8，不然后期很容易出现乱码问题。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql15.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql15.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql15.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>添加 / 修改以下内容&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[mysqld]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">character-set-server=utf8
@@ -201,22 +269,38 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[mysql]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">default-character-set=utf8
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>继续修改另一个 my.ini 配置文件&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql16.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql17.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql16.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql16.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql17.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql17.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>打开任务管理器 选择服务 找到 MySQL 的服务&lt;/p>
 &lt;p>右键 &amp;ndash;&amp;gt; 重新启动&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql18.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql18.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql18.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>再进到数据库里 查看编码格式&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">show&lt;/span> &lt;span class="n">variables&lt;/span> &lt;span class="n">like&lt;/span> &lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="si">%c&lt;/span>&lt;span class="s1">haracter%&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql19.webp"
-loading="lazy"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql19.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/mysql19.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="tomcat">Tomcat
 &lt;/h2>&lt;p>版本: Tomcat8.5&lt;/p>
 &lt;p>&lt;a class="link" href="http://tomcat.apache.org/" target="_blank" rel="noopener"
@@ -230,34 +314,58 @@ fill="currentColor">
 &lt;/span>
 &lt;/a>
 &lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="安装-2">安装
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat1.webp"
-loading="lazy"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat1.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>解压之后就算安装完成了。&lt;/p>
 &lt;h3 id="配置环境-2">配置环境
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat2.webp"
-loading="lazy"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat2.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">E:\JavaTools\apache-tomcat-8.5.14
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑 Path:&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat3.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat3.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">%CATALINA_HOME%\bin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="测试-2">测试
 &lt;/h3>&lt;p>打开 &lt;code>cmd&lt;/code>&lt;/p>
 &lt;p>输入 startup.bat 开启服务器&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat4.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat4.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>浏览器访问: http://localhost:8080/&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat5.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat5.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tomcat5.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>显示这只三脚猫就说明 Tomcat 装好了。&lt;/p>
 &lt;h2 id="maven">Maven
 &lt;/h2>&lt;p>版本: Maven3.6&lt;/p>
@@ -272,40 +380,68 @@ fill="currentColor">
 &lt;/span>
 &lt;/a>
 &lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="安装-3">安装
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven1.webp"
-loading="lazy"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven1.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="配置环境-3">配置环境
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven3.webp"
-loading="lazy"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven3.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">E:\JavaTools\Maven3.6\apache-maven-3.6.2
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>编辑 Path：&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven4.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven4.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">%MAVEN_HOME%\bin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="测试-3">测试
 &lt;/h3>&lt;p>打开 &lt;code>cmd&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mvn -v
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven5.webp"
-loading="lazy"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven5.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven5.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>能看到 Maven 版本就表示安装好了。&lt;/p>
 &lt;h3 id="配置本地仓库和云仓库">配置本地仓库和云仓库
 &lt;/h3>&lt;p>打开安装目录下 conf/settings.xml 文件&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven6.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven6.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven6.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;localRepository&amp;gt;本地仓库路径&amp;lt;/localRepository&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>配置阿里云仓库&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven7.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven7.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/maven7.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> &amp;lt;mirror&amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;name&amp;gt;aliyun maven&amp;lt;/name&amp;gt;
@@ -330,11 +466,19 @@ fill="currentColor">
 &lt;h3 id="测试-4">测试
 &lt;/h3>&lt;p>打开 &lt;code>cmd&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">git
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/git1.webp"
-loading="lazy"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/git1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/git1.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>桌面右键&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/git.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/git.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/git.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>能看到这两个选项，安装成功。&lt;/p></description></item></channel></rss>

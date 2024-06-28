@@ -88,10 +88,12 @@ fill="currentColor">
 &lt;/p>
 &lt;h1 id="提问的智慧">提问的智慧
 &lt;/h1>&lt;p>&lt;a class="link" href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/pulls" target="_blank" rel="noopener"
->&lt;img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square"
-loading="lazy"
-alt="PRs Welcome"
 >
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square">
+&lt;img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" />
+&lt;/a>
+&lt;/div>
 &lt;span style="white-space: nowrap;">
 &lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
 &lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DNS on Opoa</title><link>https://opoa.top/tags/dns/</link><description>Recent content in DNS on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Thu, 09 Apr 2020 19:29:26 +0800</lastBuildDate><atom:link href="https://opoa.top/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>谷歌 Page Speed 分析 404 的处理</title><link>https://opoa.top/post/fix-the-404-error-in-google-page-speed-analysis/</link><pubDate>Thu, 09 Apr 2020 19:29:26 +0800</pubDate><guid>https://opoa.top/post/fix-the-404-error-in-google-page-speed-analysis/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-shattered-glass-beautiful.webp" alt="Featured image of post 谷歌 Page Speed 分析 404 的处理" />&lt;p>本来打算给网站做个体检的，结果&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/googlespeed404.min.gif"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/googlespeed404.min.gif">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/googlespeed404.min.gif" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>网站是可以访问的，却报了 404 的错误。&lt;/p>
 &lt;p>博客是部署在 Coding 和 Github 上的，国内走 Coding，国外走 Github，我用的是 &lt;a class="link" href="https://www.googlespeed.cn/" target="_blank" rel="noopener"
 >谷歌测速中文版
@@ -15,12 +19,20 @@ fill="currentColor">
 &lt;/a>
 ，可能是指向了 Github。&lt;/p>
 &lt;p>打开阿里云的域名解析设置，直接停掉 Github 的两条解析记录。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/cdnclose.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/cdnclose.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/cdnclose.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>等待 10 分钟左右 DNS 服务器刷新。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/30.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/30.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/30.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>🤔emmm&amp;hellip;&lt;/p>
 &lt;p>没救了，等死吧，告辞&lt;/p></description></item></channel></rss>

@@ -13,9 +13,12 @@ fill="currentColor">
 &lt;/p>
 &lt;/blockquote>
 &lt;p>为 Hexo 加入了私密文章功能后，密码输入错误之后弹出的浏览器自带提示框，在整个博客中显得很不协调。
-&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert.webp"
-loading="lazy"
->&lt;/p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>而接下来要添加的 &lt;a class="link" href="https://sweetalert.js.org/" target="_blank" rel="noopener"
 >SweetAlert
 &lt;span style="white-space: nowrap;">
@@ -27,9 +30,13 @@ fill="currentColor">
 &lt;/span>
 &lt;/a>
 ，感官上就舒服得多，能给人更好的交互体验。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert1.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/sweetalert1.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="安装">安装
 &lt;/h2>&lt;p>在 &lt;font color=orange>themes/Sakura/layout/_partial/footer.ejs&lt;/font> 文件中加入以下代码&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;!-- sweetalert --&amp;gt;
@@ -93,9 +100,13 @@ fill="currentColor">
 &lt;/span>
 &lt;/a>
 ，其界面优雅简洁，支持多渠道回复，网页、Windows、安卓、IOS，关键是免费功能对普通用户完全够用，所以理论上来说是完全免费的！(白嫖使我快乐)&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="正文">正文
 &lt;/h2>&lt;p>安装起来还是比较简单的，但因为是国外的网站，访问起来会有一些慢，需要点耐心。&lt;/p>
 &lt;h3 id="注册账号">注册账号
@@ -112,13 +123,20 @@ fill="currentColor">
 注册账号，一个邮箱就能搞定，非常方便。&lt;/p>
 &lt;h3 id="自定义-tidio">自定义 Tidio
 &lt;/h3>&lt;p>进入账户界面后，可以根据自己的喜好定制，可选颜色，语言，布局，侧边栏等等。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio1.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio1.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>找到账户面板的 Public Key
-&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio2.webp"
-loading="lazy"
->&lt;/p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/tidio2.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="安装">安装
 &lt;/h3>&lt;p>在主题配置文件 _config.yml 添加如下代码&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Tidio online chat&lt;/span>&lt;span class="w">
@@ -145,31 +163,55 @@ fill="currentColor">
 &lt;/a>
 &lt;/p></description></item><item><title>Hexo (Sakura) 音乐插件播放异常</title><link>https://opoa.top/post/music-plugin-playback-error-in-hexo-sakura-theme/</link><pubDate>Sun, 19 Apr 2020 15:08:06 +0800</pubDate><guid>https://opoa.top/post/music-plugin-playback-error-in-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/beauty.webp" alt="Featured image of post Hexo (Sakura) 音乐插件播放异常" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>重做博客时新发现的问题，loop 按钮不显示，且循环播放功能失效。回看才发现，其实一直都存在的问题，处理了站内播放 bug 之后就忽略音乐插件了。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.min.gif"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.min.gif">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.min.gif" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="原因">原因
 &lt;/h2>&lt;p>查看源代码，发现 autoplay 和 loop 都没能被正确赋值。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.png"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.png">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop.png" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>感觉可能是 neat 压缩 html 出错了，毕竟也是有过前科的。(被换行注释坑惨了)&lt;/p>
 &lt;p>关掉 neat 的 html 压缩，然后&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop2.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop2.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>查看源代码&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop1.png"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop1.png">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop1.png" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="解决办法">解决办法
 &lt;/h2>&lt;p>neat 压缩静态资源很重要，又不想顶着残缺的 aplayer 插件，目前最简单的方式就是把主题配置文件 _config.yml 下出错的地方注释掉，让它采用默认值。既然 neat 你看不惯，那我帮你摁死好了。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop3.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop4.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop3.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/noloop4.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>嗯&amp;hellip; 目前双方情绪都很稳定。&lt;/p></description></item><item><title>Hexo 博客迁移</title><link>https://opoa.top/post/migrate-hexo-blog/</link><pubDate>Mon, 06 Apr 2020 14:22:35 +0800</pubDate><guid>https://opoa.top/post/migrate-hexo-blog/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/school-girl-reading-a-book.webp" alt="Featured image of post Hexo 博客迁移" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>折腾了两天，软件和环境装的差不多了，接下来把我的 Hexo 博客转移过来，也是第一次弄，记录一下。&lt;/p>
 &lt;h2 id="git">Git
@@ -188,75 +230,127 @@ fill="currentColor">
 &lt;/a>
 &lt;/p>
 &lt;h3 id="安装">安装
-&lt;/h3>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node1.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node2.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node3.webp"
-loading="lazy"
->&lt;/p>
+&lt;/h3>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node1.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node2.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node3.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>等待安装完成 Finish。&lt;/p>
 &lt;h3 id="测试">测试
 &lt;/h3>&lt;p>打开 &lt;code>cmd&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">node -v
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npm -v
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node4.webp"
-loading="lazy"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node4.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node4.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="环境配置">环境配置
 &lt;/h3>&lt;p>配置安装模块的路径，默认会安装到 C 盘下&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node5.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node5.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node5.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>在安装目录下新建两个文件夹&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">node_cache
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">node_global
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>打开 &lt;code>cmd&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm config set prefix &amp;#34;E:\Node\node_global&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npm config set cache &amp;#34;E:\Node\node_cache&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node6.webp"
-loading="lazy"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node6.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node6.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>&lt;strong>配置系统环境变量：&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node7.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node7.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node7.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">E:\Node\node_global\node_modules
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>修改用户变量 Path&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node8.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node9.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node8.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node8.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node9.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node9.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">E:\Node\node_global
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="测试-1">测试
 &lt;/h3>&lt;p>打开 &lt;code>cmd&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm install express -g
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>等待安装完成后到配置的路径下查看&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node10.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node10.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node10.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h3 id="配置国内淘宝镜像">配置国内淘宝镜像
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm config set registry https://registry.npm.taobao.org
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>验证配置&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm config get registry
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node11.webp"
-loading="lazy"
->&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node11.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/node11.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="hexo">Hexo
 &lt;/h2>&lt;h3 id="安装-1">安装
 &lt;/h3>&lt;p>打开 cmd&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm install -g hexo-cli
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>进入事先准备好的博客文件根目录&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>右键 &amp;ndash;&amp;gt; Git Bash Here&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">npm i
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这个命令会跟据你的 package.json 依赖来新增或删除一些模块，一般不会有太大的变化。&lt;/p>
@@ -264,25 +358,38 @@ loading="lazy"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hexo clean &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo s
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="测试-2">测试
 &lt;/h3>&lt;p>浏览器访问: http://localhost:4000/&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo2.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/hexo2.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>到这里就迁移成功啦&lt;/p></description></item><item><title>Hexo (Sakura) 缩略图显示异常</title><link>https://opoa.top/post/thumbnail-display-issue-in-hexo-sakura/</link><pubDate>Thu, 26 Mar 2020 21:36:45 +0800</pubDate><guid>https://opoa.top/post/thumbnail-display-issue-in-hexo-sakura/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp" alt="Featured image of post Hexo (Sakura) 缩略图显示异常" />&lt;h2 id="前言">前言
-&lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp"
-loading="lazy"
-alt="异常缩略图"
->&lt;/p>
+&lt;/h2>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp" alt="异常缩略图" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>由于文章的头图宽高比例不是 1:1，缩略图强行将它放入圆形容器中，挤压了宽度，导致了变形。&lt;/p>
 &lt;h2 id="正文">正文
-&lt;/h2>&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be1.webp"
-loading="lazy"
-alt="F12 定位"
->&lt;/p>
+&lt;/h2>&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be1.webp" alt="F12 定位" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>可以大致定位在分类页的部分:&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/dir.webp"
-loading="lazy"
-alt="目录"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/dir.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/dir.webp" alt="目录" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">article&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;post post-list&amp;#34;&lt;/span> &lt;span class="na">itemscope&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="na">itemtype&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://schema.org/BlogPosting&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;post-entry&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;feature&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -299,13 +406,21 @@ alt="目录"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red"> 注意：图片一定要设置宽高，否则 &lt;code>object-fit&lt;/code> 将无效。&lt;/font>&lt;/p>
 &lt;h3 id="效果">效果
 &lt;/h3>&lt;p>改之前:&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;p>改之后:&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e7%bc%a9%e7%95%a5%e5%9b%be1.webp"
-loading="lazy"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e7%bc%a9%e7%95%a5%e5%9b%be1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e7%bc%a9%e7%95%a5%e5%9b%be1.webp" alt="" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="参考资料">参考资料
 &lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/caidingnu/article/details/92232872" target="_blank" rel="noopener"
 >用 CSS 解决前端图片变形问题
@@ -319,10 +434,13 @@ fill="currentColor">
 &lt;/a>
 &lt;/p></description></item><item><title>Hexo (Sakura) 音乐插件问题</title><link>https://opoa.top/post/music-plugin-issue-of-hexo-sakura-theme/</link><pubDate>Mon, 23 Mar 2020 21:22:35 +0800</pubDate><guid>https://opoa.top/post/music-plugin-issue-of-hexo-sakura-theme/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/apple-candy-yukata-festival-look.webp" alt="Featured image of post Hexo (Sakura) 音乐插件问题" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>偶然发现的一个问题，全局的 aplayer 插件在站内跳转的时候会重新加载，让人感觉非常难受。&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/aplayer.webp"
-loading="lazy"
-alt="aplayer"
->&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/aplayer.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/aplayer.webp" alt="aplayer" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
 &lt;h2 id="正文">正文
 &lt;/h2>&lt;p>回去跑了几天前的代码，发现是 ok 的，可这几天改动的地方很多，很难定位问题在哪里。这里先记上一笔:&lt;/p>
 &lt;blockquote>
