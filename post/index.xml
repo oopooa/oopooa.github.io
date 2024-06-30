@@ -5920,8 +5920,8 @@ fill="currentColor">
 &lt;p>能看到这两个选项，安装成功。&lt;/p></description></item><item><title>Hexo (Sakura) 缩略图显示异常</title><link>https://opoa.top/post/thumbnail-display-issue-in-hexo-sakura/</link><pubDate>Thu, 26 Mar 2020 21:36:45 +0800</pubDate><guid>https://opoa.top/post/thumbnail-display-issue-in-hexo-sakura/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/black-hair-purple-eyes-shiny.webp" alt="Featured image of post Hexo (Sakura) 缩略图显示异常" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>
 &lt;div class="post-img-view">
-&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp" alt="异常缩略图" />
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/abnormal-thumbnail.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/abnormal-thumbnail.webp" alt="abnormal-thumbnail" />
 &lt;/a>
 &lt;/div>
 &lt;/p>
@@ -5929,12 +5929,12 @@ fill="currentColor">
 &lt;h2 id="正文">正文
 &lt;/h2>&lt;p>
 &lt;div class="post-img-view">
-&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be1.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be1.webp" alt="F12 定位" />
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/abnormal-thumbnail-location.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/abnormal-thumbnail-location.webp" alt="abnormal-thumbnail-location" />
 &lt;/a>
 &lt;/div>
 &lt;/p>
-&lt;p>可以大致定位在分类页的部分:&lt;/p>
+&lt;p>可以大致定位在分类页的部分：&lt;/p>
 &lt;p>
 &lt;div class="post-img-view">
 &lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/dir.webp">
@@ -5957,19 +5957,19 @@ fill="currentColor">
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;150&amp;#34;&lt;/span> &lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;150&amp;#34;&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;object-fit: cover;&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;lt;%= post.photos[0] %&amp;gt;&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;attachment-post-thumbnail size-post-thumbnail wp-post-image&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;font style="color:red"> 注意：图片一定要设置宽高，否则 &lt;code>object-fit&lt;/code> 将无效。&lt;/font>&lt;/p>
 &lt;h3 id="效果">效果
-&lt;/h3>&lt;p>改之前:&lt;/p>
+&lt;/h3>&lt;p>改之前：&lt;/p>
 &lt;p>
 &lt;div class="post-img-view">
-&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e5%bc%82%e5%b8%b8%e7%bc%a9%e7%95%a5%e5%9b%be.webp" alt="" />
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/abnormal-thumbnail.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/abnormal-thumbnail.webp" alt="abnormal-thumbnail" />
 &lt;/a>
 &lt;/div>
 &lt;/p>
-&lt;p>改之后:&lt;/p>
+&lt;p>改之后：&lt;/p>
 &lt;p>
 &lt;div class="post-img-view">
-&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e7%bc%a9%e7%95%a5%e5%9b%be1.webp">
-&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/%e7%bc%a9%e7%95%a5%e5%9b%be1.webp" alt="" />
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/normal-thumbnail.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/normal-thumbnail.webp" alt="normal-thumbnail" />
 &lt;/a>
 &lt;/div>
 &lt;/p>
