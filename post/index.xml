@@ -15,6 +15,9 @@
 &lt;h3 id="afk">afk
 &lt;/h3>&lt;p>Away From Keyboard&lt;/p>
 &lt;p>离开键盘，表示人暂时不在或者挂机。&lt;/p>
+&lt;h3 id="cs">cs
+&lt;/h3>&lt;p>Creep Score&lt;/p>
+&lt;p>补刀数，比如 40 cs 表示 40 刀&lt;/p>
 &lt;h3 id="gg">gg
 &lt;/h3>&lt;p>Good Game&lt;/p>
 &lt;p>通常在游戏结束时，用来表示队友或对手打得好。&lt;/p>
