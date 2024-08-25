@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Opoa</title><link>https://opoa.top/</link><description>Recent content on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Sun, 14 Jul 2024 23:29:38 +0800</lastBuildDate><atom:link href="https://opoa.top/index.xml" rel="self" type="application/rss+xml"/><item><title>【英雄联盟】美服历险记</title><link>https://opoa.top/post/adventures-in-lol-na/</link><pubDate>Tue, 02 Jul 2024 19:25:59 +0800</pubDate><guid>https://opoa.top/post/adventures-in-lol-na/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/truth-dragon-yasuo.webp" alt="Featured image of post 【英雄联盟】美服历险记" />&lt;h2 id="前言">前言
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Opoa</title><link>https://opoa.top/</link><description>Recent content on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Wed, 21 Aug 2024 22:31:32 +0800</lastBuildDate><atom:link href="https://opoa.top/index.xml" rel="self" type="application/rss+xml"/><item><title>谁懂这款 Idea 插件的含金量啊</title><link>https://opoa.top/post/idea-plugin-issue-navigation/</link><pubDate>Wed, 21 Aug 2024 22:31:32 +0800</pubDate><guid>https://opoa.top/post/idea-plugin-issue-navigation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/looker-with-her-hair-up.webp" alt="Featured image of post 谁懂这款 Idea 插件的含金量啊" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>在阅读开源项目的源码时，我们经常会对当前代码的写法感到困惑。这时，我们需要查阅原始 issue 以了解更多相关的讨论。&lt;/p>
+&lt;h2 id="人工跳转">人工跳转
+&lt;/h2>&lt;p>在不借助插件的情况下，当我们想要访问一个提交的 issue 地址。&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/idea-plugin-issue-navigation1.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/idea-plugin-issue-navigation1.webp" alt="open-source-project-issue" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>只能先打开对应项目任意一个 issue 页面，修改后面的 issue id 跳转过去，非常的繁琐。&lt;/p>
+&lt;h2 id="插件效果预览">插件效果预览
+&lt;/h2>&lt;p>如果我们借助一个插件，就能实现如下效果：&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/idea-plugin-issue-navigation2.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/idea-plugin-issue-navigation2.webp" alt="plugin-demo" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;p>通过提交记录，直接跳转到对应的 issue 地址，可以说是非常的方便了。&lt;/p>
+&lt;h2 id="插件配置">插件配置
+&lt;/h2>&lt;p>配置路径：&lt;/p>
+&lt;blockquote>
+&lt;p>Settings &amp;ndash;&amp;gt; Version Control &amp;ndash;&amp;gt; Issue Navigation&lt;/p>
+&lt;/blockquote>
+&lt;p>点击加号，选择 Add Issue Navigation Link.&lt;/p>
+&lt;p>来到配置页面&lt;/p>
+&lt;p>
+&lt;div class="post-img-view">
+&lt;a data-fancybox="gallery" href="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/idea-plugin-issue-navigation3.webp">
+&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/post/idea-plugin-issue-navigation3.webp" alt="plugin-config" />
+&lt;/a>
+&lt;/div>
+&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>第一个是匹配 Issue Id 的正则表达式, 比如提交记录中标注 Issue 的格式是 &lt;code>(#4272)&lt;/code>, 就写提取中间 4 位数字的正则。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>第二个是最终要跳转的 Issue 地址, $1 是 Issue Id 的占位符。以 RocketMQ 的 Issue 地址 &lt;a class="link" href="https://github.com/apache/rocketmq/issues/4272" target="_blank" rel="noopener"
+>https://github.com/apache/rocketmq/issues/4272
+&lt;span style="white-space: nowrap;">
+&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+fill="currentColor">
+&lt;/svg>
+&lt;/span>
+&lt;/a>
+为例, 用 $1 替换掉后面的 Issue Id，我们需要输入 &lt;code>https://github.com/apache/rocketmq/issues/$1&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>后面的 Example 主要是用于测试了, 随便输入一个示例, 就能在下方看到拼接后的结果，可以复制跳转看看是否正确。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>配置好后，当我们再打开 Git 的提交记录时, 就能看到标注了 Issue Id 的部分可以点击跳转啦。&lt;/p>
+&lt;p>剩下的就是享受阅读源码的乐趣了～～&lt;/p></description></item><item><title>【英雄联盟】美服历险记</title><link>https://opoa.top/post/adventures-in-lol-na/</link><pubDate>Tue, 02 Jul 2024 19:25:59 +0800</pubDate><guid>https://opoa.top/post/adventures-in-lol-na/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/truth-dragon-yasuo.webp" alt="Featured image of post 【英雄联盟】美服历险记" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>突然心血来潮，想试一下玩玩英雄联盟美服。&lt;/p>
 &lt;p>主要原因有：&lt;/p>
 &lt;ol>
