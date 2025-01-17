@@ -1,15 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Opoa</title><link>https://opoa.top/post/</link><description>Recent content in Posts on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Thu, 16 Jan 2025 15:13:32 +0800</lastBuildDate><atom:link href="https://opoa.top/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Follow 订阅源认证</title><link>https://opoa.top/post/follow-auth/</link><pubDate>Thu, 16 Jan 2025 15:13:32 +0800</pubDate><guid>https://opoa.top/post/follow-auth/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/looker-with-her-hair-up.webp" alt="Featured image of post Follow 订阅源认证" />&lt;p>此文章仅用于 Follow 订阅源认证, 认证后删除&lt;/p>
-&lt;p>This message is used to verify that this feed (feedId:97481939494471680) belongs to me (userId:72516178710034432). Join me in enjoying the next generation information browser &lt;a class="link" href="https://follow.is" target="_blank" rel="noopener"
->https://follow.is
-&lt;span style="white-space: nowrap;">
-&lt;svg width=".7em" height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-&lt;path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
-&lt;path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
-fill="currentColor">
-&lt;/svg>
-&lt;/span>
-&lt;/a>
-.&lt;/p></description></item><item><title>谁懂这款 Idea 插件的含金量啊</title><link>https://opoa.top/post/idea-plugin-issue-navigation/</link><pubDate>Wed, 21 Aug 2024 22:31:32 +0800</pubDate><guid>https://opoa.top/post/idea-plugin-issue-navigation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/looker-with-her-hair-up.webp" alt="Featured image of post 谁懂这款 Idea 插件的含金量啊" />&lt;h2 id="前言">前言
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Opoa</title><link>https://opoa.top/post/</link><description>Recent content in Posts on Opoa</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>蜀ICP备20005474号-1</copyright><lastBuildDate>Wed, 21 Aug 2024 22:31:32 +0800</lastBuildDate><atom:link href="https://opoa.top/post/index.xml" rel="self" type="application/rss+xml"/><item><title>谁懂这款 Idea 插件的含金量啊</title><link>https://opoa.top/post/idea-plugin-issue-navigation/</link><pubDate>Wed, 21 Aug 2024 22:31:32 +0800</pubDate><guid>https://opoa.top/post/idea-plugin-issue-navigation/</guid><description>&lt;img src="https://cdn.jsdelivr.net/gh/oopooa/cdn/cover/looker-with-her-hair-up.webp" alt="Featured image of post 谁懂这款 Idea 插件的含金量啊" />&lt;h2 id="前言">前言
 &lt;/h2>&lt;p>在阅读开源项目的源码时，我们经常会对当前代码的写法感到困惑。这时，我们需要查阅原始 issue 以了解更多相关的讨论。&lt;/p>
 &lt;h2 id="人工跳转">人工跳转
 &lt;/h2>&lt;p>在不借助插件的情况下，当我们想要访问一个提交的 issue 地址。&lt;/p>
